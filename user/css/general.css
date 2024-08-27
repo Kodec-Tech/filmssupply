@@ -1,0 +1,146 @@
+/* Style the scrollbar track */
+.dropdown-content.active::-webkit-scrollbar-track {
+    background: none; /* Track color */
+    border-radius: 10px; /* Rounded corners */
+    margin: 10px; /* Optional: spacing around the track */
+}
+
+/* Style the scrollbar thumb */
+.dropdown-content.active::-webkit-scrollbar-thumb {
+    background: #080000; /* Thumb color */
+    border-radius: 10px; /* Rounded corners */
+    border: none; /* Optional: border around the thumb */
+}
+
+/* Style the scrollbar itself */
+.dropdown-content.active::-webkit-scrollbar {
+    width: 12px; /* Width of the vertical scrollbar */
+    height: 12px; /* Height of the horizontal scrollbar */
+}
+
+/* Optional: hover effect on the scrollbar thumb */
+.dropdown-content.active::-webkit-scrollbar-thumb:hover {
+    background: #080000; /* Thumb color on hover */
+}
+
+/* All Fonts Global*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:stretch;
+    
+}
+
+h2,h3,h4,h5,h6{
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 13px;
+}
+div, p, span, form > label, form > input{
+    font-family: "Roboto", sans-serif !important;
+    font-size: 12px !important;
+}
+i{
+    font-size: 12px;
+}
+ol, ul {
+    padding-left: 0 !important;
+}
+ul li, ol li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px !important;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+button{
+    font-size: 13px !important;
+}
+
+@media(max-width: 500px){
+    body{
+        padding: 1rem;
+    }
+    h1,h2,h3,h4,h5,h6{
+        font-size: 11px !important;
+    }
+    p, span, ul li, ol li, i{
+        font-size: 12px !important;
+    }
+    i{
+        font-size: 14px;
+    }
+}
+
+
+
+/* ---------------------- I AM A PRELOADER FOR TABS --------------------*/
+#preloader, #preloader2, #preloader3 {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.93); /* Changed to semi-transparent background */
+    visibility: hidden; /* Hide initially */
+    z-index: 9999;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #DAF7A6;
+    border-top: 8px solid #C70039;
+    animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        border-top-width: 5px;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #preloader, #preloader2, #preloader3{
+        top: -100px;
+    }
+    .loader {
+        height: 30px;
+        width: 30px;
+        border-top: 6px solid #C70039;
+    }
+}
+
+.trans_table.no_trans {
+    display: none; /* Hide initially */
+}

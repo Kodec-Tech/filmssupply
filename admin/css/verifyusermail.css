@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Victor+Mono:wght@600&display=swap');
+
+
+*{
+	padding: 0;
+	margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+	font-family: 'Roboto Mono', monospace;
+
+}
+
+.de-email{
+    width: 100%;
+    
+  }
+  .email{
+    background: #111111;
+    
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+	height: 200px;
+	margin-bottom: 100px;
+  
+  }
+  .email img{
+    width: 30%;
+    margin: auto;
+  }
+
+main{
+    width: 80%;
+    margin: 2rem auto;
+  }
+main h1{
+  text-align: center;
+
+}
+main p{
+    font-size: 25px;
+	
+  }
+footer{
+  width: 100%;
+  margin-top: 20px;
+  background: #111111;
+ 
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  height: 100px;
+}
+
+@media (max-width: 700px){
+  .email{
+    background: #111111;
+    border: inset 2px #3163bf;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+  
+  }
+  .email img{
+    width: 50%;
+    margin: auto;
+  }
+}

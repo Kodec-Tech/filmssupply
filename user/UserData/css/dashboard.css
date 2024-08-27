@@ -1,0 +1,1290 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    
+    -webkit-box-shadow: 0 0 0 1000px #1c2440 inset !important;
+    -webkit-text-fill-color: white !important;
+}
+
+body {
+  background-color: #0c162d;
+}
+ol,
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Montserrat;
+}
+p {
+  font-family: Roboto;
+}
+a {
+  text-decoration: none;
+  font-family: Montserrat;
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+/*............................................HOME PAGE........................................................*/
+/*........................................................................................................*/
+/*****************************************/
+/*****************************************/
+
+.body-layer{
+  margin-bottom: 10rem;
+}
+.head-layer {
+  padding: 1.5rem 0.5rem;
+}
+.de-head{
+  background: #131b39;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+.cus-row {
+  width: 100%;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hlayer-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.7rem;
+}
+.hlayer-left h3 {
+  font-size: 1.2rem;
+  color: #f2a51f;
+  padding: 5px;
+  border-radius: 10px;
+}
+.user-icon {
+  width: 7.5%;
+}
+.hlayer-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.9rem;
+}
+.hlayer-right i {
+  font-size: 1.7rem;
+  color: #f2a51f;
+}
+.hlayer-right button {
+  color: #0c162d;
+  background: #fff;
+  padding: 3px 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+/*****************************************/
+/*****************************************/
+/* .user-info{
+  box-shadow: 0.2px 0.2px 2px #9aa7ae;
+} */
+.user-info-left{
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+.user-level{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+  flex-basis: 15%;
+}
+.user-level img{
+  width: 20% !important;
+}
+.user-info-left h3{
+  background: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.user-info-left img{
+  width: 7%;
+  border-radius: 100px;
+}
+/*****************************************/
+/*****************************************/
+.cards {
+  margin: 3rem 0;
+}
+.all-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+.card-items {
+  padding: 25px;
+  border-radius: 10px;
+  width: 100%;
+
+  /* box-shadow: 0.2px 0.2px 5px #9aa7ae; */
+}
+.left-card{
+  background-color: #131b39;
+}
+.mini-lc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.mini-lc h1 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.right-card .mini-lc h1{
+  color: #131b39;
+}
+.card-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+.card-text h5 {
+  color: #9aa7ae;
+  font-size: 1rem;
+}
+.card-text i {
+  color: #f2a51f;
+  font-size: 3rem;
+}
+.right-card{
+  
+  background-color: #f2a51f;
+}
+.right-card h5 {
+  color: #000;
+  font-weight: 600;
+}
+.right-card i{
+  color: #000;
+}
+
+/*****************************************/
+/*****************************************/
+.all-features{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  column-gap: 0.2rem;
+  
+  margin: 3.5rem 0;
+}
+.featured-items a{
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* background: #0e1a32; */
+  /* background: linear-gradient(to right, #9aa7ae, #0e1a32, #0e1a32, #0e1a32, #9aa7ae); */
+  background-color: rgba(37, 41, 88, 0.3);
+  gap: 1rem;
+
+  width: 80%;
+  margin: auto;
+  height: 9rem;
+}
+.featured-items i{
+  font-size: 2.5rem;
+  color: #f2a51f;
+}
+.featured-items h3{
+  font-size: 1rem;
+  color: #fff;
+}
+/*****************************************/
+/*****************************************/
+.membership h5{
+  color: #9aa7ae;
+  margin-bottom: 1.5rem;
+}
+.members{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  background: #131b39;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 1rem;
+  /* box-shadow: 0.2px 0.2px 5px #9aa7ae; */
+}
+.each-members{
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: #124;
+  color: #fff;
+  /* border: #0c162d 2px outset; */
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+.each{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.each img{
+  width: 7.5%;
+}
+/*****************************************/
+/*****************************************/
+
+.head {
+  margin: auto;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #131b39;
+  border-radius: 30px;
+
+  margin: 0 0.5rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.head-items {
+  padding: 10px;
+  width: 100%;
+}
+.head-items a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.head-items i {
+  font-size: 1.7rem;
+  color: #fff;
+}
+.head-items p {
+  color: #fff;
+  font-size: 1rem;
+}
+/*............................................UPCOMING PAGE........................................................*/
+/*........................................................................................................*/
+.upcoming-chart{
+  height: 100% !important;
+  margin-top: 3rem;
+}
+.event-image{
+  width: 75%;
+  margin: auto;
+  padding: 1rem !important;
+}
+.event-image img{
+  width: 100%;
+}
+/*............................................NOTHING PAGE........................................................*/
+/*........................................................................................................*/
+/*****************************************/
+/*****************************************/
+.de-chart{
+  margin: 1rem 0;
+}
+.de-chart h1{
+  color: #9aa7ae;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.overrall{
+  /* box-shadow: 0.2px 0.2px 5px #9aa7ae; */
+  /* background: #ffd75b; */
+  padding: 25px;
+  border-radius: 15px;
+}
+.charts{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.3rem;
+}
+.chart-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+  background: linear-gradient(to bottom right, #9aa7ae, #fff, #9aa7ae);
+  box-shadow: 0.2px 0.2px 5px #1a1f29;
+  border-radius: 15px;
+
+  padding: 20px 30px;
+  gap: 2.7rem;
+
+  /* height: 33vh; */
+}
+.chart-topics{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chart-topics h2{
+  font-weight: bold;
+  color: #0c162d;
+  font-size: 1.5rem;
+}
+.chart-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.chart-text i{
+  font-size: 2rem;
+  color: #f2a51f;
+}
+.chart-text h4{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.chart-text h6{
+  font-size: 1.5rem;
+  color: #f2a51f;
+}
+.update{
+  text-align: center;
+  margin: 3rem 0 1rem;
+}
+.update h3{
+  font-weight: bold;
+}
+.update p{
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  box-shadow: 0.2px 0.2px 7px #1a1f29;
+  color: #0c162d;
+  width: 30%;
+  margin: 1rem auto;
+}
+.update p span{
+  background-color: #0c162d;
+  color: #f2a51f;
+  padding: 0.3rem;
+  font-size: 1.4rem;
+}
+/*****************************************/
+/*****************************************/
+.daily-profit-list{
+  margin: 3rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+  background: #1a1f29;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0.2px 0.2px 5px #9aa7ae;
+}
+.profit-table{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+.profit-table h1{
+  font-size: 1.7rem;
+  color: #fff;
+}
+.profit-items{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 19rem;
+
+  color: #fff;
+  border: #0c162d 2px outset;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+.profit-items img{
+  width: 4%;
+}
+.profit-items h1{
+  font-size: 1.3rem;
+}
+/*............................................NOTHING PAGE........................................................*/
+/*........................................................................................................*/
+.recharge{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 100%;
+}
+.recharge h3{
+  font-size: 2.3rem;
+  color: #1a1f29;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.recharge p{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@keyframes changeColor{
+  0% { color: #0c162d; } /* Initial color */
+  25% { color: #039be5; } /* Intermediate color */
+  50% { color: #f2a51f; } /* Final color */
+  100% { color: #0c162d; } 
+}
+.recharge i{
+  font-size: 7rem;
+  color: #0c162d;
+  transition: all ease-in-out 0.3s;
+  animation: changeColor 10s infinite alternate;
+}
+/*............................................WITHDRWAWAL PAGE........................................................*/
+/*........................................................................................................*/
+.withdraw{
+  display: flex;
+  flex-direction: column;
+  background: rgba(37, 41, 88, 0.3) !important;
+  border: #0c162d inset 1px;
+  padding: 30px 50px;
+  border-radius: 20px;
+}
+.w-topic{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 100%;
+
+  margin-bottom: 1.5rem;
+}
+.w-topic p{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff
+}
+.w-topic h3{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f2a51f;
+}
+.withdraw form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.withdraw form input, .w-btn{
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #1c2440;
+  border: 1px solid #9aa7ae;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.withdraw form input:focus, .withdraw form input:active{
+  border: #4d614e 1px solid;
+  outline: #4d614e;
+}
+
+.w-btn{
+  background: #f2a51f;
+  color: #0c162d;
+  font-weight: 500;
+  width: 20%;
+  margin: auto;
+  border: none;
+  font-size: 14px;
+}
+
+.withdraw form select{
+  width: 100%;
+  padding: 10px 20px;
+  background: #1c2440;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.withdraw form label{
+  width: 100%;
+  padding: 10px 20px;
+  background: #0c162d;
+  border-radius: 10px;
+  color: #f20b0b;
+  font-size: 13px;
+}
+/*............................................INVITATION PAGE........................................................*/
+/*........................................................................................................*/
+.invitation h1{
+  font-size: 2.5rem;
+  background: #0c162d;
+  border-radius: 30px;
+  transition: all ease-in-out 0.3s;
+  padding: 10px 20px;
+  margin-top: 2rem;
+  color: #f2a51f;
+}
+/*............................................COMPANY PAGE........................................................*/
+/*........................................................................................................*/
+.company{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-basis: 100%;
+}
+.company p{
+  font-size: 1.3rem;
+}
+.company h3{
+  font-size: 2rem;
+  color: #1a1f29;
+  margin-bottom: 1rem;
+}
+.company a button{
+  font-size: 1.7rem;
+  background: #1a1f29;
+  color: #f2a51f;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+/*............................................TERMS PAGE........................................................*/
+/*........................................................................................................*/
+.terms{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-basis: 100%;
+}
+.terms h3{
+  font-size: 2rem;
+  color: #1a1f29;
+  margin-bottom: 1rem;
+}
+.terms p{
+  font-size: 1.3rem;
+}
+.terms ul li{
+  font-size: 1.3rem;
+  list-style-type: disc;
+  margin-left: 1.7rem;
+  margin-bottom: 1rem;
+}
+/*****************************************/
+/*****************************************/
+/*****************************************************TASKS PAGE***********************************************/
+/*****************TASKS************************/
+.tasks h5{
+  margin-top: 3rem;
+}
+.market-products{
+  margin-top: 3rem;
+}
+/* THE MODAL STARTS HERE */
+/*MODAL BUTTON*/
+.btn-primary {
+  --bs-btn-color: #1a1f29;
+  --bs-btn-bg: #f2a51f;
+  --bs-btn-border-color: none;
+
+  --bs-btn-hover-color: #1a1f29;
+  --bs-btn-hover-bg: #9aa7ae;
+  --bs-btn-hover-border-color: #0a58ca;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #1a1f29;
+  --bs-btn-active-bg: #9aa7ae;
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #0d6efd;
+  --bs-btn-disabled-border-color: #0d6efd;
+
+  font-size: 1.5rem;
+  border-radius: 15px;
+  font-family: Montserrat;
+  font-weight: bold;
+}
+/*MODAL POPUP*/
+.modal {
+  --bs-modal-zindex: 1055;
+  --bs-modal-width: 60%;
+  --bs-modal-padding: 1rem;
+  --bs-modal-margin: 0.5rem;
+  --bs-modal-color: # ;
+  --bs-modal-bg: #;
+}
+.tasks-charts{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.market-tasks div{
+  width: 20%;
+}
+.market-tasks div img{
+  width: 100%;
+  border-radius: 20px;
+  border: #0c162d solid 3px;
+}
+.task-commission h4, .task-amount h4{
+  font-size: 1.3rem;
+}
+.task-commission i, .task-amount i{
+  font-size: 2.3rem;
+}
+.g-tasks button{
+  background: #0c162d;
+  outline: none;
+  border: none;
+  color: #f2a51f;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.g-tasks button:hover{
+  background: #9aa7ae;
+  color: #0c162d;
+  border: 2.5px solid #0c162d;
+}
+.task-foot{
+  background: #0c162d;
+}
+.task-foot button{
+  font-size: 2.2rem;
+  color: #fff;
+  background: none;
+  outline: none;
+  border: none;
+}
+/*****************************************/
+/*****************************************/
+
+/*****************************************************PROFILE PAGE***********************************************/
+/*****************PROFILES************************/
+.intro-profile{
+  background-color: rgba(37, 41, 88, 0.3);
+  border-radius: 20px;
+  padding: 1rem 0;
+  margin: 1rem 0;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.profile-topic-items{
+  text-align: center;
+  color: #fff;
+}
+.profile-topic-items p{
+  font-size: 1rem;
+}
+.profile-topic-items h3{
+  color: #f2a51f;
+  font-size: 1.7rem;
+}
+.profile-topic-items:first-child{
+  border-right: 3px solid #f2a51f;
+  width: 100%;
+}
+.profile-topic-items:last-child{
+  width: 100%;
+}
+/*****************************************/
+/*****************************************/
+.profile2{
+  background-color: rgba(37, 41, 88, 0.3);
+  border-radius: 20px;
+  margin: 2rem 0;
+}
+.profile-items a{
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+.each-profile-items{
+  color: #9aa7ae;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.each-profile-items i{
+  background: #0c162d;
+  padding: 0.2rem 0.5rem;
+  font-size: 2.2rem;
+  color: #f2a51f;
+  border-radius: 10px;
+}
+.each-profile-items p{
+  font-size: 15px;
+}
+.profile-items i{
+  font-size: 15px;
+  color: #f2a51f;
+  border-radius: 10px;
+}
+/*............................................ TRANSACTION PAGE .............................................*/
+.transaction{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin: 2rem 0;
+}
+.transaction a button{
+  color: #fff;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+}
+.transaction a button:active, .transaction a button:focus{
+  text-decoration: underline #f2a51f;
+}
+.deposit-overrall{
+  display: none;
+}
+/*............................................ TRANSACTION PAGE .............................................*/
+.de-history{
+  margin: 3rem 0;
+}
+.history{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+
+  /* background: linear-gradient(to bottom right, #9aa7ae, #fff, #9aa7ae); */
+  background-color: #131b39;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 2rem 0;
+}
+.history-topic{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+.history-topic h4{
+  color: #9aa7ae;
+  font-size: 16px;
+  font-weight: bold;
+}
+.stats{
+  font-size: 9px;
+  background: rgb(10, 97, 36);
+  color: #9aa7ae;
+  padding: 6px;
+  border-radius: 30px;
+}
+.history-topic div{
+  width: 16%;
+  background-color: red;
+
+}
+.history-topic  img{
+  width: 70px;
+  height: 70px;
+  
+  border-radius: 20px;
+}
+.history-body{
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.history-body p{
+  font-size: 14px;
+  color: #9aa7ae;
+}
+.history-body p span{
+  font-size: 13px;
+  color: #f2a51f;
+  /* font-weight: bold; */
+}
+/*............................................ USER PROFILE PAGE .............................................*/
+.user-profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.user-card{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+}
+.user-card1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+
+  background-color: rgba(37, 41, 88, 0.3);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+
+}
+
+
+
+.user-card2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  
+
+  background-color: rgba(37, 41, 88, 0.3);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  
+}
+.user-card2 form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
+.user-card2 form label{
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+}
+.user-card2 form input{
+  height: 2.5rem;
+  width: 30vw;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  background: #1c2440;
+  outline: none;
+  border: none;
+  
+  
+  color: #fff;
+}
+.user-card2 form select{
+  height: 2.5rem;
+  width: 30vw;
+  background: #1c2440;
+  font-size: 1rem;
+  outline: none;
+  border: none;  
+  color: #fff;
+  
+}
+
+.user-card2 form .card2-submit{
+  padding: 10px !important; 
+  height: 3rem !important;
+}
+
+.user-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.user-button button{
+  width: 12rem;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  border: 3px inset #9aa7ae;
+  color: #fff;
+  background: #f2a51f;
+}
+/*****************************************/
+/*****************************************/
+
+
+
+
+/* ^^^^^^^^^^FROM HERE STARTS THE RESPONSIVENESS ^^^^^^^^^^*/
+
+@media screen and (max-width: 700px) {
+  /*.........................HOME..........................*/
+  .head-layer {
+    margin-top: 0.5rem;
+  }
+  .head {
+    gap: 5px;
+  }
+  .head-items i {
+    font-size: 1.3rem;
+    color: #fff;
+  }
+  .head-items p {
+    color: #fff;
+    font-size: 0.8rem;
+  }
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  .head-layer {
+    padding: 10px 5px;
+  }
+  .user-icon {
+    width: 12%;
+  }
+  .hlayer-left {
+    gap: 1rem;
+  }
+  .hlayer-left h3 {
+    font-size: 1rem;
+  }
+  .hlayer-right {
+    gap: 1rem;
+  }
+  .hlayer-right i {
+    font-size: 1.4rem;
+  }
+  .hlayer-right h5 {
+    font-size: 0.9rem;
+  }
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  .user-level{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.6rem;
+    flex-basis: 25%;
+  }
+  .user-level img{
+    width: 30% !important;
+  }
+  .avatar{
+    width: 15% !important;
+  }
+   /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  .card-items {
+    padding: 10px;
+    gap: 10px;
+  }
+  .card-text h5 {
+    font-size: 0.65rem;
+  }
+  .card-text i {
+    font-size: 1.7rem;
+    
+  }
+  .mini-lc {
+    gap: 0.5rem;
+  }
+  .mini-lc h1 {
+    font-size: 1.2rem;
+  }
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  .all-features{
+    row-gap: 1.3rem;
+    column-gap: 0.9rem;
+  }
+  .featured-items a{
+    width: 90%;
+    padding: 5px;
+    height: 5.8rem;
+    gap: 0.7rem;
+  }
+  .featured-items i{
+    font-size: 1.7rem;
+    color: #f2a51f;
+  }
+  .featured-items a h3{
+    font-size: 0.72rem;
+  }
+  /************************************************UPCOMING PAGE STARTS*****************************************/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  .event-image{
+    width: 100%;
+    margin: auto;
+    padding: 1rem !important;
+  }
+  /************************************************UPCOMING PAGE STARTS*****************************************/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  .upcoming-chart{
+    margin-top: 3rem;
+  }
+  .charts{
+    display: flex;
+    flex-direction: column;
+  }
+  .chart-items{
+    height: 100%;
+
+    padding: 20px 15px;
+    gap: 1rem;
+  }
+  .chart-topics{
+    gap: 10px;
+  }
+  .chart-topics h2{
+    font-size: 1.2rem
+  }
+  .chart-text{
+    gap: 2px;
+  }
+  .chart-text i{
+    font-size: 2rem;
+  }
+  .chart-text h4{
+    font-size: 1rem;
+  }
+  .chart-text h6{
+    font-size: 1rem;
+  }
+  .update{
+    margin: 3rem 0 1rem;
+  }
+  .update h3{
+    font-size: 1.3rem;
+  }
+  .update p{
+    width: 80%;
+    font-size: 1.2rem;
+  }
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  .profit-table h1{
+    font-size: 1.1rem;
+  }
+  .profit-items{
+    gap: 4.1rem;
+  }
+  .profit-items img{
+    width: 10%;
+  }
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  .recharge-head{
+    margin-top: 3rem;
+  }
+  .recharge h3{
+    font-size: 1.5rem;
+  }
+  .recharge p{
+    font-size: 1.3rem;
+  }
+  .recharge i{
+    font-size: 5.5rem;
+  }
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  .w-topic p{
+    font-size: 1.3rem;
+  }
+  .w-topic h3{
+    font-size: 1.7rem;
+  }
+  .withdraw form input, .w-btn{
+    font-size: 14px;
+  }
+ 
+  .w-btn, .w-btn:last-child{
+    width: 100%;
+  }
+
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  .invitation h1{
+    font-size: 1.7rem;
+  }
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  .company h3{
+    font-size: 1.7rem;
+  }
+  .company p{
+    font-size: 1.2rem;
+  }
+  .company a button{
+    font-size: 1.7rem;
+  }
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  .terms h3{
+    font-size: 1.7rem;
+  }
+  .terms p{
+    font-size: 1.2rem;
+  }
+  .terms ul li{
+    font-size: 1.2rem;
+  }
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /************************************************TASKS PAGE STARTS*****************************************/
+  .each img{
+    width: 12%;
+  }
+  .each-members h4{
+  font-size: 14px !important;
+}
+
+  .main-tasks{
+    padding: 10px;
+  }
+  .market-tasks h2{
+    font-size: 1rem;
+  }
+  .market-tasks div{
+    width: 35%;
+  }
+  .g-tasks{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .g-tasks button{
+    font-size: 1rem;
+    padding: 10px;
+    width: 80%;
+  }
+  .tasks-btn{
+    font-size: 1.3rem;
+  }
+
+   /************************************************PROFILE PAGE STARTS*****************************************/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+  .profile-topic-items p{
+    font-size: 0.9rem;
+  }
+  .profile-topic-items h3{
+    color: #f2a51f;
+    font-size: 1.3rem;
+  }
+  .each-profile-items{
+    gap: 1rem;
+    margin-top: 15px;
+  }
+  .each-profile-items i{
+    font-size: 2rem;
+  }
+  .each-profile-items p{
+    font-size: 15px;
+  }
+  .profile-items a i{
+    font-size: 1.5rem;
+  }
+  .user-card2{
+    width: 100%;
+  }
+  /************************************************TRANSACTION PAGE STARTS*****************************************/
+  .transaction{
+    gap: 1.2rem;
+    
+  }
+  .transaction a button{
+    font-size: 14px;
+  }
+  /************************************************HISTORY PAGE STARTS*****************************************/
+  .history{
+    gap: 1rem;
+  }
+  .history-topic h4{
+    font-size: 15px;
+    line-height: 2rem;
+  }
+  .stats{
+    padding: 5px;
+    margin-left: 4px;
+    font-size: 8px;
+  }
+  .history-topic div{
+    width: 45%;
+  }
+  .history-body{
+    display: flex;
+    flex-direction:row;
+    /* align-items: flex-start; */
+    gap: 10px;
+  }
+/************************************************USER-PROFILE PAGE STARTS*****************************************/
+.user-profile{
+  gap: 3rem;
+}
+  .user-card{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .user-card2 form input{
+    width: 70vw;
+  }
+  .user-button{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .user-button button{
+    width: 15rem;
+  }
+  /*^^^^^^^^^^^^^^^^^^^*/
+  /*^^^^^^^^^^^^^^^^^^^*/
+}

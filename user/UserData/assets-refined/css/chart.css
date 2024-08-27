@@ -1,0 +1,43 @@
+/* --------------- FIRST CHART ----------------------- */
+monospace{
+  font-size: 14px;
+  color:#ccc; 
+}
+
+.wrapper {
+  display: block;
+  border: 1px solid #555;
+  width: 100%;
+  height: 210px;
+  position: relative;
+}
+.label {
+  height: 3rem;
+  padding: .3em;
+  background: rgba(255, 255, 255, .8);
+  position: absolute;
+  display: none;
+  color:#333;
+  
+}
+
+/* ------------ SECOND CHART ----------- */
+svg {
+  margin-top: -3rem;
+  text-align: center;
+  width: 100%;
+}
+
+polyline {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s ease-in forwards;
+  animation-iteration-count:infinite;
+  animation-direction: alternate;
+}
+
+@keyframes dash{
+  to {
+    stroke-dashoffset: 0;
+  }
+}

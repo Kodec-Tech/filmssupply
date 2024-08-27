@@ -1,0 +1,435 @@
+.flex1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.flex1 img{
+    width: 35%;
+    margin: auto;
+    border-radius: 50%;
+}
+.flex2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: -3rem;
+}
+.flex3{
+    padding: 10px 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 6rem;
+    margin-bottom: -3rem;
+}
+.mdi-icons{
+    display: flex;
+}
+.avatar-title i{
+    font-size: 18px;
+}
+.finner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3rem;
+    padding: 10px 0 20px;
+}
+.finner h3{
+    font-size:13px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all ease-in-out .5s;
+}
+.finner h3:first-child:hover{
+    border: solid 1px #32394e;
+}
+.finner h3:first-child{
+    cursor: pointer;
+    background: #32394e;
+}
+.finner h3:last-child{
+    background: #798ce5;
+}
+.finner h3:last-child:hover{
+    cursor: pointer;
+    background: #485ec4;
+}
+.fx{
+    justify-content: start
+}
+
+.dashpic{
+    width: 25%;
+    filter: brightness(50%);
+    transition: ease-in-out all .7s;
+}
+.dashpic:hover{
+    filter: brightness(100%);
+    transform: scale(1.05);
+}
+.dashpic img{
+    width: 85%;
+}
+.card-vid{
+    width: 100%;
+}
+.card-vid video{
+    width: 100%;
+}
+/* ^^^^^^^^^^^^^ WITHDRAWAL IS HERE ^^^^^^^^^^^^^^*/
+.withdrawal{
+    padding: 1rem 3rem 0;
+    width: 100%;
+}
+.withdrawal label{
+    font-size: 18px;
+    color: #fff;
+}
+.withdrawal form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.dform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+}
+.dform input{
+    padding: 7px 15px;
+    width: 250%;
+    background: #25282a;
+    border-radius: 10px;
+    outline: none;
+    border: solid 1px rgb(91, 87, 87);
+    color: #fff;
+    font-size: 18px;
+}
+.withdrawal button{
+    width: 20%;
+    padding: 5px;
+    /* background: #25282a; */
+    outline: none;
+    border: solid 2px #485ec4;
+    color: #fff;
+    font-weight: bolder;
+    transition: all .5s ease-in-out;
+    font-size: 15px;
+}
+.withdrawal button:hover{
+    border: solid 1px #25282a;
+    background:#485ec4;
+}
+/* ^^^^^^^^^^^^^ SAVING IS HERE ^^^^^^^^^^^^^^*/
+.savhead{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.save{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.card{
+    width: 100%;
+}
+.card-img{
+    width: 35%;
+    margin: auto;
+}
+.card-img2{
+    width: 58%;
+    margin: auto;
+    padding-top: 35px;
+}
+.dsaves{
+    text-align: center;
+    border: dotted 2px #485ec4;
+    padding: 20px 50px;
+    font-size: 20px;
+    transition: all .5s ease-in-out;
+}
+.dsaves:hover{
+    background: #485ec4;
+}
+
+/* USER PROFILE PIC STARTS */
+.profile-pic-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pic-holder {
+    text-align: center;
+    position: relative;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .pic-holder .pic {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+  }
+  
+  .pic-holder .upload-file-block,
+  .pic-holder .upload-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(90, 92, 105, 0.7);
+    color: #f8f9fc;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  
+  .pic-holder .upload-file-block {
+    cursor: pointer;
+  }
+  
+  .pic-holder:hover .upload-file-block,
+  .uploadProfileInput:focus ~ .upload-file-block {
+    opacity: 1;
+  }
+  
+  .pic-holder.uploadInProgress .upload-file-block {
+    display: none;
+  }
+  
+  .pic-holder.uploadInProgress .upload-loader {
+    opacity: 1;
+  }
+  
+  /* Snackbar css */
+  .snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 14px;
+    transform: translateX(-50%);
+  }
+  
+  .snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {
+      bottom: 30px;
+      opacity: 1;
+    }
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeout {
+    from {
+      bottom: 30px;
+      opacity: 1;
+    }
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+  
+
+/* USER PROFILE PIC ENDS */
+/* USER PROFILE CSS */
+.dprofile{
+    display: flex;
+    padding: 10px 5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5rem;
+}
+.pcard{
+    padding: 10px 0;
+    width: 40%;
+}
+.ppcard{
+    width: 100%;
+}
+.uprofile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.uprofile label{
+    background-color: #5d6369;
+    outline: none;
+    color: #fff;
+    padding: 12px 10px;
+    width: 23%;
+}
+.uprofile p{
+    font-size: 15px;
+    padding: 2px 10px;
+    background-color: #1e2022;
+    width: 80%;
+    color: #fff;
+    padding: 12px;
+}
+.update{
+    text-align: center;
+    margin: auto;
+    width: 15%;
+}
+.update h5{
+    font-size: 15px;
+    margin-top: 30px;
+    padding: 5px ;
+    background: #25282a;
+    border: 2px solid #5d6369;
+    transition: ease-in-out .5s all;
+}
+.update h5:hover{
+    background: #5d6369;
+    border: 2px solid #25282a;
+}
+/* LOAN BEGINS HERE */
+.loan{
+    width: 50%;
+}
+.loan img{
+    width: 20%;
+    margin: auto;
+    padding: 20px 10px;
+}
+
+/* MEDIA QUERY */
+@media (max-width:1200px) {
+    .card-vid{
+        margin-bottom: 21rem;
+    }
+    .withdrawal label{
+        font-size: 14px;
+        color: #fff;
+    }
+    .withdrawal{
+        padding: .5rem 1.5rem 0;
+    }
+    .dform input{
+        width: 180%;
+    }
+    .dform input{
+        font-size: 14px;
+    }
+    .withdrawal button{
+        width: 35%;
+        font-size: 12px;
+    }
+}
+@media (max-width:700px) {
+    .card-vid{
+        margin-bottom: 21rem;
+    }
+    .overview{
+        margin-top: -20rem;
+    }
+    .dform input{
+        width: 140%;
+    }
+    .withdrawal button{
+        width: 45%;
+        font-size: 12px;
+    }
+    .save{
+        flex-direction: column;
+    }
+    .dprofile{
+        flex-direction: column;
+        padding: 30px;
+        gap: 2rem;
+    }
+    .pcard{
+        width: 100%;
+    }
+    .ppcard{
+        width: 100%;
+    }
+    .uprofile{
+        flex-direction: column;
+    }
+    .uprofile label{
+        width: 100%;
+    }
+    .uprofile p{
+        width: 100%;
+    }
+    .update{
+        width: 50%;
+    }
+    .loan{
+        width: 80%;
+    }
+    .loan img{
+        width: 40%;
+    }
+}
+
+.card-color{
+    background-color:  #25282a !important;
+}
+

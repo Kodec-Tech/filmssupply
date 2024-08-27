@@ -1,0 +1,404 @@
+/* All Fonts Global*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@media(max-width: 500px){
+    /*header*/
+    .moving-text{
+        font-size: 15px;
+    }
+    .header_img img:first-child{
+        width: 25%;
+    }
+    .header_img img:last-child{
+        width: 25px !important;
+    }
+    .contents_body{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    /*body hero*/
+    .hero-gif{
+        width: 100%;
+        height: 100%;
+    }
+    .dropdown-content.active {
+        overflow: unset;
+    }
+    .tasks_btn{
+        width: 14.5%;
+        font-size: 16px;
+        left: 42%;
+        right: 40%;
+        top: -30px;
+    }
+    .start_image{
+        width: 20px;
+    }
+    .tab{
+        text-align: center;
+        font-size: 13px!important;
+    }
+    .movie i{
+        font-size: 9px !important;
+    }
+
+    /*profile*/
+    /* .profile img{
+        width: 30% !important;
+    } */
+   
+
+
+
+
+
+     
+    .rank img, .name img{
+        width: 25px !important;
+    }
+    .earn_wallet{
+        gap: 20px;
+    }
+    .assessment{
+        width: 100%;
+    }
+    .major_profiles{
+        width: 100%;
+    }
+    .single_major_profiles h2{
+        font-size: 20px;
+    }
+    .profile_option a{
+        padding: 15px 8px;
+    }
+    .profile_option a p{
+        font-size: 20px !important;
+    }
+    .profile_option a i{
+        font-size: 20px !important;
+    }
+    .v-line{
+        height: 40px;
+    }
+    .credit_level{
+        width: 80px;
+    }
+    .logout{
+        padding: 10px;
+    }
+    .copyright h3{
+        font-size: 12px !important;
+    }
+    .d_level{
+        padding: 0.3rem;
+        border-radius: 7px;
+    }
+
+    /* .credit_level::before {
+        content: "";
+        width: 25px;
+        height: 18px;
+        background-color: #DAF7A6;
+        border-radius: 100px;
+        position: absolute;
+        top: -7px;
+        right: 0;
+    } */
+    .option_image{
+        width: 17px;
+    }
+    .event_image{
+        width: 40px;
+    }
+    .certificate{
+        width: 100%;
+    }
+    .events{
+        width: 75%;
+    }
+    .event_dropdown{
+        right: -3%;
+    }
+    .all_tasks_menu li a p{
+        font-size: 14px !important;
+    }
+    .all_tasks_menu li a i{
+        font-size: 14px;
+    }
+
+/* Levels*/
+.levels{
+    padding: 0.7rem;
+}
+.level_card{
+    width: 100%;
+}
+
+
+    /*withdrawal*/
+    .withdrawal{
+        padding: 0.7rem;
+    }
+
+    .history_card_left{
+        gap: 3px;
+    }
+    .history_card_left h5 .history_card_left span{
+        font-size: 12px !important;
+    }
+    .history_card_left h3{
+        font-size: 14px;
+    }
+    .history_card_left h2{
+        font-size: 16px;
+    }
+    .history_card_right h2{
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 14px !important;
+    }
+
+
+    .form-text{
+        font-size: 10px !important;
+    }
+    .withdraw_form{
+        margin-top: 15px !important;
+    }
+    .description{
+        padding: 0.7rem;
+    }
+    .description h3{
+        text-align: left;
+        
+        color: #fff;
+        width: 60%;
+        
+        font-size: 14px;
+    }
+
+    /* deposit*/
+    .deposit_notice{
+        width: 100%;
+    }
+    .deposit_notice p{
+        text-align: center;
+    }
+
+    /*user profile*/
+    .userprofile{
+        padding: 0.7rem;
+    }
+
+    /*Customer Support*/
+    .support{
+        padding: 0.7rem;
+    }
+    .support_persons{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .chat_person img{
+        /* border-radius: 50px; */
+        height: 160px;
+        width: 70%;
+        margin: auto;
+    }
+    .chat_person .card_button{
+        border-radius: 30px;
+    }
+    /* .chat_person{
+        width: 10rem;
+        background: none;
+    }
+    .text-head{
+        text-align: center;
+        color: #DAF7A6;
+    }
+    .support_text{
+        display: none;
+    } */
+
+    /*Transactions*/
+    .transactions{
+    padding: 0.1rem;
+    }
+    .trans_table{
+        align-items: flex-start;
+    }
+    .trans_col{
+        gap: 0.1rem;
+    }
+    .trans_col .completed, .trans_col .cancelled{
+        padding: 1px 3px;
+    }
+    .trans_col h5{
+        font-size: 13px;
+    }
+    .trans_col p{
+        font-size: 10px;
+    }
+
+    /*History here*/
+    .overrall_history_card{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    .history_card{
+        padding: 0.7rem;
+        width: 100%;
+    }
+    .history_card1{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .history_card1 h1{
+        font-size: 13px;
+        padding: 3px;
+    }
+   
+    .card_boy{
+        margin-top: 15px;
+    }
+
+    /*FAQS*/
+    .filmfaqs .description{
+        width: 100%;
+    }
+
+    /*Security*/
+    .request_button{
+        margin-top: 10px !important;
+    }
+
+    /*Tasks*/
+    .tasks {
+        background: url('../images/img/bgprofile.png') top center no-repeat;
+        /* background-size: contain; */
+        background-size: 100% 50.2%;
+        margin-top: -1px !important;
+    }
+    
+    .tasks_contents{
+        padding: 0.7rem;
+    }
+    .tasks_dropdown h6{
+        font-size: 17px;
+    }
+    .tasks_info h4{
+        font-size: 14px !important;
+    }
+    .tasks_col h5{
+        font-size: 12px !important;
+    }
+    .tasks_col p{
+        font-size: 11px !important;
+    }
+    .tasks_table{
+        padding: 0.5rem;
+    }
+    /* terms*/
+    .start_terms{
+        padding: 0.7rem;
+    }
+    .start_terms h3{
+        text-align: center;
+        background: #FF5733;
+        color: #fff;
+        width: 60%;
+        margin: auto;
+    }
+
+    /*Login*/
+    .login{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .login_img{
+        width: 100%;
+    }
+    .login_img img{
+        width: 100%;
+        height: 100%;
+    }
+    .login_data{
+        gap: 1rem;
+        padding: 0.5rem 0.7rem;
+    }
+    .login_data img{
+        width: 50%;
+    }
+    .login_data h2{
+        font-size: 20px;
+    }
+    .login_data h4{
+        font-size: 15px;
+    }
+    .log_btn{
+        width: 100%;
+    }
+    .log_text{
+        margin-top: 2rem !important;
+    }
+
+    /*footer*/
+    .footer{
+        margin-top: 1.5rem;
+        padding: 10px 0 70px 0;
+        height: 70px;
+        margin: auto;
+    }
+    .navigations{
+        font-size: 15px;
+    }
+    .each_nav i{
+        font-size: 20px!important;
+    }
+    .each_nav p, .tasks_btn p{
+        font-size: 10px!important;
+        font-family: "Montserrat", sans-serif ;
+    }
+
+    .tasks_table {
+        width: 360px!important;
+    }
+    .hints{
+        margin-top: -8rem !important;
+    }
+
+    /* .major_profiles span{
+        font-size: 16px!important;
+    } */
+
+    .task_gif{
+        max-width: 65% !important;
+        margin-top: 50px;
+    }
+
+    .arrow_image {
+        width: 9px;
+    }
+
+    .logout_alone a h4{
+        font-size: 14px !important;
+    }
+
+    .levels_img{
+        display: block;
+        width: 100%;
+    }
+
+
+
+    #preloader, #preloader2, #preloader3 {
+        height: 1200px!important;
+
+    }
+
+}
