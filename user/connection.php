@@ -3,9 +3,9 @@
 // Defining constant php variable for local host
 
 define('DB_host', 'localhost');
-define('DB_username', 'u497958722_filmssupply');
-define('DB_password', 'Filmssupply123456789@');
-define('DB_name', 'u497958722_filmssupply');
+define('DB_username', 'root');
+define('DB_password', '');
+define('DB_name', 'filmssupply');
 $conn = mysqli_connect(DB_host, DB_username, DB_password, DB_name);
 
 
