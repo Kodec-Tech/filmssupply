@@ -31,7 +31,7 @@
     display: inline-block;
     position: absolute;
     right: 100%;
-    animation: moveText 10s linear infinite;
+    animation: moveText 12s linear infinite;
 }
 
 @keyframes moveText {
@@ -118,9 +118,10 @@ header .container{
 .dropdown-content.active {
     display: grid;
     grid-template-columns: repeat(3, 1fr) !important;
-    column-gap: 0.3rem;
-    row-gap: 3rem;
-    /* height: 500px; */
+    justify-content: center;
+    align-items: center;
+    column-gap: 1px;
+    row-gap: 1.5rem;
     overflow-y: scroll;
 }
 /*flexed single movie*/
@@ -130,9 +131,11 @@ header .container{
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
+    width: 55%;
+    margin: auto;
 }
 .movie img{
-    width: 80%;
+    width: 100%;
 }
 .movie p{
     font-size: 15px!important;
@@ -140,7 +143,16 @@ header .container{
     margin-bottom: -8px;
 }
 .stars{
-    margin-top: -5px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.stars i{
+    font-size: 15px;
+}
+.stars h5{
+    margin-top: 8px;
 }
 .movie i{
     color: #fff;
@@ -149,7 +161,7 @@ header .container{
 /*PROFILE PAGE*/
 
 
-.profile {
+/* .profile {
     position: relative;
     width: 100%;
     background: url(../images/img/bgprofile.png) ;
@@ -157,22 +169,22 @@ header .container{
     background-repeat: no-repeat;
     background-position: center;
     
-}
+} */
 
-  .profile::before {
+  /* .profile::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(30, 1, 1, 0.4); /* White overlay with 50% opacity */
+    background: rgba(30, 1, 1, 0.4);  White overlay with 50% opacity 
     z-index: 1;
-  }
+  } */
   .profile-content{
     z-index: 2;
     position: relative;
-    padding: 30px;
+    padding: 20px;
     
   }
 /* .profile{
@@ -204,7 +216,7 @@ header .container{
     width: 30px !important;
 }
 .profile h4{
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 .profile p i{
     font-size: 30px;
@@ -272,7 +284,10 @@ header .container{
     text-align: start;
 }
 .single_major_profiles h2{
-    margin: 2rem 0;
+    margin: 0.5rem 0;
+    padding-top: 5px;
+    color: #fff;
+    font-weight: bolder;
 }
 /* .profile_option{
     margin-top: 1.5rem;
@@ -316,10 +331,10 @@ header .container{
     background: rgba(0,0,0,0.4);
     border: 1px rgba(255, 255, 255, 0.8) outset;
 }
-.tasks_section{
+/* .tasks_section{
     background: url('../images/img/bg.png') top no-repeat;
     background-size: auto;
-}
+} */
 .all_tasks_menu .dropdown-item:hover{
     background: none;
 }
@@ -360,7 +375,8 @@ header .container{
 }
 
 .profile_option a {
-    padding: 15px 8px;
+    padding: 10px 8px;
+    padding-bottom: 1px;
 }
 
 .profile_option a p{
@@ -506,12 +522,9 @@ header .container{
 }
 
 .description h3{
-    
     width: 25%;
     text-align: left;
-    
     font-size: 14px;
-   
 }
 .description ol li{
     list-style-type: decimal;
@@ -759,7 +772,7 @@ header .container{
     align-items: center;
 }
 .card_boy h5 span{
-    color: #DAF7A6;
+    color: #772a38;
 }
 .card_boy h5, .card_boy2 h5{
     font-size: 14px !important;
@@ -785,10 +798,10 @@ header .container{
 }
 .history_card2 img{
     width: 70%;
-    height: 170px
+    height: 130px
 }
 .movie_title{
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: -2px;
 }
 .hcard_stars i{
@@ -807,12 +820,33 @@ header .container{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background: url('../images/img/bgprofile.png') top center no-repeat;
-    background-size: 40% 50%; */
-    gap: 2rem;
-
     position: relative;
 }
+
+
+.zoom_tasks{
+    transform: scale(0.6);
+    margin-top: -150px;
+}
+
+.zoom_modal{
+    transform: scale(0.8);
+    margin-top: -40px;
+}
+
+.zoom_profile{
+    transform: scale(0.6);
+    margin-top: -180px;
+}
+.zoom_dash{
+    transform: scale(0.6);
+    margin-top: -150px;
+}
+
+
+
+
+
 
 .task_gif{
     max-width: 30% !important;
@@ -837,7 +871,7 @@ header .container{
     width: 30%;
 }
 .hints{
-    margin-top: -6rem !important;
+    margin-top: -8rem !important;
 }
 @keyframes start_task {
     0%{
@@ -854,17 +888,21 @@ header .container{
 .tasks_tab .active{
     background: #772a38;
     animation: start_task 1.5s infinite;
+    color: #fff;
 }
 .tasks_tab .active:active{
     background: #772a38 !important;
+    color: #fff;
 }
 .tasks_dropdown.active{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: space-between;
+    align-items: center;
     color: #fff;
-    row-gap: 1.5rem;
+
+
+    height: 500px!important;
 }
 
 /* ----- MODAL SECTION HERE ----*/
@@ -876,17 +914,30 @@ header .container{
 /* .modal {
     --bs-modal-margin: 5.75rem;
 } */
+
+.modal-backdrop.show {
+    opacity: var(--bs-backdrop-opacity);
+    z-index: -2;
+}
+
+
+
+
+
+
 .modal-content{
     background: rgba(0,0,0,0.7);
+    z-index: 10;
 }
 .modal-header{
     color: #fff;
     font-size: 20px;
     font-weight: bold;
     border-bottom: solid 2px #772a38;
+    padding: 5px !important;
 }
 .modal-header h5{
-    font-size: 20px;
+    font-size: 15px;
 }
 .modal-footer{
     color: #fff;
@@ -898,7 +949,7 @@ header .container{
     visibility: hidden;
 }
 .close_task h1{
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     border: solid 1.5px #fff;
     background: none;
@@ -930,6 +981,7 @@ header .container{
     justify-content: space-between;
     align-items: center;
     font-size: 16px;
+    margin-top: -20px;
 }
 .info2{
     color: #772a38;

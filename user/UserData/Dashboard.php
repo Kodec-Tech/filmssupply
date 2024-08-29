@@ -35,7 +35,7 @@
     include"header.php";
     ?>
 
-        <main style="margin-top:20px!important;">
+        <main style="margin-top:30px!important">
         <h1 class="container" style="font-size: 14px; color: #fff; border-bottom: none!important;"><?php echo  getGreeting().", ".ucfirst($username) ?> </h1>
             
             <!-- this is a notice -->
@@ -43,7 +43,7 @@
                 <i class="bi bi-bell-fill bell"></i>
                 <div class="moving-text">Welcome to FILMSUPPLY, if you need more information, please contact online customer service. Thank you</div>
             </div>
-            <div class="container contents_body">
+            <div class="container contents_body zoom_dash">
                 <!-- this is hero GIF -->
                 <!-- <img src="../images/gif/index-movie.gif" alt=""class="hero-gif"> -->
                  <img src="../images/img/levels.jpeg" alt="" class="levels_img">
@@ -61,64 +61,57 @@
                         <!-- grid these men -->
                         <div class="movie">
                             <!-- flex each movie -->
-                            <img src="../images/img/movie4.jpeg" alt="movie1" class="rounded">
-                            <p>Ghosted</p>
-                            <i class="bi bi-star-fill" style="font-size: 14px!important;">9</i>
-                            <!-- <div class="stars">
+                            <img src="../images/img/coming_soon1.jfif" alt="movie1" class="rounded">
+                            <p>Suerja 42</p>
+                            <div class="stars">
                                 <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
+                                <h5>3</h5>
+                            </div>
                         </div>
                         <div class="movie">
                             <!-- flex each movie -->
-                            <img src="../images/img/movie2.jpg" alt="movie1" class="rounded">
-                            <p>The Crow</p>
-                            <i class="bi bi-star-fill" style="font-size: 14px!important;">8</i>
-                            <!-- <div class="stars">
+                            <img src="../images/img/coming_soon2.jfif" alt="movie1" class="rounded">
+                            <p>Imaginary</p>
+                            <div class="stars">
                                 <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
+                                <h5>2</h5>
+                            </div>
                         </div>
                         <div class="movie">
                             <!-- flex each movie -->
-                            <img src="../images/img/movie3.jpg" alt="movie1" class="rounded">
-                            <p>venom 3</p>
-                            <i class="bi bi-star-fill" style="font-size: 14px!important;">6</i>
-                            <!-- <div class="stars">
+                            <img src="../images/img/coming_soon3.jfif" alt="movie1" class="rounded">
+                            <p>The Up FIles</p>
+                            <div class="stars">
                                 <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
-                        </div>
-                       
-                        <div class="movie">
-                            <!-- flex each movie -->
-                            <img src="../images/img/movie1.jpg" alt="movie1" class="rounded">
-                            <p>land of bad</p>
-                            <i class="bi bi-star-fill" style="font-size: 14px!important;">5</i>
-                            <!-- <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
+                                <h5>5</h5>
+                            </div>
                         </div>
                         <div class="movie">
                             <!-- flex each movie -->
-                            <img src="../images/img/movie5.jpg" alt="movie1" class="rounded">
-                            <p>deadpool 3</p>
-                            <i class="bi bi-star-fill" style="font-size: 14px!important;">5</i>
-                            <!-- <div class="stars">
+                            <img src="../images/img/coming_soon4.jfif" alt="movie1" class="rounded">
+                            <p>Bad Boys</p>
+                            <div class="stars">
                                 <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
+                                <h5>4</h5>
+                            </div>
                         </div>
                         <div class="movie">
                             <!-- flex each movie -->
-                            <img src="../images/img/movie6.jpg" alt="movie1" class="rounded">
-                            <p>the red one</p>
-                            <i class="bi bi-star-fill" style="font-size: 14px!important;">5</i>
-                            <!-- <div class="stars">
+                            <img src="../images/img/coming_soon5.png" alt="movie1" class="rounded">
+                            <p>Kraven</p>
+                            <div class="stars">
                                 <i class="bi bi-star-fill"></i>
+                                <h5>3</h5>
+                            </div>
+                        </div>
+                        <div class="movie">
+                            <!-- flex each movie -->
+                            <img src="../images/img/coming_soon6.jpg" alt="movie1" class="rounded">
+                            <p>Kanguva</p>
+                            <div class="stars">
                                 <i class="bi bi-star-fill"></i>
-                            </div> -->
+                                <h5>5</h5>
+                            </div>
                         </div>
                        
                         
@@ -159,65 +152,11 @@
                     <!-- content 3 items -->
                     <div class="dropdown-content" id="content3">
                         <!-- grid these men -->
-                        <div class="movie">
-                            <!-- flex each movie -->
-                            <img src="../images/img/coming_soon1.jfif" alt="movie1" class="rounded">
-                            <p>Suerja 42</p>
-                            <!-- <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
-                        </div>
-                        <div class="movie">
-                            <!-- flex each movie -->
-                            <img src="../images/img/coming_soon2.jfif" alt="movie1" class="rounded">
-                            <p>Imaginary</p>
-                            <!-- <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
-                        </div>
-                        <div class="movie">
-                            <!-- flex each movie -->
-                            <img src="../images/img/coming_soon3.jfif" alt="movie1" class="rounded">
-                            <p>The Up FIles</p>
-                            <!-- <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
-                        </div>
-                        <div class="movie">
-                            <!-- flex each movie -->
-                            <img src="../images/img/coming_soon4.jfif" alt="movie1" class="rounded">
-                            <p>Bad Boys</p>
-                            <!-- <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
-                        </div>
-                        <div class="movie">
-                            <!-- flex each movie -->
-                            <img src="../images/img/coming_soon5.png" alt="movie1" class="rounded">
-                            <p>Kraven</p>
-                            <!-- <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
-                        </div>
-                        <div class="movie">
-                            <!-- flex each movie -->
-                            <img src="../images/img/coming_soon6.jpg" alt="movie1" class="rounded">
-                            <p>Kanguva</p>
-                            <!-- <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
-                        </div>
+                        
                         <div class="movie">
                             <!-- flex each movie -->
                             <img src="../images/img/comin_soon7.jfif" alt="movie1" class="rounded">
-                            <p>Layers of Lies</p>
+                            <p>Lies</p>
                             <!-- <div class="stars">
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
