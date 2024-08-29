@@ -13,6 +13,10 @@ if (!isset($_SESSION['username'])) {
 }
 $username = $_SESSION['username'];
 
+if($isAdmin == 'Super'){
+  header("Location: ../../admin/Dashboard.php");
+}
+
 //this file since is included here, will check for all the urls to see if access is denied
 include_once ("../threat_response.php");
 
