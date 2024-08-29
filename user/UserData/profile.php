@@ -42,16 +42,17 @@
 ></script>
 
 
-      </head>
+</head>
 
-    <body style="background-image: url('../../user/images/img/bgprofile.png'); background-repeat: no-repeat; background-size: 100% 100%; background-position: top center; width: 100%; height: 100%;">
+
+ <body class="profile_body">
 
     
 <?php
 include("header.php");
 ?>
 
-        <main class="profilepage">
+        <main class="zoom_profile">
             <div class="container  text-center  text-light">
                 
                 <div class="profile">

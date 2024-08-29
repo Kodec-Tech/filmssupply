@@ -64,6 +64,7 @@
     }
     .earn_wallet{
         gap: 20px;
+        margin: 10px;
     }
     .assessment{
         width: 100%;
@@ -291,8 +292,18 @@
 
 
     .zoom_tasks{
-        transform: scale(1);
+        transform: none;
         margin-top: -20px;
+    }
+
+    .zoom_modal{
+        transform: none;
+        margin-top: 70px;
+    }
+
+    .zoom_profile{
+        transform: none;
+        margin-top: 10px;
     }
 
 

@@ -161,7 +161,7 @@ header .container{
 /*PROFILE PAGE*/
 
 
-.profile {
+/* .profile {
     position: relative;
     width: 100%;
     background: url(../images/img/bgprofile.png) ;
@@ -169,22 +169,22 @@ header .container{
     background-repeat: no-repeat;
     background-position: center;
     
-}
+} */
 
-  .profile::before {
+  /* .profile::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(30, 1, 1, 0.4); /* White overlay with 50% opacity */
+    background: rgba(30, 1, 1, 0.4);  White overlay with 50% opacity 
     z-index: 1;
-  }
+  } */
   .profile-content{
     z-index: 2;
     position: relative;
-    padding: 30px;
+    padding: 20px;
     
   }
 /* .profile{
@@ -216,7 +216,7 @@ header .container{
     width: 30px !important;
 }
 .profile h4{
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 .profile p i{
     font-size: 30px;
@@ -284,7 +284,9 @@ header .container{
     text-align: start;
 }
 .single_major_profiles h2{
-    margin: 2rem 0;
+    margin: 0.5rem 0;
+    color: #fff;
+    font-weight: bolder;
 }
 /* .profile_option{
     margin-top: 1.5rem;
@@ -372,7 +374,8 @@ header .container{
 }
 
 .profile_option a {
-    padding: 15px 8px;
+    padding: 10px 8px;
+    padding-bottom: 1px;
 }
 
 .profile_option a p{
@@ -794,7 +797,7 @@ header .container{
 }
 .history_card2 img{
     width: 70%;
-    height: 170px
+    height: 130px
 }
 .movie_title{
     margin-top: 10px;
@@ -828,6 +831,11 @@ header .container{
 .zoom_modal{
     transform: scale(0.8);
     margin-top: -40px;
+}
+
+.zoom_profile{
+    transform: scale(0.6);
+    margin-top: -180px;
 }
 
 
