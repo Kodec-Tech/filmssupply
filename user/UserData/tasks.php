@@ -49,12 +49,12 @@
     </style>
   </head>
 
-  <body style="padding:0!important">
+  <body class="tasks_body">
   <?php
         include "header.php";
         ?>
 
-    <main>
+    <main class="zoom_tasks">
         <div class="container tasks mt-3">
 
 
@@ -368,13 +368,13 @@ include("tasksModals.php");
                     </div>
 
                     <!-- these are the tab contents -->
-                    <div style="height: 500px!important;" class="dropdown-content active tasks_dropdown" id="content1">
+                    <div  class="dropdown-content active tasks_dropdown" id="content1">
                         <!-- flex-column these men -->
                          <!-- first info -->
                          <a href="terms.php"><h6>Reservation Rules</h6></a>
                          
                          <!-- second info -->
-                         <div class="tasks_info">
+                         <div class="tasks_info alone_info">
                             <h4>Trial Bonus: <?php echo $currency . number_format($bonus, 2); ?></h4>
                             
                          </div>
