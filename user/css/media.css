@@ -75,8 +75,9 @@
     .single_major_profiles h2{
         font-size: 20px;
     }
-    .profile_option a{
-        padding: 15px 8px;
+    .profile_option a {
+        padding: 10px 8px;
+        padding-bottom: 1px;
     }
     .profile_option a p{
         font-size: 20px !important;
