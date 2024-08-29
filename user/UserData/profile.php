@@ -44,7 +44,7 @@
 
       </head>
 
-    <body style="padding:0!important">
+    <body style="background-image: url('../../user/images/img/bgprofile.png'); background-repeat: no-repeat; background-size: 100% 100%; background-position: top center; width: 100%; height: 100%;">
 
     
 <?php

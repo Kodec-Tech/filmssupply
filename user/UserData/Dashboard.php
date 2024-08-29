@@ -29,7 +29,7 @@
         <link rel="shortcut icon" href="../images/img/icon.png" type="image/x-icon" />
       </head>
 
-    <body style="background-color: red;">
+    <body class="dashboard_body">
 
     <?php
     include"header.php";
@@ -82,7 +82,7 @@
                         <div class="movie">
                             <!-- flex each movie -->
                             <img src="../images/img/movie3.jpg" alt="movie1" class="rounded">
-                            <p>venom: the last dance</p>
+                            <p>venom 3</p>
                             <i class="bi bi-star-fill" style="font-size: 14px!important;">6</i>
                             <!-- <div class="stars">
                                 <i class="bi bi-star-fill"></i>
@@ -103,7 +103,7 @@
                         <div class="movie">
                             <!-- flex each movie -->
                             <img src="../images/img/movie5.jpg" alt="movie1" class="rounded">
-                            <p>deadpool x wolverine</p>
+                            <p>deadpool 3</p>
                             <i class="bi bi-star-fill" style="font-size: 14px!important;">5</i>
                             <!-- <div class="stars">
                                 <i class="bi bi-star-fill"></i>
