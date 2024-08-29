@@ -35,7 +35,7 @@
     include"header.php";
     ?>
 
-        <main style="margin-top:20px!important;">
+        <main style="margin-top:30px!important">
         <h1 class="container" style="font-size: 14px; color: #fff; border-bottom: none!important;"><?php echo  getGreeting().", ".ucfirst($username) ?> </h1>
             
             <!-- this is a notice -->
@@ -43,7 +43,7 @@
                 <i class="bi bi-bell-fill bell"></i>
                 <div class="moving-text">Welcome to FILMSUPPLY, if you need more information, please contact online customer service. Thank you</div>
             </div>
-            <div class="container contents_body">
+            <div class="container contents_body zoom_dash">
                 <!-- this is hero GIF -->
                 <!-- <img src="../images/gif/index-movie.gif" alt=""class="hero-gif"> -->
                  <img src="../images/img/levels.jpeg" alt="" class="levels_img">

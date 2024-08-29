@@ -838,6 +838,11 @@ header .container{
     transform: scale(0.6);
     margin-top: -180px;
 }
+.zoom_dash{
+    transform: scale(0.6);
+    margin-top: -150px;
+}
+
 
 
 
