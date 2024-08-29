@@ -16,7 +16,7 @@ if (isset($_SESSION['username'])) {
     if (isset($_POST['login'])) {
         $username = mysqli_real_escape_string($conn, $_POST['username']);
         $password = $_POST['password'];
-        $hashPassword = md5($password);
+        // $hashPassword = md5($password);
         $password_err = $username_err = "";
 
         if (empty(trim($_POST['password'])) && empty(trim($_POST['username']))) {
@@ -34,7 +34,7 @@ if (isset($_SESSION['username'])) {
             exit();
         } else {
 
-            $query = "SELECT ID, Username, Password, AccountNo, Status, State FROM login WHERE Username= '{$username}' AND Password= '{$hashPassword}'";
+            $query = "SELECT * FROM login WHERE Username= '{$username}' ";
 
             $result = mysqli_query($conn, $query) or die("Query Fail.");
 
@@ -44,47 +44,51 @@ if (isset($_SESSION['username'])) {
 
                     $status = $row['Status'];
                     $state = $row['State'];
+                    $DbPassword = trim($row['Password']);
 
-                    if ($state == 0) {
-                        if ($status == "Active") {
+                    if (password_verify($password, $DbPassword)) {
 
-                            //check for maintenance mode
-                            maintenanceMode($maintenance_mode);
+                        if ($state == 0) {
+                            if ($status == "Active") {
 
-                            session_start();
-                            $_SESSION['username'] = $row['Username'];
-                            $_SESSION['verifyCode'] = $row['Username'];
-                            // $_SESSION['id'] = $row['ID'];
-                            $_SESSION['accountNo'] = $row['AccountNo'];
-                            //For 2factor authentication 
-                            //header("Location: ../user/twostepverify.php");
-                            //header to dashboard directly
+                                //check for maintenance mode
+                                maintenanceMode($maintenance_mode);
 
-
-
-                            check_if_banned(true, true, $conn);
-                            header("location: ../user/UserData/Dashboard.php");
-                            mysqli_close($conn);
-                        } else {
+                                session_start();
+                                $_SESSION['username'] = $row['Username'];
+                                $_SESSION['verifyCode'] = $row['Username'];
+                                // $_SESSION['id'] = $row['ID'];
+                                $_SESSION['accountNo'] = $row['AccountNo'];
+                                //For 2factor authentication 
+                                //header("Location: ../user/twostepverify.php");
+                                //header to dashboard directly
 
 
-                            header("Location: ../user/login.php?Account=deactivated");
-                            exit();
-                        }
-                    } else if ($state == 1) {
 
-                        if ($status == "Super") {
+                                check_if_banned(true, true, $conn);
+                                header("location: ../user/UserData/Dashboard.php");
+                                mysqli_close($conn);
+                            } else {
 
 
-                            $_SESSION['username'] = $row['Username'];
-                            // $_SESSION['id'] = $row['ID'];
-                            session_start();
-                            $_SESSION['accountNo'] = $row['AccountNo'];
-                            header("Location: ../admin/Dashboard.php");
-                            mysqli_close($conn);
-                        } else {
-                            header("Location: ../user/login.php?error=Account not Activated");
-                            exit();
+                                header("Location: ../user/login.php?Account=deactivated");
+                                exit();
+                            }
+                        } else if ($state == 1) {
+
+                            if ($status == "Super") {
+
+
+                                $_SESSION['username'] = $row['Username'];
+                                // $_SESSION['id'] = $row['ID'];
+                                session_start();
+                                $_SESSION['accountNo'] = $row['AccountNo'];
+                                header("Location: ../admin/Dashboard.php");
+                                mysqli_close($conn);
+                            } else {
+                                header("Location: ../user/login.php?error=Account not Activated");
+                                exit();
+                            }
                         }
                     }
                 }
@@ -233,26 +237,26 @@ if (isset($_SESSION['username'])) {
         // Valid Alert for Login
         <?php if (isset($_GET['Account'])) { ?>
             swal({
-  title: "Account Deactivated",
-  text: "Your account has been deactivated. Please contact support to resolve the issue and regain access.",
-//   icon: "https://cdn-icons-png.flaticon.com/512/15498/15498359.png",
+                title: "Account Deactivated",
+                text: "Your account has been deactivated. Please contact support to resolve the issue and regain access.",
+                //   icon: "https://cdn-icons-png.flaticon.com/512/15498/15498359.png",
 
-  buttons: {
-    cancel: {
-      text: "Okay",
-      value: null,
-      visible: true,
-      className: "swal-button--cancel",
-      closeModal: true,
-    },
-  
-  },
+                buttons: {
+                    cancel: {
+                        text: "Okay",
+                        value: null,
+                        visible: true,
+                        className: "swal-button--cancel",
+                        closeModal: true,
+                    },
 
-  className: "swal-custom",  // Optional custom class for further styling
-  dangerMode: true, // Adds a red button style for 'confirm' button, suitable for warnings
-  closeOnClickOutside: false,  // Prevents closing the alert when clicking outside
-  closeOnEsc: false,           // Prevents closing the alert on pressing 'Esc' key
-});
+                },
+
+                className: "swal-custom", // Optional custom class for further styling
+                dangerMode: true, // Adds a red button style for 'confirm' button, suitable for warnings
+                closeOnClickOutside: false, // Prevents closing the alert when clicking outside
+                closeOnEsc: false, // Prevents closing the alert on pressing 'Esc' key
+            });
 
 
 

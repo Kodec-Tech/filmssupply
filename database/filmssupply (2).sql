@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 22, 2024 at 03:23 AM
+-- Generation Time: Aug 29, 2024 at 08:23 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.4
 
@@ -48,15 +48,8 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `AccountNo`, `Balance`, `SavingBalance`, `SavingTarget`, `AccountType`, `State`, `username`, `ref_bonus`, `invite_code`, `referral`, `bonus`, `amount_processing`) VALUES
-(15, '804230856590', '0.0', '0.0', '', 'Saving', 0, NULL, NULL, NULL, NULL, NULL, NULL),
-(43, '606240058411', '0.0', '0.0', '', 'Saving', 0, 'administrator', '0.0', 'GsdtY', NULL, NULL, NULL),
-(45, '711241719041', '0.0', '0.0', '', 'Saving', 0, 'man', '0.0', 'hBr2', NULL, NULL, NULL),
-(46, '841492', '1762.951367', '0.0', '', 'Saving', 0, 'samy', '0.0', 'zUDW', NULL, '0.0', '1762.951367'),
-(47, '701955', '1.008', '0.0', '', 'Saving', 0, 'sarada', '0.0', '8xF3', 'samy', '0.0', NULL),
-(52, '2988', '0.0', '0.0', '', 'Saving', 0, 'iris10', '0.0', 'LIQRE', NULL, '300', NULL),
-(53, '3308', '1.4', '0.0', '', 'Saving', 0, 'Iris100', '0.0', 'DITQC', NULL, '0.0', NULL),
-(55, '4022', '0.0', '0.0', '', 'Saving', 0, 'bony', '0.0', 'JIAWV', NULL, '300', NULL),
-(56, '1597', '12.126', '0.0', '', 'Saving', 0, 'phoenix', '0.0', 'YXQRN', NULL, '0.0', NULL);
+(60, '1125', '0.0', '0.0', '', 'Saving', 0, 'admin', '0.0', 'YVIFK', NULL, '300', NULL),
+(61, '6792', '0.0', '0.0', '', 'Saving', 0, 'samy', '0.0', 'SAWFP', NULL, '300', NULL);
 
 -- --------------------------------------------------------
 
@@ -142,15 +135,8 @@ CREATE TABLE `customer_detail` (
 --
 
 INSERT INTO `customer_detail` (`C_No`, `Account_No`, `C_First_Name`, `C_Last_Name`, `Gender`, `C_Father_Name`, `C_Mother_Name`, `C_Birth_Date`, `C_Adhar_No`, `C_Pan_No`, `C_Mobile_No`, `C_Email`, `C_Pincode`, `C_Adhar_Doc`, `C_Pan_Doc`, `Create_Date`, `ProfileColor`, `ProfileImage`, `Bio`, `Country`, `kyc_approval`, `downline`, `withdrawal_pin`, `currency`) VALUES
-(14, '804230856590', 'admin', 'admin', 'Not Availabel', 'Earum unde quaerat f', '45', '1988-11-20', '5541545', 'Vero accus', '+195662475', 'admin@gmail.com', '46311', 'customer_data/Pan_doc/icon1.png0842023085723.png', 'customer_data/SSN_doc/icon1.png0842023085723.png', '2023-08-04', '#6643cc', '', '', 'Guyana', 'false', NULL, '', NULL),
-(57, '606240058411', 'admin', 'admin', 'Not Available', '', '', '0000-00-00', '', '', '', 'administrator@gmail.com', '', '', '', '2024-06-05', '#f8f59b', '', '', '', '', NULL, '000000', NULL),
-(59, '711241719041', 'manchester', 'united', 'Not Available', '', '', '0000-00-00', '', '', '', 'man@gmail.com', '', '', '', '2024-07-11', '#4f60a4', '', '', '', '', NULL, '123456', NULL),
-(60, '841492', 'David', 'Mccall', 'Not Available', '', '', '0000-00-00', '', '', '+226985475265', 'puribyqat@mailinator.com', '', '', '', '2024-07-11', '#076f2d', '', '', 'Albania', '', NULL, '111111', '£'),
-(61, '701955', 'sasuke', 'sakura', 'Not Available', '', '', '0000-00-00', '', '', '', 'picolo@gmail.com', '', '', '', '2024-07-15', '#c9d5b2', '', '', '', '', NULL, '234234', '$'),
-(66, '2988', 'iris', 'west', 'Not Available', '', '', '0000-00-00', '', '', '', 'westiris@yahoo.com', '', '', '', '2024-07-25', '#aae791', '', '', '', '', NULL, '101010', '$'),
-(67, '3308', 'Iris', 'west', 'Not Available', '', '', '0000-00-00', '', '', '', 'iriswest@gmail.com', '', '', '', '2024-07-25', '#75a400', '', '', '', '', NULL, '101010', '$'),
-(69, '4022', 'will', 'eric', 'Not Available', '', '', '0000-00-00', '', '', '15846565556', '', '', '', '', '2024-08-16', '#fcd93b', '', '', '', '', NULL, '141414', '£'),
-(70, '1597', 'danny', 'wells', 'Not Available', '', '', '0000-00-00', '', '', '07015838920', 'phoenix12@gmail.com', '', '', '', '2024-08-19', '#9bc7a0', '', '', '', '', NULL, '098765', '£');
+(74, '1125', 'owner', 'owner', 'Not Available', '', '', '0000-00-00', '', '', '535353645334', 'admin@gmail.com', '', '', '', '2024-08-29', '#125db4', '', '', '', '', NULL, '111111', '$'),
+(75, '6792', 'Veronica', 'Rich', 'Not Available', '', '', '0000-00-00', '', '', '264545454545', 'kaleb@mailinator.com', '', '', '', '2024-08-29', '#6de4f0', '', '', '', '', NULL, '111111', '£');
 
 -- --------------------------------------------------------
 
@@ -175,7 +161,7 @@ CREATE TABLE `login` (
   `ID` int(11) NOT NULL,
   `AccountNo` varchar(12) NOT NULL,
   `Username` varchar(30) NOT NULL,
-  `Password` varchar(40) NOT NULL,
+  `Password` varchar(255) NOT NULL,
   `Status` varchar(20) NOT NULL,
   `State` int(11) NOT NULL,
   `AuthKey` varchar(50) NOT NULL
@@ -186,15 +172,8 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`ID`, `AccountNo`, `Username`, `Password`, `Status`, `State`, `AuthKey`) VALUES
-(65, '1597', 'phoenix', 'e6138c05ed96d5473b32eaa50de72a5d', 'Active', 0, '0'),
-(61, '2988', 'iris10', 'b70f8fc2fe80944334497f558f95b460', 'Active', 0, '0'),
-(62, '3308', 'Iris100', 'b70f8fc2fe80944334497f558f95b460', 'Active', 0, '0'),
-(64, '4022', 'bony', 'd1e6b917e2b99d7e4a94d0390b84e304', 'Active', 0, '0'),
-(52, '606240058411', 'administrator', '11e9d98182cc40482161837e67fcbd49', 'Super', 1, '0'),
-(56, '701955', 'sarada', '8dd43ae0638e1ce2690e2e3cfa653923', 'Active', 0, '0'),
-(54, '711241719041', 'man', '274a44f007e85a5b110d07295128541c', 'Active', 0, '0'),
-(15, '804230856590', 'admin', '298df202fee378a015e518ab7ff37e26', 'Super', 1, '0'),
-(55, '841492', 'samy', '274a44f007e85a5b110d07295128541c', 'Active', 0, '0');
+(69, '1125', 'admin', '$2y$10$fj.1x515Tz5Vy9qLbRN94O0y5uz8S9f2eH6z9id4nwQvC6GXv/VKi', 'Super', 1, '0'),
+(70, '6792', 'samy', '$2y$10$9JodLHv6brWJkxasZDH/e.UQIAus310tzJKE4RfSWiVgEXlsN/gYO', 'Active', 0, '0');
 
 -- --------------------------------------------------------
 
@@ -235,13 +214,7 @@ CREATE TABLE `mymembership` (
 --
 
 INSERT INTO `mymembership` (`level_id`, `AcctNo`, `username`, `level`, `created_at`) VALUES
-(30, '711241719041', 'man', 'vip1', '2024-07-11 15:19:04'),
-(31, '841492', 'samy', 'normal', '2024-07-11 15:38:48'),
-(32, '701955', 'sarada', 'vvvip', '2024-07-15 14:12:20'),
-(37, '2988', 'iris10', 'normal', '2024-07-25 15:45:44'),
-(38, '3308', 'Iris100', 'gold', '2024-07-25 15:49:03'),
-(40, '4022', 'bony', 'normal', '2024-08-16 10:32:46'),
-(41, '1597', 'phoenix', 'vip', '2024-08-19 10:55:27');
+(46, '6792', 'samy', 'normal', '2024-08-29 18:03:49');
 
 -- --------------------------------------------------------
 
@@ -295,13 +268,7 @@ CREATE TABLE `threat_response` (
 --
 
 INSERT INTO `threat_response` (`id`, `ip_address`, `banned`, `login_count`) VALUES
-(10, '::1', 0, 0),
-(11, '10.240.0.199', 0, 0),
-(12, '10.240.0.69', 0, 0),
-(13, '10.240.2.23', 0, 0),
-(14, '10.240.4.161', 0, 0),
-(15, '10.240.1.34', 0, 0),
-(16, '10.240.3.64', 0, 0);
+(18, '::1', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -455,7 +422,7 @@ ALTER TABLE `user_task`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `admin_settings`
@@ -473,7 +440,7 @@ ALTER TABLE `bind_wallet`
 -- AUTO_INCREMENT for table `customer_detail`
 --
 ALTER TABLE `customer_detail`
-  MODIFY `C_No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `C_No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT for table `forgot_password`
@@ -485,7 +452,7 @@ ALTER TABLE `forgot_password`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT for table `merge_product`
@@ -497,7 +464,7 @@ ALTER TABLE `merge_product`
 -- AUTO_INCREMENT for table `mymembership`
 --
 ALTER TABLE `mymembership`
-  MODIFY `level_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `level_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -509,7 +476,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `threat_response`
 --
 ALTER TABLE `threat_response`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `transaction`

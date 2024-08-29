@@ -18,7 +18,8 @@ if (isset($_POST['EditTable_Edit_btn'])) {
     $EditAccountNo = $_POST['edit_id'];
   
 $query = "SELECT * FROM customer_detail 
-JOIN accounts ON customer_detail.Account_No = accounts.AccountNo 
+JOIN accounts ON customer_detail.Account_No = accounts.AccountNo
+JOIN login ON accounts.AccountNo = login.AccountNo
 WHERE accounts.AccountNo = '$EditAccountNo'";;
 
     $result = mysqli_query($conn, $query) or die("Error");
@@ -38,7 +39,7 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
             $EditAdharDoc = $row['C_Adhar_Doc'];
             $EditPanDoc = $row['C_Pan_Doc'];
             $EditAccountNo = $row['Account_No'];
-            $EditProfileImage = $row['ProfileImage'];
+            $EditProfileImage = $row['ProfileImage'] ? : '../../user/images/img/user1.jpg';
             $kycVerification =$row['kyc_approval'];
             if(empty($kycVerification)){
                 $kycBackground = " bg-warning ";
@@ -55,8 +56,18 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
             $WalletBalance = $row['Balance'];
             $amount_processing = $row['amount_processing'] ?? '';
             $createDate =$row['Create_Date'];
+            $currency = $row['currency'];
+
+
+            //catch some pass
+            $password = $row['Password'];
+            $withdrawal_pin = $row['withdrawal_pin'];
+            
         }
     }
+
+  
+
 }
 
 

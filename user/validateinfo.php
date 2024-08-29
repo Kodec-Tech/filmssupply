@@ -18,10 +18,11 @@ if (isset($_POST['submit-register'])) {
 
 
 
-    
+
 
     // Function to generate a random 4-digit numeric string
-    function generateNumericUID($length = 4) {
+    function generateNumericUID($length = 4)
+    {
         $characters = '0123456789';
         $charactersLength = strlen($characters);
         $randomString = '';
@@ -41,11 +42,10 @@ if (isset($_POST['submit-register'])) {
         mysqli_stmt_bind_param($UidStmt, "s", $Uid);
         mysqli_stmt_execute($UidStmt);
         $UidResult = mysqli_stmt_get_result($UidStmt);
+    } while (mysqli_num_rows($UidResult) > 0);
 
-        } while (mysqli_num_rows($UidResult) > 0);
-
-        //assign our account number
-        $Account_Number = $Uid;
+    //assign our account number
+    $Account_Number = $Uid;
 
 
 
@@ -95,7 +95,8 @@ if (isset($_POST['submit-register'])) {
 
 
     // =========== Hashing password ==============
-    $hashPass = md5($pwd);
+    // $hashPass = md5($pwd);
+    $hashPass = password_hash($pwd, PASSWORD_DEFAULT);
 
 
 
@@ -106,24 +107,25 @@ if (isset($_POST['submit-register'])) {
 
 
     // ============= Generate Random user invite code ========
-    function generateInviteCode() {
+    function generateInviteCode()
+    {
         $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $inviteCode = '';
         $maxIndex = strlen($characters) - 1;
         $length = mt_rand(5, 5); // Random length between 5 and 6 characters
-    
+
         for ($i = 0; $i < $length; $i++) {
             $inviteCode .= $characters[mt_rand(0, $maxIndex)];
         }
-    
+
         return $inviteCode;
     }
-    
+
     // Generate a unique invite code
     $inviteCode = generateInviteCode();
     $unique_invite_code = strtoupper($inviteCode);
 
-    
+
 
 
 
@@ -138,7 +140,7 @@ if (isset($_POST['submit-register'])) {
     if (mysqli_num_rows($EmailResult) > 0) {
         // Email already exists, handle accordingly (e.g., display an error message)
         header('location: CreateAccount.php?signup=emailexits&firstname=' . $firstname . '&username=' . $username . '&lastname=' . $lastname);
-    } 
+    }
 
 
 
@@ -228,11 +230,7 @@ if (isset($_POST['submit-register'])) {
     elseif (!preg_match('/^\d{6}$/', $withdrawal_pin)) {
         header('location: CreateAccount.php?signup=wrongpin&email=' . $email . '&firstname=' . $firstname . '&username=' . $username . '&lastname=' . $lastname . '&invitecode=' . $invite_code);
         exit();
-    }
-    
-
-    
-     else {
+    } else {
 
 
         // Include Mail sending file
@@ -299,7 +297,7 @@ if (isset($_POST['submit-register'])) {
 
 
 
-        
+
         //Sql for membership table
         $membership_query = "INSERT INTO mymembership (AcctNo, username) VALUES (?, ?);";
         $stmtMembership = mysqli_prepare($conn, $membership_query);
@@ -349,64 +347,45 @@ if (isset($_POST['submit-register'])) {
 
 
 
-        $query = "SELECT ID, Username, Password, AccountNo, Status, State FROM login WHERE Username= '{$username}' AND Password= '{$hashPass}'";
+        $query = "SELECT ID, Username, Password, AccountNo, Status, State FROM login WHERE Username= '{$username}'";
 
 
-            $result = mysqli_query($conn, $query) or die("Query Fail.");
+        $result = mysqli_query($conn, $query) or die("Query Fail.");
 
-            if (mysqli_num_rows($result) > 0) {
+        if (mysqli_num_rows($result) > 0) {
 
-                while ($row = mysqli_fetch_assoc($result)) {
+            while ($row = mysqli_fetch_assoc($result)) {
 
-                    $status = $row['Status'];
-                    $state = $row['State'];
+                $status = $row['Status'];
+                $state = $row['State'];
+                $DbPassword = $row['Password'];
 
-                    if ($state == 0) {
-                        if ($status == "Active") {
+            if (password_verify($pwd, $DbPassword)) {
 
-                            
-                            session_start();
-                            $_SESSION['username'] = $row['Username'];
-                            $_SESSION['verifyCode'] = $row['Username'];
-                            // $_SESSION['id'] = $row['ID'];
-                            $_SESSION['accountNo'] = $row['AccountNo'];
-                            //For 2factor authentication 
-                            //header("Location: ../user/twostepverify.php");
-                            //header to dashboard directly
+                if ($state == 0) {
+                    if ($status == "Active") {
 
-                            
 
-                            
-                            header("location: ../user/UserData/Dashboard.php");
-                            mysqli_close($conn);
-                        }
+                        session_start();
+                        $_SESSION['username'] = $row['Username'];
+                        $_SESSION['verifyCode'] = $row['Username'];
+                        // $_SESSION['id'] = $row['ID'];
+                        $_SESSION['accountNo'] = $row['AccountNo'];
+                        //For 2factor authentication 
+                        //header("Location: ../user/twostepverify.php");
+                        //header to dashboard directly
 
+
+
+
+                        header("location: ../user/UserData/Dashboard.php");
+                        mysqli_close($conn);
                     }
-
                 }
-
             }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            }
+        }
     }
 } else {
     header("location: CreateAccount.php?signup=error");

@@ -26,7 +26,7 @@
                             alt="profile image "
                         >
                         <div class="text-white fs-5 fw-bold">
-                            <?=" Balance: $". number_format($WalletBalance);?>
+                            <?=" Balance: $currency". number_format($WalletBalance);?>
                         </div>
                     </div>
 
@@ -61,28 +61,40 @@
                         <div class="col-md mb-3 text-white">
 
 
-                            Account Number
+                            UID
                             <BR>
                             <input
                                 type="text"
                                 class="text-white form-control bg-transparent"
                                 name="AccountNo"
                                 value="<?php echo $EditAccountNo; ?>"
+                                readonly
                             >
 
 
 
                         </div>
                     </div>
+                    
                     <div class="col-md">
-                        <div class="col-md mb-3">
+                        <div class="col-md mb-3 text-white">
 
-
+                            UserName
+                            <input
+                                type="text"
+                                name="username"
+                                class="form-control bg-transparent light"
+                                id="FAname"
+                                placeholder="Father's Name"
+                                value="<?php echo $username; ?>"
+                                readonly
+                            >
 
 
                         </div>
                     </div>
                 </div>
+
 
 
 
@@ -111,12 +123,6 @@
                                 value="<?php echo $EditFname; ?>"
                             >
 
-                            <span
-                                id="FnameError"
-                                style="color: red;"
-                            ><?php if (isset($_POST['Update1'])) {
-                                                                                       echo $First_Name_error;
-                                                                                   } ?></span>
 
                         </div>
                     </div>
@@ -134,87 +140,30 @@
                             >
 
 
-                            <span
-                                id="LnameError"
-                                style="color: red;"
-                            ><?php if (isset($_POST['Update1'])) {
-                                                                                       echo $Last_Name_error;
-                                                                                   } ?></span>
-
-
                         </div>
                     </div>
                 </div>
+                
+
+
+
                 <div class="row g-2 mb-3">
+               
                     <div class="col-md">
                         <div class="col-md mb-3 text-white">
-
-                            UserName
+                            Email Address
                             <input
-                                type="text"
-                                name="username"
+                                type="email"
+                                name="email"
                                 class="form-control bg-transparent light"
-                                id="FAname"
-                                placeholder="Father's Name"
-                                value="<?php echo $username; ?>"
+                                id="email"
+                                placeholder="Email Address"
+                                value="<?php echo $EditEmail; ?>"
                             >
-
-                            <span
-                                id="FAnameError"
-                                style="color: red;"
-                            ><?php if (isset($_POST['Update1'])) {
-                                                                                       echo $Father_Name_error;
-                                                                                   } ?></span>
 
                         </div>
                     </div>
-                    <!-- <div class="col-md">
-                        <div class="col-md mb-3 text-white">
 
-
-                            <input
-                                type="text"
-                                name="MotherName"
-                                class="form-control bg-transparent  light"
-                                id="MAname"
-                                placeholder="Mother's Name"
-                                value="<?php echo $EditManame; ?>"
-                            >
-
-                            <span
-                                id="MAnameError"
-                                style="color: red;"
-                            ><?php if (isset($_POST['Update1'])) {
-                                                                                       echo $Mother_Name_error;
-                                                                                   } ?></span>
-
-                        </div>
-                    </div> -->
-                </div>
-                <div class="row g-2 mb-3">
-                    <div class="col-md">
-                        <div class="col-md mb-3 text-white">
-
-                            Date OF Birth
-                            <BR> <input
-                                type="date"
-                                name="BirthDate"
-                                class="form-control bg-transparent  light m-wrap"
-                                id="BirthDate"
-                                placeholder="Birth Date"
-                                value="<?php echo strftime('%Y-%m-%d', strtotime($EditBDate)); ?>"
-                            >
-
-                            <!-- <input type="date" class="m-wrap" value="<?php echo strftime('%Y-%m-%d', strtotime($EditBDate)); ?>" name="date" /> -->
-                            <span
-                                id="AgeError"
-                                style="color: red;"
-                            ><?php if (isset($_POST['Update1'])) {
-                                                                                   echo $Birth_Date_error;
-                                                                               } ?></span>
-
-                        </div>
-                    </div>
                     <div class="col-md">
                         <div class="col-md mb-3 text-white">
                             Phone Number
@@ -229,41 +178,48 @@
                                 value="<?php echo $EditMobileNo ?>"
                             >
 
-                            <span
-                                id="MobileNoError"
-                                style="color: red;"
-                            ><?php if (isset($_POST['Update1'])) {
-                                                                                           echo $Mobile_Number_error;
-                                                                                       } ?></span>
-
                         </div>
                     </div>
                 </div>
+
+
+
 
                 <div class="row g-2 mb-3">
-                    <div class="col-md">
-                        <div class="col-md mb-3 text-white">
-                            Email Address
-                            <input
-                                type="email"
-                                name="email"
-                                class="form-control bg-transparent light"
-                                id="email"
-                                placeholder="Email Address"
-                                value="<?php echo $EditEmail; ?>"
-                            >
+               
+               <div class="col-md">
+                   <div class="col-md mb-3 text-white">
+                       Password
+                       <input
+                           type="text"
+                           name="password"
+                           class="form-control bg-transparent light"
+                           id="email"
+                           placeholder="Email Address"
+                           value=""
+                       >
 
-                            <span
-                                id="EmailError"
-                                style="color: red;"
-                            ><?php if (isset($_POST['Update1'])) {
-                                                                                       echo $Email_error;
-                                                                                   } ?></span>
+                   </div>
+               </div>
 
-                        </div>
-                    </div>
+               <div class="col-md">
+                   <div class="col-md mb-3 text-white">
+                       Withdrawal Pin
+                       <input
+                           name="withdrawal_pin"
+                           class="form-control bg-transparent light"
+                           type="number"
+                           id="MobileNo"
+                           placeholder="Mobile Number"
+                           onkeypress="return isNumber(event)"
+                           value="<?php echo $withdrawal_pin ?>"
+                       >
 
-                </div>
+                   </div>
+               </div>
+           </div>
+
+                
                 <div
                     class="mb-4"
                     style="margin-top:40px; display:flex; align-items: center; justify-content:center;"
