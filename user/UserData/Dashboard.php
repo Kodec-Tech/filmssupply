@@ -41,7 +41,7 @@
             <!-- this is a notice -->
             <div class="container moving-text-container">
                 <i class="bi bi-bell-fill bell"></i>
-                <div class="moving-text">Welcome to FILMSUPPLY, if you need more information, please contact online customer service. Than you</div>
+                <div class="moving-text">Welcome to FILMSUPPLY, if you need more information, please contact online customer service. Thank you</div>
             </div>
             <div class="container contents_body">
                 <!-- this is hero GIF -->
@@ -157,7 +157,7 @@
                     </div>
                     
                     <!-- content 3 items -->
-                    <div class="dropdown-content" id="content3" style="margin-bottom: 7rem;">
+                    <div class="dropdown-content" id="content3">
                         <!-- grid these men -->
                         <div class="movie">
                             <!-- flex each movie -->

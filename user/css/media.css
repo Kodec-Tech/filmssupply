@@ -350,8 +350,8 @@
     /*footer*/
     .footer{
         margin-top: 1.5rem;
-        padding: 10px 0 70px 0;
-        height: 70px;
+        padding: 10px 0 10px 0;
+        height: 50px;
         margin: auto;
     }
     .navigations{

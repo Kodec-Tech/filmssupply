@@ -11,36 +11,38 @@
     height: 50px; /* Optional: height for container */
     line-height: 50px; /* Optional: vertically center text */
     margin-bottom: 2rem;
-
     display: flex;
     justify-content: stretch;
     align-items: stretch;
 }
-.moving-text-container i{
+
+.moving-text-container i {
     color: gold;
     font-size: 20px;
-    background-color: #3d0b0c;
     width: 20px;
-    z-index: 1;
+    z-index: 2;
     left: 0;
     position: absolute;
 }
+
 .moving-text {
     font-family: 'montserrat';
     font-weight: bold;
     display: inline-block;
     position: absolute;
     right: 100%;
-    animation: moveText 12s linear infinite;
+    animation: moveText 10s linear infinite;
 }
+
 @keyframes moveText {
     from {
         right: -100%;
     }
     to {
-        right: 100%;
+        right: 100%; /* Stop the text before it reaches the bell */
     }
 }
+
 /*Main Header*/
 header .container{
     border-bottom: 1px rgba(255, 251, 251, 0.6) solid;
@@ -102,8 +104,8 @@ header .container{
 }
 .tab.active {
     background-color: none;
-    border-bottom: 2px solid #FF5733;
-    color: #FFF;
+    border-bottom: 2px solid #772a38;
+    color: #772a38;
     font-size: 18px;
     font-weight: bold;
 }
@@ -645,7 +647,7 @@ header .container{
 }
 .card-title{
     font-weight: bold;
-    color: #FF5733;
+    color: #772a38;
 }
 .card_button{
     width: 100%;
@@ -679,7 +681,7 @@ header .container{
 .trans_tabs .tab.active {
     border: none;
     color: #FFF;
-    border-bottom: #FF5733 solid 4px;
+    border-bottom: #772a38 solid 4px;
 }
 .transactions .tab-content {
     padding: 20px;
@@ -711,7 +713,7 @@ header .container{
     gap: 0.5rem;
 }
 .trans_col h5{
-    color: #FF5733;
+    color: #772a38;
     font-size: 17px;
 }
 .trans_col .completed, .trans_col .cancelled{
@@ -770,7 +772,7 @@ header .container{
     background: rgb(5, 105, 5);
 }
 .pending{
-    background: #FF5733;
+    background: #772a38;
 }
 .cancelled{
     background: #C70039;
@@ -790,7 +792,7 @@ header .container{
     margin-bottom: -2px;
 }
 .hcard_stars i{
-    color: #FF5733;
+    color: #772a38;
 }
 .history_card3{
     display: flex;
@@ -850,11 +852,11 @@ header .container{
     }
 }
 .tasks_tab .active{
-    background: #FF5733;
+    background: #772a38;
     animation: start_task 1.5s infinite;
 }
 .tasks_tab .active:active{
-    background: #FF5733 !important;
+    background: #772a38 !important;
 }
 .tasks_dropdown.active{
     display: flex;
@@ -881,7 +883,7 @@ header .container{
     color: #fff;
     font-size: 20px;
     font-weight: bold;
-    border-bottom: solid 2px #FF5733;
+    border-bottom: solid 2px #772a38;
 }
 .modal-header h5{
     font-size: 20px;
@@ -890,7 +892,7 @@ header .container{
     color: #fff;
     font-size: 25px;
     font-weight: bold;
-    border-top: solid 2px #FF5733;
+    border-top: solid 2px #772a38;
 }
 .btn-close{
     visibility: hidden;
@@ -904,7 +906,7 @@ header .container{
     color: #fff;
 }
 .Perform_tasks_btn{
-    background: #FF5733;
+    background: #772a38;
     width: 100%;
     transition: all ease-in-out 0.5s;
 }
@@ -916,7 +918,7 @@ header .container{
 
 
 .tasks_dropdown h6{
-    color: #FF5733;
+    color: #772a38;
     text-decoration: underline;
     font-size: 13px!important;
     font-weight: bolder;
@@ -930,7 +932,7 @@ header .container{
     font-size: 16px;
 }
 .info2{
-    color: #FF5733;
+    color: #772a38;
     margin-top: -1.5rem;
 }
 .info2 h4{
@@ -945,7 +947,7 @@ header .container{
     gap: 2rem;
 }
 .tasks_col h5{
-    color: #FF5733;
+    color: #772a38;
     font-weight: bold;
     font-size: 13px!important;
 }
@@ -996,7 +998,7 @@ header .container{
     padding: 3rem 2rem;
 }
 .start_terms h3{
-    background-color: #FF5733;
+    background-color: #772a38;
     width: 25%;
     text-align: center;
     font-weight: bold;
@@ -1061,7 +1063,7 @@ header .container{
     font-weight: bold;
 }
 .log_register{
-    color: #FF5733;
+    color: #772a38;
 }
 /*Register*/
 .register_img{
@@ -1088,8 +1090,8 @@ footer{
     left: 0;
     right: 0;
     padding-top: 5px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
 }
 /*static footer navigations*/
 .navigations{
@@ -1148,7 +1150,7 @@ footer{
             transition: background-color 0.2s;
         }
         .star.selected {
-            background-color: #FF5733;
+            background-color: #772a38;
         }
         .rating-result {
             text-align: center;
