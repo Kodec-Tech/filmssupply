@@ -32,7 +32,7 @@ if (isset($_SESSION['username'])) {
 
             header("Location: ../user/login.php?error=Password required");
             exit();
-        } else {
+        } else { 
 
             $query = "SELECT ID, Username, Password, AccountNo, Status, State FROM login WHERE Username= '{$username}' AND Password= '{$hashPassword}'";
 
