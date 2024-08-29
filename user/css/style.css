@@ -31,7 +31,7 @@
     display: inline-block;
     position: absolute;
     right: 100%;
-    animation: moveText 10s linear infinite;
+    animation: moveText 12s linear infinite;
 }
 
 @keyframes moveText {
@@ -118,9 +118,10 @@ header .container{
 .dropdown-content.active {
     display: grid;
     grid-template-columns: repeat(3, 1fr) !important;
-    column-gap: 0.3rem;
-    row-gap: 3rem;
-    /* height: 500px; */
+    justify-content: center;
+    align-items: center;
+    column-gap: 1px;
+    row-gap: 1.5rem;
     overflow-y: scroll;
 }
 /*flexed single movie*/
@@ -130,9 +131,11 @@ header .container{
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
+    width: 55%;
+    margin: auto;
 }
 .movie img{
-    width: 80%;
+    width: 100%;
 }
 .movie p{
     font-size: 15px!important;

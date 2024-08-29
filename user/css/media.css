@@ -14,7 +14,7 @@
     }
     .contents_body{
         flex-direction: column-reverse;
-        gap: 30px;
+        gap: 50px;
     }
 
     /*body hero*/
@@ -24,6 +24,7 @@
     }
     .dropdown-content.active {
         overflow: unset;
+        column-gap: 10px;
     }
     .tasks_btn{
         width: 14.5%;
@@ -38,6 +39,10 @@
     .tab{
         text-align: center;
         font-size: 13px!important;
+    }
+    .movie{
+        width: 90%;
+        margin: auto;
     }
     .movie i{
         font-size: 9px !important;

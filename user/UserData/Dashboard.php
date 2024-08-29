@@ -61,106 +61,6 @@
                         <!-- grid these men -->
                         <div class="movie">
                             <!-- flex each movie -->
-                            <img src="../images/img/movie4.jpeg" alt="movie1" class="rounded">
-                            <p>Ghosted</p>
-                            <i class="bi bi-star-fill" style="font-size: 14px!important;">9</i>
-                            <!-- <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
-                        </div>
-                        <div class="movie">
-                            <!-- flex each movie -->
-                            <img src="../images/img/movie2.jpg" alt="movie1" class="rounded">
-                            <p>The Crow</p>
-                            <i class="bi bi-star-fill" style="font-size: 14px!important;">8</i>
-                            <!-- <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
-                        </div>
-                        <div class="movie">
-                            <!-- flex each movie -->
-                            <img src="../images/img/movie3.jpg" alt="movie1" class="rounded">
-                            <p>venom 3</p>
-                            <i class="bi bi-star-fill" style="font-size: 14px!important;">6</i>
-                            <!-- <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
-                        </div>
-                       
-                        <div class="movie">
-                            <!-- flex each movie -->
-                            <img src="../images/img/movie1.jpg" alt="movie1" class="rounded">
-                            <p>land of bad</p>
-                            <i class="bi bi-star-fill" style="font-size: 14px!important;">5</i>
-                            <!-- <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
-                        </div>
-                        <div class="movie">
-                            <!-- flex each movie -->
-                            <img src="../images/img/movie5.jpg" alt="movie1" class="rounded">
-                            <p>deadpool 3</p>
-                            <i class="bi bi-star-fill" style="font-size: 14px!important;">5</i>
-                            <!-- <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
-                        </div>
-                        <div class="movie">
-                            <!-- flex each movie -->
-                            <img src="../images/img/movie6.jpg" alt="movie1" class="rounded">
-                            <p>the red one</p>
-                            <i class="bi bi-star-fill" style="font-size: 14px!important;">5</i>
-                            <!-- <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div> -->
-                        </div>
-                       
-                        
-                    </div>
-
-                    <!-- content 2 items -->
-                    <div class="dropdown-content" id="content2">
-                        <!-- grid these men -->
-                        <div class="movie">
-                            <!-- flex each movie -->
-                            <img src="../images/img/movie2.jpeg" alt="movie1" class="rounded">
-                            <p>Movie Name</p>
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="movie">
-                            <!-- flex each movie -->
-                            <img src="../images/img/movie1.jpeg" alt="movie1" class="rounded">
-                            <p>Movie Name</p>
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                        </div>
-                        
-                        
-                    </div>
-                    
-                    <!-- content 3 items -->
-                    <div class="dropdown-content" id="content3">
-                        <!-- grid these men -->
-                        <div class="movie">
-                            <!-- flex each movie -->
                             <img src="../images/img/coming_soon1.jfif" alt="movie1" class="rounded">
                             <p>Suerja 42</p>
                             <!-- <div class="stars">
@@ -214,10 +114,50 @@
                                 <i class="bi bi-star-fill"></i>
                             </div> -->
                         </div>
+                       
+                        
+                    </div>
+
+                    <!-- content 2 items -->
+                    <div class="dropdown-content" id="content2">
+                        <!-- grid these men -->
+                        <div class="movie">
+                            <!-- flex each movie -->
+                            <img src="../images/img/movie2.jpeg" alt="movie1" class="rounded">
+                            <p>Movie Name</p>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="movie">
+                            <!-- flex each movie -->
+                            <img src="../images/img/movie1.jpeg" alt="movie1" class="rounded">
+                            <p>Movie Name</p>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <!-- content 3 items -->
+                    <div class="dropdown-content" id="content3">
+                        <!-- grid these men -->
+                        
                         <div class="movie">
                             <!-- flex each movie -->
                             <img src="../images/img/comin_soon7.jfif" alt="movie1" class="rounded">
-                            <p>Layers of Lies</p>
+                            <p>Lies</p>
                             <!-- <div class="stars">
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
