@@ -294,7 +294,7 @@
 
     .zoom_tasks{
         transform: scale(0.95);
-        margin-top: -20px;
+        margin-top: -50px;
     }
 
     .zoom_modal{
@@ -419,7 +419,7 @@
     } */
 
     .task_gif{
-        max-width: 65% !important;
+        max-width: 80% !important;
         margin-top: 50px;
     }
 

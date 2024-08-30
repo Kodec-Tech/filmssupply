@@ -11,7 +11,10 @@
         <!-- flex-column this man -->
         <div class="history_card perform_task">
           <div class="history_card2">
-              <img src="../../admin/movies-img/<?php echo ($productData['product_img'] ?? '') ?>" alt="<?php echo ($productData['product_title'] ?? ''); ?>">
+            <div class="card_movie">
+            <img src="../../admin/movies-img/<?php echo ($productData['product_img'] ?? '') ?>" alt="<?php echo ($productData['product_title'] ?? ''); ?>">
+            </div>
+              
               <div class="hcard_texts">
                   <p class="text-center movie_title text-light fs-5"><?php echo $productData['product_title'] ?? ''; ?></p>
                   
