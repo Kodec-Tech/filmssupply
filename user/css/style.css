@@ -773,7 +773,6 @@ header .container{
     align-items: center;
 }
 .card_boy h5 span{
-    /* color: #c52022; */
     color: #DAF7A6;
 }
 .card_boy h5, .card_boy2 h5{
@@ -813,6 +812,9 @@ header .container{
 .movie_title{
     margin-top: 10px;
     margin-bottom: -2px;
+}
+.hcard_texts p:last-child{
+    margin-top: -17px;
 }
 .hcard_stars i{
     color: #c52022;
@@ -961,6 +963,7 @@ header .container{
     font-size: 25px;
     font-weight: bold;
     border-top: solid 2px #c52022;
+    margin-bottom: 10rem;
 }
 .btn-close{
     visibility: hidden;
