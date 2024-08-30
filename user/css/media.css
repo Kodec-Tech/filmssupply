@@ -258,7 +258,7 @@
        align-items: center;
     }
     .history_card{
-        padding: 0.7rem;
+        padding: 1.4rem;
         width: 100%;
     }
     .history_card1{
@@ -285,26 +285,30 @@
     }
 
     /*Tasks*/
-    /* .tasks {
-        background: url('../images/img/bgprofile.png') top center no-repeat;
-        background-size: 100% 50.2%;
-        margin-top: -1px !important;
-    } */
+    .tasks_body{
+        overflow: hidden!important;
+    }
+
+    
 
 
     .zoom_tasks{
-        transform: none;
+        transform: scale(0.95);
         margin-top: -20px;
     }
 
     .zoom_modal{
         transform: none;
-        margin-top: 70px;
+        margin-top: -5px;
     }
 
     .zoom_profile{
         transform: none;
         margin-top: 10px;
+    }
+    .zoom_dash{
+        transform: none;
+        margin-top: -20px;
     }
 
 
@@ -382,6 +386,10 @@
     }
 
     /*footer*/
+    footer{
+        margin-top: 4rem;  
+    }
+
     .footer{
         margin-top: 1.5rem;
         padding: 10px 0 10px 0;

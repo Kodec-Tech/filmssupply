@@ -180,6 +180,36 @@
                                 <i class="bi bi-star-fill"></i>
                             </div> -->
                         </div>
+
+
+
+                        <div class="movie">
+                            <!-- flex each movie -->
+                            <img src="../images/img/soon4.jpg" alt="movie1" class="rounded">
+                            <p>Kalki</p>
+                            <!-- <div class="stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div> -->
+                        </div>
+                        <div class="movie">
+                            <!-- flex each movie -->
+                            <img src="../images/img/soon5.jpg" alt="movie1" class="rounded">
+                            <p>Rebel Moon</p>
+                            <!-- <div class="stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div> -->
+                        </div>
+                        <div class="movie">
+                            <!-- flex each movie -->
+                            <img src="../images/img/soon6.jpg" alt="movie1" class="rounded">
+                            <p>Darkness</p>
+                            <!-- <div class="stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div> -->
+                        </div>
                     </div>
                 </div>
             </div>

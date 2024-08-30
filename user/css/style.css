@@ -45,8 +45,9 @@
 
 /*Main Header*/
 header .container{
-    border-bottom: 1px rgba(255, 251, 251, 0.6) solid;
-    padding-bottom: 12px;
+    /* border-bottom: 1px rgba(255, 251, 251, 0.6) solid; */
+    border: none;
+    /* padding: 5px 0 10px; */
 }
 .header_img{
     display: flex;
@@ -104,8 +105,8 @@ header .container{
 }
 .tab.active {
     background-color: none;
-    border-bottom: 2px solid #772a38;
-    color: #772a38;
+    border-bottom: 2px solid #c52022;
+    color: #c52022;
     font-size: 18px;
     font-weight: bold;
 }
@@ -660,7 +661,7 @@ header .container{
 }
 .card-title{
     font-weight: bold;
-    color: #772a38;
+    color: #c52022;
 }
 .card_button{
     width: 100%;
@@ -694,7 +695,7 @@ header .container{
 .trans_tabs .tab.active {
     border: none;
     color: #FFF;
-    border-bottom: #772a38 solid 4px;
+    border-bottom: #c52022 solid 4px;
 }
 .transactions .tab-content {
     padding: 20px;
@@ -726,7 +727,7 @@ header .container{
     gap: 0.5rem;
 }
 .trans_col h5{
-    color: #772a38;
+    color: #c52022;
     font-size: 17px;
 }
 .trans_col .completed, .trans_col .cancelled{
@@ -772,7 +773,8 @@ header .container{
     align-items: center;
 }
 .card_boy h5 span{
-    color: #772a38;
+    /* color: #c52022; */
+    color: #DAF7A6;
 }
 .card_boy h5, .card_boy2 h5{
     font-size: 14px !important;
@@ -785,7 +787,7 @@ header .container{
     background: rgb(5, 105, 5);
 }
 .pending{
-    background: #772a38;
+    background: #c52022;
 }
 .cancelled{
     background: #C70039;
@@ -805,7 +807,7 @@ header .container{
     margin-bottom: -2px;
 }
 .hcard_stars i{
-    color: #772a38;
+    color: #c52022;
 }
 .history_card3{
     display: flex;
@@ -825,22 +827,22 @@ header .container{
 
 
 .zoom_tasks{
-    transform: scale(0.6);
-    margin-top: -150px;
+    transform: scale(0.7);
+    margin-top: -120px;
 }
 
 .zoom_modal{
     transform: scale(0.8);
-    margin-top: -40px;
+    margin-top: -70px;
 }
 
 .zoom_profile{
-    transform: scale(0.6);
-    margin-top: -180px;
+    transform: scale(0.8);
+    margin-top: -70px;
 }
 .zoom_dash{
-    transform: scale(0.6);
-    margin-top: -150px;
+    transform: scale(0.8);
+    margin-top: -80px;
 }
 
 
@@ -886,24 +888,25 @@ header .container{
     }
 }
 .tasks_tab .active{
-    background: #772a38;
+    background: #c52022;
     animation: start_task 1.5s infinite;
     color: #fff;
 }
 .tasks_tab .active:active{
-    background: #772a38 !important;
+    background: #c52022 !important;
     color: #fff;
 }
 .tasks_dropdown.active{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     color: #fff;
 
 
     height: 500px!important;
 }
+
 
 /* ----- MODAL SECTION HERE ----*/
 .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
@@ -922,6 +925,11 @@ header .container{
 
 
 
+.modal-body{
+    padding: 5px;
+}
+
+
 
 
 
@@ -933,7 +941,7 @@ header .container{
     color: #fff;
     font-size: 20px;
     font-weight: bold;
-    border-bottom: solid 2px #772a38;
+    border-bottom: solid 2px #c52022;
     padding: 5px !important;
 }
 .modal-header h5{
@@ -943,7 +951,7 @@ header .container{
     color: #fff;
     font-size: 25px;
     font-weight: bold;
-    border-top: solid 2px #772a38;
+    border-top: solid 2px #c52022;
 }
 .btn-close{
     visibility: hidden;
@@ -957,7 +965,7 @@ header .container{
     color: #fff;
 }
 .Perform_tasks_btn{
-    background: #772a38;
+    background: #c52022;
     width: 100%;
     transition: all ease-in-out 0.5s;
 }
@@ -969,7 +977,7 @@ header .container{
 
 
 .tasks_dropdown h6{
-    color: #772a38;
+    color: #c52022;
     text-decoration: underline;
     font-size: 13px!important;
     font-weight: bolder;
@@ -984,11 +992,11 @@ header .container{
     margin-top: -20px;
 }
 .info2{
-    color: #772a38;
+    color: #c52022;
     margin-top: -1.5rem;
 }
 .info2 h4{
-    font-size: 15px !important;
+    font-size: 16px !important;
 }
 .tasks_table{
     background: #302f2f;
@@ -999,7 +1007,7 @@ header .container{
     gap: 2rem;
 }
 .tasks_col h5{
-    color: #772a38;
+    color: #c52022;
     font-weight: bold;
     font-size: 13px!important;
 }
@@ -1050,7 +1058,7 @@ header .container{
     padding: 3rem 2rem;
 }
 .start_terms h3{
-    background-color: #772a38;
+    background-color: #c52022;
     width: 25%;
     text-align: center;
     font-weight: bold;
@@ -1115,7 +1123,7 @@ header .container{
     font-weight: bold;
 }
 .log_register{
-    color: #772a38;
+    color: #c52022;
 }
 /*Register*/
 .register_img{
@@ -1129,8 +1137,7 @@ header .container{
 
 /* --------------------------------------- FOOTER SECTION STARTS -------------------------------------*/
 footer{
-    margin-top: 7rem;
-    
+    margin-top: 1rem;  
 }
 .footer{
     height: 45px;
@@ -1202,7 +1209,8 @@ footer{
             transition: background-color 0.2s;
         }
         .star.selected {
-            background-color: #772a38;
+            /* background-color: #c52022; */
+            background-color: gold;
         }
         .rating-result {
             text-align: center;

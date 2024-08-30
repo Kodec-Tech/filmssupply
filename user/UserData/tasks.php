@@ -33,19 +33,37 @@
 
     <style>
         .notification {
-            display: none;
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 5px 15px;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 5px;
-            z-index: 1000;
-        }
-        .notification.error {
-            background-color: #f44336;
-        }
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 5px;
+    padding: 8px 20px 8px 15px; /* Added padding-right to give more space for the close button */
+    color: white;
+    border-radius: 5px;
+    z-index: 1000;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.notification.success {
+    background-color: #4CAF50; /* Green for success */
+}
+
+.notification.error {
+    background-color: #f44336; /* Red for error */
+}
+
+.close-btn {
+    position: absolute;
+    top: 8px; /* Adjust this value to position it higher or lower */
+    right: 10px; /* Adjust this value to position it further from the edge */
+    font-size: 24px; /* Adjusted font size */
+    cursor: pointer;
+    background: transparent; /* Remove any background color */
+    border: none; /* Remove default border */
+    padding: 0; /* Remove default padding */
+    margin-left: 10px; /* Adjust spacing to the left of the button */
+}
     </style>
   </head>
 
@@ -58,14 +76,21 @@
         <div class="container tasks mt-3">
 
 
-        <?php 
-        $message = isset($_SESSION['message']) ? $_SESSION['message'] : '';
-        unset($_SESSION['message']);
-        if ($message): ?>
-        <div class="notification" id="notification">
-            <?php echo htmlspecialchars($message); ?>
-        </div>
-      <?php endif; ?>
+        <?php
+    /// Determine the message and type
+    $message = isset($_SESSION['message']) ? $_SESSION['message'] : '';
+    $messageType = isset($_SESSION['message_type']) ? $_SESSION['message_type'] : 'success'; // Default to 'success'
+    
+    // Clear the session variables
+    unset($_SESSION['message'], $_SESSION['message_type']);
+?>
+
+<?php if ($message): ?>
+    <div class="notification <?php echo htmlspecialchars($messageType); ?>" id="notification">
+        <?php echo htmlspecialchars($message); ?>
+        <span class="close-btn">&times;</span>
+    </div>
+<?php endif; ?>
 
 
 <?php
@@ -455,18 +480,15 @@ include("tasksModals.php");
         if (notification) {
             notification.style.display = 'block';
 
-            var closeBtn = document.createElement('span');
-            closeBtn.innerHTML = '&times;';
-            closeBtn.style.float = 'right';
-            closeBtn.style.cursor = 'pointer';
+            var closeBtn = notification.querySelector('.close-btn');
             closeBtn.onclick = function() {
                 notification.style.display = 'none';
             };
-            notification.appendChild(closeBtn);
 
+            // Hide the notification after 20 seconds
             setTimeout(function () {
                 notification.style.display = 'none';
-            }, 10000); // 1 seconds
+            }, 20000); // 20 seconds
         }
     });
 </script>
