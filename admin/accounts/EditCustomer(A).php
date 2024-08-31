@@ -482,12 +482,18 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
 
                             $result = mysqli_query($conn, $query3) or  die(mysqli_error($conn));
 
-                            $query4 = "UPDATE login SET Password = '$hashedPassword' WHERE Account_No = '$EditAccountNo')";
+                            if(!empty($EditPassword)){
 
-                            $result4 = mysqli_query($conn, $query4) or  die(mysqli_error($conn));
+                                $query4 = "UPDATE login SET Password = '$hashedPassword' WHERE Account_No = '$EditAccountNo')";
+
+                                $result4 = mysqli_query($conn, $query4) or  die(mysqli_error($conn));
+
+                            }
+
+                           
 
 
-                            if ($result && $result4) {
+                            if ($result || $result4) {
 
                                 echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                            <strong>Your Account Updated!</strong> You should check in on some of those fields below.
