@@ -2,6 +2,10 @@
 
 
 define('DB_host', 'localhost');
+// define('DB_username', 'root');
+// define('DB_password', '');
+// define('DB_name', 'filmssupply');
+
 define('DB_username', 'u497958722_filmssupply');
 define('DB_password', 'Filmssupply123456789@');
 define('DB_name', 'u497958722_filmssupply');
