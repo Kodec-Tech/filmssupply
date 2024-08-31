@@ -473,7 +473,7 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
                         if ($result || $result4) {
 
                             echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                                           <strong>Your Account Updated!</strong> You should check in on some of those fields below.
+                                           <strong>User Account Updated Successfully!</strong> 
                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                              <span aria-hidden="true">&times;</span>
                                            </button>
