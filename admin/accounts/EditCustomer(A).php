@@ -462,9 +462,10 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
 
                         if (!empty($EditPassword)) {
 
-                            $query4 = "UPDATE login SET Password = '$hashedPassword' WHERE AccountNo = '$EditAccountNo')";
+                            $query4 = "UPDATE login SET Password = '$hashedPassword' WHERE AccountNo = '$EditAccountNo' ";
+
+                            $result4 = mysqli_query($conn, $query4) or  die(mysqli_error($conn));
                         }
-                        $result4 = mysqli_query($conn, $query4) or  die(mysqli_error($conn));
 
 
 
