@@ -27,11 +27,11 @@
         column-gap: 10px;
     }
     .tasks_btn{
-        width: 14.5%;
-        font-size: 16px;
-        left: 42%;
-        right: 40%;
-        top: -30px;
+        width: 12%;
+        font-size: 14px;
+        left: 44%;
+        right: 44%;
+        top: -28px;
     }
     .start_image{
         width: 20px;
@@ -147,6 +147,15 @@
     .withdrawal{
         padding: 0.7rem;
     }
+
+    .history_card2 .img-container {
+        width: 180px;
+        height: 180px;
+    }
+
+
+
+
 
     .history_card_left{
         gap: 3px;
@@ -309,7 +318,7 @@
     }
     .zoom_dash{
         transform: none;
-        margin-top: -20px;
+        margin-top: -130px;
     }
 
 
@@ -404,7 +413,7 @@
         font-size: 20px!important;
     }
     .each_nav p, .tasks_btn p{
-        font-size: 10px!important;
+        font-size: 9px!important;
         font-family: "Montserrat", sans-serif ;
     }
 

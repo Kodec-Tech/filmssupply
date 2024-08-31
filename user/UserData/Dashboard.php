@@ -43,6 +43,8 @@
                 <i class="bi bi-bell-fill bell"></i>
                 <div class="moving-text">Welcome to FILMSUPPLY, if you need more information, please contact online customer service. Thank you</div>
             </div>
+
+
             <div class="container contents_body zoom_dash">
                 <!-- this is hero GIF -->
                 <!-- <img src="../images/gif/index-movie.gif" alt=""class="hero-gif"> -->
@@ -65,7 +67,7 @@
                             <p>Suerja 42</p>
                             <div class="stars">
                                 <i class="bi bi-star-fill"></i>
-                                <h5>3</h5>
+                                <h5>5</h5>
                             </div>
                         </div>
                         <div class="movie">
@@ -74,7 +76,7 @@
                             <p>Imaginary</p>
                             <div class="stars">
                                 <i class="bi bi-star-fill"></i>
-                                <h5>2</h5>
+                                <h5>5</h5>
                             </div>
                         </div>
                         <div class="movie">
@@ -101,7 +103,7 @@
                             <p>Kraven</p>
                             <div class="stars">
                                 <i class="bi bi-star-fill"></i>
-                                <h5>3</h5>
+                                <h5>4</h5>
                             </div>
                         </div>
                         <div class="movie">
