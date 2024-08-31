@@ -38,7 +38,7 @@
 
     <main>
         <div class="container transactions">
-            <h2 class="text-uppercase text-center text-light mb-5">Tasks History</h2>
+            <h2 class="text-uppercase text-center text-light mt-5"></h2>
             <!-- using triple tabs -->
             <div class="trans_tabs">
                 <div class="tab active" data-tab="tab1">Completed</div>

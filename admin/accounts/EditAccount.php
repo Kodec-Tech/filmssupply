@@ -208,9 +208,9 @@ if ($msg === 'acctCleared') {
                                                         <thead class="thead-light">
                                                             <tr>
                                                                 <th scope="col">#</th>
-                                                                <th scope="col">Account No</th>
-                                                                <th scope="col">F Name</th>
-                                                                <th scope="col">L Name</th>
+                                                                <th scope="col">UID</th>
+                                                                <th scope="col">Username</th>
+                                                                <th scope="col">Rcode</th>
                                                                 <th scope="col">Edit</th>
                                                                 <!-- <th scope="col">Delete</th> -->
                                                             </tr>
@@ -219,7 +219,7 @@ if ($msg === 'acctCleared') {
 
                                                             <?php
 
-                                                            $query = "SELECT * FROM customer_detail";
+                                                            $query = "SELECT * FROM customer_detail JOIN accounts ON customer_detail.Account_No = accounts.AccountNo ";
                                                             $result = mysqli_query($conn, $query) or die("query fail");
 
                                                             if (mysqli_num_rows($result) > 0) {
@@ -232,9 +232,9 @@ if ($msg === 'acctCleared') {
 
                                                                         <td class="light"><?php echo $row['Account_No']; ?></td>
 
-                                                                        <td class="light"><?php echo $row['C_First_Name']; ?></td>
+                                                                        <td class="light"><?php echo $row['username']; ?></td>
 
-                                                                        <td class="light"><?php echo $row['C_Last_Name']; ?></td>
+                                                                        <td class="light"><?php echo $row['invite_code']; ?></td>
 
                                                                         <td class="light">
                                                                             <form action="EditCustomer(A).php" method="POST">

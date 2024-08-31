@@ -25,12 +25,8 @@ if (mysqli_num_rows($result) > 0) {
 
 
         // for us to know if the user is admin or not 
-        if(strtolower($row['Status'])== "super"){
-            $_SESSION["isAdmin"] = true;
-            $isAdmin = true;
-    
-
-        }
+        $isAdmin = $row['Status'];
+        
     }
     $ProfileText = substr($Fname, 0, 1);
     $_SESSION['AccountNo'] = $AccountNo;
