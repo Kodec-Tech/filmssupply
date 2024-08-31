@@ -10,7 +10,7 @@
     width: 100%;
     height: 50px; /* Optional: height for container */
     line-height: 50px; /* Optional: vertically center text */
-    margin-bottom: 2rem;
+    margin-bottom: 10rem;
     display: flex;
     justify-content: stretch;
     align-items: stretch;
@@ -840,7 +840,7 @@ header .container{
 }
 .zoom_dash{
     transform: scale(0.6);
-    margin-top: -150px;
+    margin-top: -250px;
 }
 
 
