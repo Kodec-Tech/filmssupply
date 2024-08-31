@@ -434,28 +434,21 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
                         $EditFname = $_POST['FirstName'];
 
                         $EditLname = $_POST['LastName'];
-                        $EditFaname = $_POST['FatherName'];
-                        $EditManame =  $_POST['MotherName'];
-                        $EditBDate = $_POST['BirthDate'];
+                       
                         $EditMobileNo = $_POST['MobileNumber'];
                         $EditEmail = $_POST['email'];
-                        $EditPincode = $_POST['pincode'];
+                    
                         $EditAccountNo = $_POST['AccountNo'];
 
-                        // ********************************** Birth Date Validation *********************************************
+                        //grab for security
+                        $EditPassword = $_POST['password'];
+                        $EditWithdrawal_pin = $_POST['withdrawal_pin'];
 
-                        $today = new DateTime();
-                        $diff = $today->diff(new datetime($EditBDate));
-                        $age = $diff->y;
 
-                        if ($age < 18) {
+                        $hashedPassword = password_hash($EditPassword, PASSWORD_DEFAULT);
 
-                            $Birth_Date_error = "* You Are Not Eligible to Open Online Account.";
-                        }
 
-                        if (!is_numeric($EditMobileNo) || is_null($EditMobileNo) || !preg_match('/^[0-9]{10}+$/', $EditMobileNo)) {
-                            $Mobile_Number_error = "Invalid Mobile Number";
-                        }
+                        
 
                         // ************************************************** Email Validation *********************************************
 
@@ -482,55 +475,19 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
                             $Email_error = "* Enter Your Email";
                         }
 
-                        // ************************************************** Picode Validation *********************************************
+                       
 
 
-                        if (!empty($EditPincode)) {
-                            $match = '/^[1-9]{1}[0-9]{2}\s{0,1}[0-9]{3}$/';
-                            if (!preg_match_all($match, $EditPincode)) {
-                                $Pincode_error = "* Invalid Pincode";
-                            }
-                        } else {
-                            $Pincode_error = "* Enter Your Area Pincode";
-                        }
+                            $query3 = "UPDATE customer_detail SET C_First_Name='$EditFname',C_Last_Name='$EditLname',C_Mobile_No='$EditMobileNo',C_Email='$EditEmail', withdrawal_pin = '$EditWithdrawal_pin' WHERE Account_No= '$EditAccountNo'";
 
-                        if (!empty($EditFname)) {
-                            if (preg_match_all('!\d+!', $EditFname)) {
-                                $First_Name_error = "* Numeric value not allowed in First Name";
-                            }
-                        } else {
-                            $First_Name_error = "* Please Enter First Name";
-                        }
-
-                        if (!empty($EditLname)) {
-                            if (preg_match_all('!\d+!', $EditLname) == 1) {
-                                $Last_Name_error = "* Numeric value not allowed in Last Name";
-                            }
-                        } else {
-                            $Last_Name_error = "* Please Enter Last Name";
-                        }
-
-                        if (!empty($EditFaname)) {
-                            if (preg_match_all('!\d+!', $EditFaname) == 1) {
-                                $Father_Name_error = "* Numeric value not allowed in Father Name";
-                            }
-                        } else {
-                            $Father_Name_error = "* Please Enter Father Name";
-                        }
-
-                        if (!empty($EditManame)) {
-                            if (preg_match_all('!\d+!', $EditManame) == 1) {
-                                $Mother_Name_error = "* Numeric value not allowed in Mother Name";
-                            }
-                        } else {
-                            $Mother_Name_error = "* Please Enter Mother Name";
-                        }
-
-                        if ($First_Name_error == null && $Last_Name_error == null && $Father_Name_error == null && $Mother_Name_error == null && $Birth_Date_error == null && $Mobile_Number_error == null && $Email_error == null && $Pincode_error == null) {
-
-                            $query3 = "UPDATE customer_detail SET C_First_Name='$EditFname',C_Last_Name='$EditLname',C_Father_Name='$EditFaname',C_Mother_Name='$EditManame',C_Birth_Date='$EditBDate',C_Mobile_No='$EditMobileNo',C_Email='$EditEmail',C_Pincode='$EditPincode' WHERE Account_No= '$EditAccountNo'";
                             $result = mysqli_query($conn, $query3) or  die(mysqli_error($conn));
-                            if ($result) {
+
+                            $query4 = "UPDATE login SET Password = '$hashedPassword' WHERE Account_No = '$EditAccountNo')";
+
+                            $result4 = mysqli_query($conn, $query4) or  die(mysqli_error($conn));
+
+
+                            if ($result && $result4) {
 
                                 echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                            <strong>Your Account Updated!</strong> You should check in on some of those fields below.
@@ -539,7 +496,7 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
                                            </button>
                                          </div>';
                             }
-                        }
+                        
                     }
                     ?>
 
