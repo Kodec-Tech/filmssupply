@@ -312,39 +312,7 @@ include "../../config.php";
 
                                                 
                                                 
-                                                <td class="text-center dropdown show ">
-
-
-                                                    <a
-                                                        class=" dropdown-toggle"
-                                                        href="#"
-                                                        role="button"
-                                                        id="dropdownMenuLink"
-                                                        data-toggle="dropdown"
-                                                        aria-haspopup="true"
-                                                        aria-expanded="false"
-                                                    >
-                                                        <i class='custom-dropdown-icon bx bx-menu bx-sm'></i>
-
-                                                    </a>
-
-                                                    <div
-                                                        class="dropdown-menu bg-dark text-white"
-                                                        aria-labelledby="dropdownMenuLink"
-                                                    >
-                                                        <a
-                                                            class="dropdown-item text-white"
-                                                            href="addMovies.php?page=update&id=<?php echo $rows['product_id']?>"
-                                                        >Update</a>
-                                                        <a
-                                                            class="dropdown-item text-white mb-0 "
-                                                            style="cursor:pointer"
-                                                            href="../includes/deleteMovies.inc.php?id=<?php echo $rows['product_id']?>"
-                                                        >Delete</a>
-
-                                                    </div>
-
-                                                </td>
+                                                <td>Hello</td>
 
 
                                             </tr>
@@ -376,7 +344,7 @@ include "../../config.php";
                                                 class="img-fluid"
                                                 style="height:200px"
                                                 alt=""
-                                            >
+                                            >d
                                             <p
                                                 class="mt-5"
                                                 style="color:#999"
