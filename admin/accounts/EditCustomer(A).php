@@ -441,7 +441,7 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
                         $EditAccountNo = $_POST['AccountNo'];
 
                         //grab for security
-                        $EditPassword = $_POST['password'];
+                        $EditPassword = $_POST['password'] ?? '';
                         $EditWithdrawal_pin = $_POST['withdrawal_pin'];
 
 
