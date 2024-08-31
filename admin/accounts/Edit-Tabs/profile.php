@@ -191,7 +191,7 @@
 
                     <div class="col-md">
                         <div class="col-md mb-3 text-white">
-                            Withdrawal Pin <sub>6digit</sub>
+                            Withdrawal Pin <sub>(6digit)</sub>
                             <input
                                 name="withdrawal_pin"
                                 class="form-control bg-transparent light"
