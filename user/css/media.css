@@ -148,6 +148,15 @@
         padding: 0.7rem;
     }
 
+    .history_card2 .img-container {
+        width: 180px;
+        height: 180px;
+    }
+
+
+
+
+
     .history_card_left{
         gap: 3px;
     }

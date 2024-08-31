@@ -476,7 +476,7 @@ header .container{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px;
+    gap: none;
 }
 .history_card_left h5 .history_card_left span{
     font-size: 14px !important;
@@ -743,19 +743,19 @@ header .container{
 }
 
 .history_card2 .img-container {
-    width: 350px;
-    height: 150px;
-    overflow: hidden; /* Ensures that any overflow is hidden */
+    width: 250px;
+    height: 250px;
+    /* overflow: hidden; */
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    padding: none;
 }
 
 .history_card2 img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:inherit;
     border-radius: none;
 }
 
@@ -774,9 +774,10 @@ header .container{
 }
 .card_boy h5 span{
     color: #DAF7A6;
+    padding-bottom: none;
 }
 .card_boy h5, .card_boy2 h5{
-    font-size: 14px !important;
+    font-size: 12px !important;
 }
 .history_card1 h1{
     font-size: 14px !important;
@@ -818,6 +819,9 @@ header .container{
 }
 .hcard_stars i{
     color: #c52022;
+}
+.hist_card p:last-child{
+    margin-top: 10px;
 }
 .history_card3{
     display: flex;

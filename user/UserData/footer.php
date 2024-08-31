@@ -94,7 +94,6 @@ filename = filename.split('.php')[0];
 var currentIcon = document.getElementById(filename + 'Icon');
 if (currentIcon) {
     currentIcon.style.color = '#f2a51f';
-    
 }
 
 // Special handling for the "More" link

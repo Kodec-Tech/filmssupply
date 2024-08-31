@@ -90,7 +90,7 @@ if (mysqli_num_rows($result) > 0) {
                     <div class="img-container">
                         <img src="../../admin/movies-img/<?php echo $user_task['product_img'] ?? ''; ?>" alt="">
                     </div>
-                        <div class="hcard_texts">
+                        <div class="hist_card">
                             <p class="text-center movie_title"><?php echo $user_task['product_title'] ?? ''; ?></p>
                             
                         </div>
