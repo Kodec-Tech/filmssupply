@@ -306,11 +306,11 @@ header .container{
 }
 
 .start_image{
-    width: 25px;
+    width: 20px;
     padding-top: 12px;
 }
 .arrow_image{
-    width: 12px;
+    width: 10px;
 }
 .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
     background: none;
@@ -1189,13 +1189,13 @@ footer{
 }
 .tasks_btn{
     position: absolute;
-    left: 49%;
-    right: 49%;
-    top: -40px;
+    left: 48%;
+    right: 48%;
+    top: -30px;
     background: #4d4d4d;
     /* border:  inset 5px gold; */
     border-radius: 50%;
-    width: 6%;
+    width: 5%;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -1203,6 +1203,12 @@ footer{
     font-size: 25px;
     padding: none;
 }
+.tasks_btn p{
+    padding-bottom: 1px !important;
+    margin-bottom: 10px !important;
+}
+
+
 
  .stars {
             display: flex;
