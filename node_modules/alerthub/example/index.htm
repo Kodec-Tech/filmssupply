@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="../src/Alerthub.css">
+    <script src="../src/Alerthub.js"></script> -->
+
+    <link rel="stylesheet" href="../node_modules/alerthub/dist/css/Alerthub.min.css">
+    <script src="../node_modules/alerthub/dist/js/alerthub.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <button id="show-alert-button" class="btn btn-primary m-5">Click me!</button>
+
+
+
+
+    <script>
+        const alertInstance = new AlertHub()
+
+        document.getElementById("show-alert-button").addEventListener("click", () => {
+            alertInstance.showAlert({
+                title: "",
+                description: "This is a custom alert message with a title.This is a custom alert message with a titleThis is a custom alert message with a title ",
+                timeout: 30
+            });
+        });
+    </script>
+
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
