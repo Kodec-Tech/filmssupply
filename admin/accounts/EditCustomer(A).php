@@ -16,8 +16,8 @@ $Email_error = $Pincode_error = null;
 
 if (isset($_POST['EditTable_Edit_btn']) || isset($_POST['Update1'])) {
     $EditAccountNo = $_POST['edit_id'] ?? $_POST['AccountNo'] ?? '';
-  
-$query = "SELECT * FROM customer_detail 
+
+    $query = "SELECT * FROM customer_detail 
 JOIN accounts ON customer_detail.Account_No = accounts.AccountNo
 JOIN login ON accounts.AccountNo = login.AccountNo
 WHERE accounts.AccountNo = '$EditAccountNo'";;
@@ -39,35 +39,31 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
             $EditAdharDoc = $row['C_Adhar_Doc'];
             $EditPanDoc = $row['C_Pan_Doc'];
             $EditAccountNo = $row['Account_No'];
-            $EditProfileImage = $row['ProfileImage'] ? : '../../user/images/img/user1.jpg';
-            $kycVerification =$row['kyc_approval'];
-            if(empty($kycVerification)){
+            $EditProfileImage = $row['ProfileImage'] ?: '../../user/images/img/user1.jpg';
+            $kycVerification = $row['kyc_approval'];
+            if (empty($kycVerification)) {
                 $kycBackground = " bg-warning ";
-                $kycVerification="No kyc provided";
-            }elseif($kycVerification=='approve'){
+                $kycVerification = "No kyc provided";
+            } elseif ($kycVerification == 'approve') {
                 $kycBackground = " bg-success ";
 
-                $kycVerification="Approved";
-            }else{
+                $kycVerification = "Approved";
+            } else {
                 $kycBackground = " bg-danger ";
 
-                $kycVerification="Rejected";
+                $kycVerification = "Rejected";
             }
             $WalletBalance = $row['Balance'];
             $amount_processing = $row['amount_processing'] ?? '';
-            $createDate =$row['Create_Date'];
+            $createDate = $row['Create_Date'];
             $currency = $row['currency'];
 
 
             //catch some pass
             $password = $row['Password'];
             $withdrawal_pin = $row['withdrawal_pin'];
-            
         }
     }
-
-  
-
 }
 
 
@@ -79,73 +75,62 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        >
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Edit Account</title>
+    <title>Edit Account</title>
 
-        <!-- Favicons -->
-        <link
-            href="../../assets/img/favicon-32x32.ico"
-            rel="icon"
-        >
-        <link
-            href="../../assets/img/apple-icon-180x180.png"
-            rel="apple-touch-icon"
-        >
+    <!-- Favicons -->
+    <link
+        href="../../assets/img/favicon-32x32.ico"
+        rel="icon">
+    <link
+        href="../../assets/img/apple-icon-180x180.png"
+        rel="apple-touch-icon">
 
-        <!-- Bootstrap CSS -->
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-            crossorigin="anonymous"
-        >
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        >
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap"
-            rel="stylesheet"
-        >
-        <link
-            href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'
-            rel='stylesheet'
-        >
+    <!-- Bootstrap CSS -->
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'
+        rel='stylesheet'>
 
 
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap"
-            rel="stylesheet"
-        >
-        <!--fontawesome-->
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-            crossorigin="anonymous"
-        >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!--fontawesome-->
+    <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
 
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        >
-        <link
-            rel="stylesheet"
-            href="../css/accounts/OpenAccount.css"
-        >
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+        rel="stylesheet"
+        href="../css/accounts/OpenAccount.css">
 
-        <link rel="stylesheet" href="../css/AdminDash.css">
-        
+    <link rel="stylesheet" href="../css/AdminDash.css">
 
-        <style>
+
+    <style>
         input[type="date"]::-webkit-calendar-picker-indicator {
             cursor: pointer;
             border-radius: 4px;
@@ -162,15 +147,13 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
         .nav-tabs .nav-link.active {
             background: #616161 !important;
         }
+    </style>
 
-       
-        </style>
+    <!-- Javascrip -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        <!-- Javascrip -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <style>
+    <style>
         ::-webkit-scrollbar {
             height: 1px !important;
             /* Remove scrollbar space */
@@ -338,106 +321,101 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
     */
             transition: border 10s ease;
         }
-        </style>
-    </head>
+    </style>
+</head>
 
-    <body class="dark_bg">
-
-
-        <div id="wrapper">
-            <!-- <div class="overlay"></div> -->
-
-            <!-- Sidebar -->
-            <?php include_once('nav.php')?>
-            <!-- /#sidebar-wrapper -->
+<body class="dark_bg">
 
 
-            <!-- Page Content -->
-            <div id="page-content-wrapper">
+    <div id="wrapper">
+        <!-- <div class="overlay"></div> -->
+
+        <!-- Sidebar -->
+        <?php include_once('nav.php') ?>
+        <!-- /#sidebar-wrapper -->
 
 
-                <div id="content">
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
 
-                    <div class="container-fluid p-0 px-lg-0 px-md-0">
-                        <!-- Topbar -->
-                        <nav class="navbar navbar-expand navbar-light gray_bg my-navbar">
 
-                            <!-- Sidebar Toggle (Topbar) -->
-                            <div
-                                type="button"
-                                id="bar"
-                                class="nav-icon1 hamburger animated fadeInLeft is-closed"
-                                data-toggle="offcanvas"
-                            >
-                                <span class="light_bg"></span>
-                                <span class="light_bg"></span>
-                                <span class="light_bg"></span>
-                            </div>
+            <div id="content">
 
-                            <!-- Topbar Navbar -->
-                            <ul class="navbar-nav ml-auto">
+                <div class="container-fluid p-0 px-lg-0 px-md-0">
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light gray_bg my-navbar">
 
-                                <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                                <li class="nav-item dropdown  d-sm-none">
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <div
+                            type="button"
+                            id="bar"
+                            class="nav-icon1 hamburger animated fadeInLeft is-closed"
+                            data-toggle="offcanvas">
+                            <span class="light_bg"></span>
+                            <span class="light_bg"></span>
+                            <span class="light_bg"></span>
+                        </div>
 
-                                    <!-- Dropdown - Messages -->
-                                    <div class="dropdown-menu dropdown-menu-right p-3">
-                                        <form class="form-inline mr-auto w-100 navbar-search">
-                                            <div class="input-group">
-                                                <input
-                                                    type="text"
-                                                    class="form-control bg-light border-0 small"
-                                                    placeholder="Search for..."
-                                                >
-                                                <div class="input-group-append">
-                                                    <button
-                                                        class="btn btn-primary"
-                                                        type="button"
-                                                    >
-                                                        <i class="fas fa-search fa-sm"></i>
-                                                    </button>
-                                                </div>
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
+
+                            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                            <li class="nav-item dropdown  d-sm-none">
+
+                                <!-- Dropdown - Messages -->
+                                <div class="dropdown-menu dropdown-menu-right p-3">
+                                    <form class="form-inline mr-auto w-100 navbar-search">
+                                        <div class="input-group">
+                                            <input
+                                                type="text"
+                                                class="form-control bg-light border-0 small"
+                                                placeholder="Search for...">
+                                            <div class="input-group-append">
+                                                <button
+                                                    class="btn btn-primary"
+                                                    type="button">
+                                                    <i class="fas fa-search fa-sm"></i>
+                                                </button>
                                             </div>
-                                        </form>
-                                    </div>
-                                </li>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
 
 
 
 
-                                <!-- Nav Item - User Information -->
-                                <li class="nav-item ">
-                                    <a
-                                        class="nav-link"
-                                        href="#"
-                                        role="button"
-                                    >
-                                        <span
-                                            class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $Admin ?></span>
-                                        <img
-                                            id="AdminDropdown"
-                                            class="img-profile rounded-circle"
-                                            src="../<?php echo  $AdminProfileInner ?>"
-                                        >
-                                    </a>
-                                </li>
+                            <!-- Nav Item - User Information -->
+                            <li class="nav-item ">
+                                <a
+                                    class="nav-link"
+                                    href="#"
+                                    role="button">
+                                    <span
+                                        class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $Admin ?></span>
+                                    <img
+                                        id="AdminDropdown"
+                                        class="img-profile rounded-circle"
+                                        src="../<?php echo  $AdminProfileInner ?>">
+                                </a>
+                            </li>
 
-                            </ul>
+                        </ul>
 
-                        </nav>
-                        <!-- End of Topbar -->
+                    </nav>
+                    <!-- End of Topbar -->
 
-                        <?php
+                    <?php
                     if (isset($_POST['Update1'])) {
 
 
                         $EditFname = $_POST['FirstName'];
 
                         $EditLname = $_POST['LastName'];
-                       
+
                         $EditMobileNo = $_POST['MobileNumber'];
                         $EditEmail = $_POST['email'];
-                    
+
                         $EditAccountNo = $_POST['AccountNo'];
 
                         //grab for security
@@ -448,7 +426,7 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
                         $hashedPassword = password_hash($EditPassword, PASSWORD_DEFAULT);
 
 
-                        
+
 
                         // ************************************************** Email Validation *********************************************
 
@@ -475,55 +453,52 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
                             $Email_error = "* Enter Your Email";
                         }
 
-                       
 
 
-                            $query3 = "UPDATE customer_detail SET C_First_Name='$EditFname',C_Last_Name='$EditLname',C_Mobile_No='$EditMobileNo',C_Email='$EditEmail', withdrawal_pin = '$EditWithdrawal_pin' WHERE Account_No= '$EditAccountNo'";
 
-                            $result = mysqli_query($conn, $query3) or  die(mysqli_error($conn));
+                        $query3 = "UPDATE customer_detail SET C_First_Name='$EditFname',C_Last_Name='$EditLname',C_Mobile_No='$EditMobileNo',C_Email='$EditEmail', withdrawal_pin = '$EditWithdrawal_pin' WHERE Account_No= '$EditAccountNo'";
 
-                            if(!empty($EditPassword)){
+                        $result = mysqli_query($conn, $query3) or  die(mysqli_error($conn));
 
-                                $query4 = "UPDATE login SET Password = '$hashedPassword' WHERE Account_No = '$EditAccountNo')";
+                        if (!empty($EditPassword)) {
 
-                                $result4 = mysqli_query($conn, $query4) or  die(mysqli_error($conn));
+                            $query4 = "UPDATE login SET Password = '$hashedPassword' WHERE AccountNo = '$EditAccountNo')";
 
-                            }
-
-                           
+                            $result4 = mysqli_query($conn, $query4) or  die(mysqli_error($conn));
+                        }
 
 
-                            if ($result || $result4) {
 
-                                echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+
+                        if ($result || $result4) {
+
+                            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                            <strong>Your Account Updated!</strong> You should check in on some of those fields below.
                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                              <span aria-hidden="true">&times;</span>
                                            </button>
                                          </div>';
-                            }
-                        
+                        }
                     }
                     ?>
 
-                        <!-- Begin Page Content -->
-                        <div class="container-fluid px-lg-4 dark_bg light">
-                            <div class="row">
-                                <div class="col-md-12 mt-lg-4 mt-4">
-                                    <!-- Page Heading -->
-                                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                        <h1 class="h3 mb-0 light">Edit Account #<?php echo $EditAccountNo ?></h1>
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid px-lg-4 dark_bg light">
+                        <div class="row">
+                            <div class="col-md-12 mt-lg-4 mt-4">
+                                <!-- Page Heading -->
+                                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                    <h1 class="h3 mb-0 light">Edit Account #<?php echo $EditAccountNo ?></h1>
 
-                                        <a href="../accounts/EditAccount.php"><button
-                                                name="Edit_another"
-                                                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm light btn-custo "
-                                            ><i class="bx bxs-pencil ico"></i> Edit Another</button></a>
+                                    <a href="../accounts/EditAccount.php"><button
+                                            name="Edit_another"
+                                            class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm light btn-custo "><i class="bx bxs-pencil ico"></i> Edit Another</button></a>
 
-                                    </div>
                                 </div>
+                            </div>
 
 
-                                <style>
+                            <style>
                                 .btn-circle.btn-md {
                                     width: 65px;
                                     height: 65px;
@@ -565,231 +540,226 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
                                 #swal2-content {
                                     color: #fff;
                                 }
-                                
-    /* Style the tabs */
-    .tab {
-      display: none;
-    }
 
-    /* Style the tab content */
-    .tab-content {
-      display: none;
-    }
-.nav-tabs li.active {
-      background-color: #4CAF50;
-      color: #fff;
-    }
-    /* Style the active tab */
-    .active {
-      display: block;
-    }
+                                /* Style the tabs */
+                                .tab {
+                                    display: none;
+                                }
 
-    /* Optional: Style for better appearance */
-    .nav-tabs {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-    }
+                                /* Style the tab content */
+                                .tab-content {
+                                    display: none;
+                                }
 
-    .nav-tabs li {
-      margin-right: 10px;
-      cursor: pointer;
-    }
-  </style>
+                                .nav-tabs li.active {
+                                    background-color: #4CAF50;
+                                    color: #fff;
+                                }
 
-                                <!-- Tab Navigation -->
-                                
-                   
-<div class="container mt-5 ">
-  <ul class="nav-tabs overflow-x-auto border-0 " id="tabs">
-    <li onclick="showTab('profile')" style="background: #000000 !important;" id="profiletab"class=" border px-5 py-2  m-0 active">Profile</li>
-    
-    <li onclick="showTab('investment')" id="investmenttab"class=" border px-5 py-2  m-0" >Task</li>
+                                /* Style the active tab */
+                                .active {
+                                    display: block;
+                                }
 
-    <li onclick="showTab('merge')" id="mergetab"class=" border px-5 py-2  m-0" >Grand Order</li>
+                                /* Optional: Style for better appearance */
+                                .nav-tabs {
+                                    list-style: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    display: flex;
+                                }
 
-    <li onclick="showTab('withdrawal')" id="withdrawaltab"class=" border px-5 py-2  m-0" >Withdrawal</li>
-    <li onclick="showTab('referral')" id="referraltab"class=" border px-5 py-2  m-0" >Referral</li>
-    <!-- <li onclick="showTab('account')" id="accounttab"class=" border px-5 py-2  m-0" >Account</li> -->
-    
-    <!-- <li onclick="showTab('security')" class=" border px-5 py-2  m-0" >Security</li> -->
-  </ul>
+                                .nav-tabs li {
+                                    margin-right: 10px;
+                                    cursor: pointer;
+                                }
+                            </style>
 
-  <div class="tab-content" id="profile">
-   <!-- Tab 1 Content -->
-   <?php include_once('Edit-Tabs/profile.php') ?>
-  </div>
-  <div class="tab-content" id="investment">
-  <?php include_once('Edit-Tabs/taskTab.php') ?>
-  </div>
-
-  <div class="tab-content" id="merge">
-  <?php include_once('Edit-Tabs/mergeTab.php') ?>
-  </div>
-
-  <div class="tab-content" id="withdrawal">
-  <?php include_once('Edit-Tabs/WithdrawalTab.php') ?>
-
-  </div>
- <div class="tab-content" id="referral">
-  <?php include_once('Edit-Tabs/ReferralTable.php') ?>
-
-  </div>
-   <div class="tab-content" id="account">
-  </div>
-  
- 
-</div>
-
-<script>
-   var profiletab= document.getElementById('profiletab');
- profiletab.click()
+                            <!-- Tab Navigation -->
 
 
-  function showTab(tabId) {
-    // Hide all tabs
-    const tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(tab => tab.style.display = 'none');
+                            <div class="container mt-5 ">
+                                <ul class="nav-tabs overflow-x-auto border-0 " id="tabs">
+                                    <li onclick="showTab('profile')" style="background: #000000 !important;" id="profiletab" class=" border px-5 py-2  m-0 active">Profile</li>
 
+                                    <li onclick="showTab('investment')" id="investmenttab" class=" border px-5 py-2  m-0">Task</li>
 
-      // Remove active class and reset background for all tabs
-      const tabLinks = document.querySelectorAll('#tabs li');
-    // Remove active class from all tabs
-    tabLinks.forEach(link => {
-        const element = document.getElementById(link.id);
-console.log(tabId)
-        if (link.id == tabId+"tab") {
-            // Set the background for the active tab
-            element.style.background = "#212121";
-        } else {
-            // Remove active class and reset background for non-active tabs
-            element.classList.remove('active');
-            element.style.background = "transparent";
-        }
-    });
-  
- 
+                                    <li onclick="showTab('merge')" id="mergetab" class=" border px-5 py-2  m-0">Grand Order</li>
 
+                                    <li onclick="showTab('withdrawal')" id="withdrawaltab" class=" border px-5 py-2  m-0">Withdrawal</li>
+                                    <li onclick="showTab('referral')" id="referraltab" class=" border px-5 py-2  m-0">Referral</li>
+                                    <!-- <li onclick="showTab('account')" id="accounttab"class=" border px-5 py-2  m-0" >Account</li> -->
 
+                                    <!-- <li onclick="showTab('security')" class=" border px-5 py-2  m-0" >Security</li> -->
+                                </ul>
 
-  
-    // Show the selected tab
-    const selectedTab = document.getElementById(tabId);
-    selectedTab.style.display = 'block';
+                                <div class="tab-content" id="profile">
+                                    <!-- Tab 1 Content -->
+                                    <?php include_once('Edit-Tabs/profile.php') ?>
+                                </div>
+                                <div class="tab-content" id="investment">
+                                    <?php include_once('Edit-Tabs/taskTab.php') ?>
+                                </div>
 
-    // Add active class to the selected tab link
-    const selectedTabLink = document.querySelector(`.nav-tabs li:contains('${tabId}')`);
-    selectedTabLink.classList.add('active');
-  
+                                <div class="tab-content" id="merge">
+                                    <?php include_once('Edit-Tabs/mergeTab.php') ?>
+                                </div>
 
-  
-  }
+                                <div class="tab-content" id="withdrawal">
+                                    <?php include_once('Edit-Tabs/WithdrawalTab.php') ?>
 
-  // Custom contains function for selecting elements by text content
-  HTMLElement.prototype.containsText = function (text) {
-    return this.innerText.includes(text);
-  };
-  
-</script>
+                                </div>
+                                <div class="tab-content" id="referral">
+                                    <?php include_once('Edit-Tabs/ReferralTable.php') ?>
 
-                                 
-
+                                </div>
+                                <div class="tab-content" id="account">
                                 </div>
 
 
-
                             </div>
+
+                            <script>
+                                var profiletab = document.getElementById('profiletab');
+                                profiletab.click()
+
+
+                                function showTab(tabId) {
+                                    // Hide all tabs
+                                    const tabs = document.querySelectorAll('.tab-content');
+                                    tabs.forEach(tab => tab.style.display = 'none');
+
+
+                                    // Remove active class and reset background for all tabs
+                                    const tabLinks = document.querySelectorAll('#tabs li');
+                                    // Remove active class from all tabs
+                                    tabLinks.forEach(link => {
+                                        const element = document.getElementById(link.id);
+                                        console.log(tabId)
+                                        if (link.id == tabId + "tab") {
+                                            // Set the background for the active tab
+                                            element.style.background = "#212121";
+                                        } else {
+                                            // Remove active class and reset background for non-active tabs
+                                            element.classList.remove('active');
+                                            element.style.background = "transparent";
+                                        }
+                                    });
+
+
+
+
+
+
+                                    // Show the selected tab
+                                    const selectedTab = document.getElementById(tabId);
+                                    selectedTab.style.display = 'block';
+
+                                    // Add active class to the selected tab link
+                                    const selectedTabLink = document.querySelector(`.nav-tabs li:contains('${tabId}')`);
+                                    selectedTabLink.classList.add('active');
+
+
+
+                                }
+
+                                // Custom contains function for selecting elements by text content
+                                HTMLElement.prototype.containsText = function(text) {
+                                    return this.innerText.includes(text);
+                                };
+                            </script>
+
+
 
                         </div>
 
 
 
-
-                                <div class="text-white">
-
-
-
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
+
+                </div>
+
+
+
+
+                <div class="text-white">
 
 
 
                 </div>
 
-                <footer class="footer gray_bg">
-                    <div class="container-fluid">
-                        <div class="row text-muted">
-                            <div class="col-6 text-left">
-                                <p class="mb-0">
-                                    <a
-                                        href="../../index.php"
-                                        class="text-muted light"
-                                    ><strong><?php echo BANKNAME ?>
-                                        </strong></a> &copy
-                                </p>
-                            </div>
-                            <div class="col-6 text-right">
-                                <ul class="list-inline">
-                                    <!-- <li class="footer-item">
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+
+    <footer class="footer gray_bg">
+        <div class="container-fluid">
+            <div class="row text-muted">
+                <div class="col-6 text-left">
+                    <p class="mb-0">
+                        <a
+                            href="../../index.php"
+                            class="text-muted light"><strong><?php echo BANKNAME ?>
+                            </strong></a> &copy
+                    </p>
+                </div>
+                <div class="col-6 text-right">
+                    <ul class="list-inline">
+                        <!-- <li class="footer-item">
                                     <a class="text-muted light" href="#">Support</a>
                                 </li>
                                 <li class="footer-item">
                                     <a class="text-muted light" href="#">Help Center</a>
                                 </li> -->
-                                    <li class="footer-item">
-                                        <a
-                                            class="text-muted light"
-                                            href="../../pages/privacypolicy.php"
-                                        >Privacy</a>
-                                    </li>
-                                    <li class="footer-item">
-                                        <a
-                                            class="text-muted light"
-                                            href="../../pages/terms.php"
-                                        >Terms</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-
+                        <li class="footer-item">
+                            <a
+                                class="text-muted light"
+                                href="../../pages/privacypolicy.php">Privacy</a>
+                        </li>
+                        <li class="footer-item">
+                            <a
+                                class="text-muted light"
+                                href="../../pages/terms.php">Terms</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <!-- /#page-content-wrapper -->
+    </footer>
 
-        </div>
-        <!-- /#wrapper -->
+    </div>
+    </div>
+    <!-- /#page-content-wrapper -->
 
-
-
-
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script
-            src="https://code.jquery.com/jquery-3.5.1.js"
-            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"
-        ></script>
+    </div>
+    <!-- /#wrapper -->
 
 
 
-        <script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+
+
+    <script>
         $('#bar').click(function() {
             $(this).toggleClass('open');
             $('#page-content-wrapper ,#sidebar-wrapper').toggleClass('toggled');
@@ -809,9 +779,9 @@ console.log(tabId)
 
 
         });
-        </script>
+    </script>
 
 
-    </body>
+</body>
 
 </html>
