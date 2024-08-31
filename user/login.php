@@ -90,6 +90,9 @@ if (isset($_SESSION['username'])) {
                                 exit();
                             }
                         }
+                    } else {
+                        header("Location: ../user/login.php?error=Invalid Credential");
+                        exit();
                     }
                 }
             } else {
