@@ -14,8 +14,8 @@ $Email_error = $Pincode_error = null;
 //  User varible
 
 
-if (isset($_POST['EditTable_Edit_btn'])) {
-    $EditAccountNo = $_POST['edit_id'];
+if (isset($_POST['EditTable_Edit_btn']) || isset($_POST['Update1'])) {
+    $EditAccountNo = $_POST['edit_id'] ?? $_POST['AccountNo'] ?? '';
   
 $query = "SELECT * FROM customer_detail 
 JOIN accounts ON customer_detail.Account_No = accounts.AccountNo
