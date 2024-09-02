@@ -24,11 +24,12 @@ mysqli_stmt_fetch($stmt);
 mysqli_stmt_close($stmt);
 
 // Function to check maintenance mode
-function maintenanceMode($mode) {
+function maintenanceMode($mode)
+{
     if ($mode === 'ON') {
         // Redirect to maintenance page
-        header('Location: http://localhost/filmssupply/user/maintenance.php');
-        exit(); 
+        header('Location: maintenance.php');
+        exit();
     }
 }
 
