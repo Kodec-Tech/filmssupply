@@ -462,10 +462,6 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
 
                         $result = mysqli_query($conn, $query3) or  die(mysqli_error($conn));
 
-                        $query5 = "UPDATE accounts SET Balance = '$EditBalance' WHERE AccountNo = '$EditAccountNo' ";
-
-                        $result5 = mysqli_query($conn, $query5) or  die(mysqli_error($conn));
-
                         if (!empty($EditPassword)) {
 
                             $query4 = "UPDATE login SET Password = '$hashedPassword' WHERE AccountNo = '$EditAccountNo' ";
@@ -473,7 +469,11 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
                             $result4 = mysqli_query($conn, $query4) or  die(mysqli_error($conn));
                         }
 
-                        
+                        if (!empty($EditBalance)) {
+                            $query5 = "UPDATE accounts SET Balance = '$EditBalance' WHERE AccountNo = '$EditAccountNo' ";
+
+                            $result5 = mysqli_query($conn, $query5) or  die(mysqli_error($conn));
+                        }
 
 
 
