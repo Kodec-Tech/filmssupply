@@ -465,7 +465,6 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
                         $query5 = "UPDATE accounts SET Balance = '$EditBalance' WHERE AccountNo = '$EditAccountNo' ";
 
                         $result5 = mysqli_query($conn, $query5) or  die(mysqli_error($conn));
-                        
 
                         if (!empty($EditPassword)) {
 

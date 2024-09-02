@@ -219,7 +219,7 @@
                                 type="text"
                                 id="MobileNo"
 
-                                value="<?php echo $WalletBalance ?>">
+                                value="">
 
                         </div>
                     </div>
