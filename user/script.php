@@ -28,7 +28,7 @@ function maintenanceMode($mode)
 {
     if ($mode === 'ON') {
         // Redirect to maintenance page
-        header('Location: ../user/maintenance.php');
+        header('Location: ../maintenance.php');
         exit();
     }
 }
