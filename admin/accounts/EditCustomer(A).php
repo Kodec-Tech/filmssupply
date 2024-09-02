@@ -416,6 +416,8 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
                         $EditMobileNo = $_POST['MobileNumber'];
                         $EditEmail = $_POST['email'];
 
+                        $EditBalance = $_POST['balance'] ?? "";
+
                         $EditAccountNo = $_POST['AccountNo'];
 
                         //grab for security
@@ -467,10 +469,16 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
                             $result4 = mysqli_query($conn, $query4) or  die(mysqli_error($conn));
                         }
 
+                        if (!empty($EditBalance)) {
+                            $query5 = "UPDATE accounts SET Balance = '$EditBalance' WHERE AccountNo = '$EditAccountNo' ";
+
+                            $result5 = mysqli_query($conn, $query5) or  die(mysqli_error($conn));
+                        }
 
 
 
-                        if ($result || $result4) {
+
+                        if ($result || $result4 || $result5) {
 
                             echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                            <strong>User Account Updated Successfully!</strong> 
