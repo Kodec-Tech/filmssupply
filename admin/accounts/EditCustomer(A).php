@@ -416,7 +416,7 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
                         $EditMobileNo = $_POST['MobileNumber'];
                         $EditEmail = $_POST['email'];
 
-                        $EditBalance = $_POST['balance'] ?? "";
+                        $EditBalance = $_POST['balance'];
 
                         $EditAccountNo = $_POST['AccountNo'];
 
