@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['id'], $_POST['amount_processing'], $_POST['account_number'])) {
 
         $id = $_POST['id'];
-        $amount_processing = $_POST['amount_processing'];
+        $amount_processing = $_POST['amount_processing'] ?? '';
         $account_number = $_POST['account_number'];
 
 
