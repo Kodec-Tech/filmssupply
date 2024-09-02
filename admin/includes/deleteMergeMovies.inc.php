@@ -56,8 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         //To clear the Grand order for the user
         $userCommission = (float)$commission * (float)$amount_processing;
-        $NewBalance = $amount_processing + $userCommission;
-        $NewAmountProcessing = $amount_processing + $userCommission;
+        $NewBalance = (float)$amount_processing + (float)$userCommission;
+        $NewAmountProcessing = (float)$amount_processing + $userCommission;
 
 
 
