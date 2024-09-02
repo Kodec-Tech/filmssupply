@@ -21,34 +21,33 @@ $username = $_POST['username'];
 
 //checks
 //lets work merge product that will freeze user account
-    $NewBalance = 0 - ($product_amount + $balance);
-    $amount_processing = $product_amount + $balance;
+$NewBalance = 0 - ($product_amount + $balance);
+$amount_processing = $product_amount + $balance;
 
-    // Prepare the SQL update statement
-    $sql = "UPDATE accounts SET Balance = ?, amount_processing = ? WHERE AccountNo = ?";
-    $stmt = mysqli_prepare($conn, $sql);
+// Prepare the SQL update statement
+$sql = "UPDATE accounts SET Balance = ?, amount_processing = ? WHERE AccountNo = ?";
+$stmt = mysqli_prepare($conn, $sql);
 
-    if ($stmt) {
-        // Bind the parameters
-        mysqli_stmt_bind_param($stmt, "sss", $NewBalance, $amount_processing, $acctNo);
+if ($stmt) {
+    // Bind the parameters
+    mysqli_stmt_bind_param($stmt, "sss", $NewBalance, $amount_processing, $acctNo);
 
-        // Execute the statement
-        if (mysqli_stmt_execute($stmt)) {
+    // Execute the statement
+    if (mysqli_stmt_execute($stmt)) {
 
-            $_SESSION['message'] = "Movie Rated Successfully!  ";
+        $_SESSION['message'] = "Successfully! ";
 
-            // Redirect to tasks.php
-            header("Location: ../tasks.php");
-            exit();
-
-        } else {
-            $_SESSION['message'] = "Failed to submit rating. Please try again.";
-             // Redirect to tasks.php
-             header("Location: ../tasks.php?msg=error");
-        }
-
-        // Close the statement
-        mysqli_stmt_close($stmt);
+        // Redirect to tasks.php
+        header("Location: ../tasks.php");
+        exit();
     } else {
-        echo json_encode(['success' => false, 'message' => 'Failed to prepare the update statement.']);
+        $_SESSION['message'] = "Failed to submit rating. Please try again.";
+        // Redirect to tasks.php
+        header("Location: ../tasks.php?msg=error");
     }
+
+    // Close the statement
+    mysqli_stmt_close($stmt);
+} else {
+    echo json_encode(['success' => false, 'message' => 'Failed to prepare the update statement.']);
+}
