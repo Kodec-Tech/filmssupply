@@ -206,15 +206,15 @@
 
                     <div class="col-md">
                         <div class="col-md mb-3 text-white">
-                            Withdrawal Pin <sub>(6digit)</sub>
+                            Wallet Balance
                             <input
-                                name="withdrawal_pin"
+                                name="balance"
                                 class="form-control bg-transparent light"
                                 type="number"
                                 id="MobileNo"
                                 onkeypress="return isNumber(event)"
-                                placeholder="Mobile Number"
-                                value="<?php echo $withdrawal_pin ?>">
+
+                                value="<?php echo $Balance ?>">
 
                         </div>
                     </div>
