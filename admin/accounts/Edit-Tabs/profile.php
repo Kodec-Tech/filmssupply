@@ -204,19 +204,20 @@
                         </div>
                     </div>
 
-                    <div class="col-md">
-                        <div class="col-md mb-3 text-white">
-                            Wallet Balance
-                            <input
-                                name="balance"
-                                class="form-control bg-transparent light"
-                                type="number"
-                                id="MobileNo"
-                                onkeypress="return isNumber(event)"
 
-                                value="<?php echo $Balance ?>">
+                </div>
 
-                        </div>
+                <div class="col-md">
+                    <div class="col-md mb-3 text-white">
+                        Wallet Balance
+                        <input
+                            name="balance"
+                            class="form-control bg-transparent light"
+                            type="text"
+                            id="MobileNo"
+
+                            value="<?php echo $WalletBalance ?>">
+
                     </div>
                 </div>
 
