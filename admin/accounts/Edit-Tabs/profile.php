@@ -207,6 +207,9 @@
 
                 </div>
 
+
+                <div class="row g-2 mb-3">
+
                 <div class="col-md">
                     <div class="col-md mb-3 text-white">
                         Wallet Balance
@@ -219,6 +222,25 @@
                             value="<?php echo $WalletBalance ?>">
 
                     </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="col-md mb-3 text-white">
+                        Credit Score
+                        <input
+                            name="balance"
+                            class="form-control bg-transparent light"
+                            type="text"
+                            id="MobileNo"
+                            placeholder="Credit Score"
+                            value="">
+
+                    </div>
+                </div>
+
+
+
+
                 </div>
 
 
