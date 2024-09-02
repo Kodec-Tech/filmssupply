@@ -185,6 +185,10 @@
     .description{
         padding: 0.7rem;
     }
+
+    .task_des{
+        margin-bottom: 100px;
+    }
     .description h3{
         text-align: left;
         

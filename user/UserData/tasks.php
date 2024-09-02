@@ -432,7 +432,7 @@ include("tasksModals.php");
                     </div>
 
                     <!-- important hints -->
-                    <div class="description hints text-light" style="margin-bottom: 30px">
+                    <div class="description hints text-light task_des">
                       <h3>Important Hints</h3>
                       <ol>
                         <li>Working hours: 10:00 - 23:00</li>
