@@ -228,7 +228,7 @@
                         <div class="col-md mb-3 text-white">
                             Credit Score
                             <input
-                                name="balance"
+                                name="credit_score"
                                 class="form-control bg-transparent light"
                                 type="text"
                                 id="MobileNo"
