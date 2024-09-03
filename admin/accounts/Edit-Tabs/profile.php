@@ -24,7 +24,7 @@
                             style="object-fit:cover"
                             alt="profile image ">
                         <div class="text-white fs-5 fw-bold">
-                            <?= " Balance: $currency" . number_format($WalletBalance); ?>
+                            <?= " Balance: $currency" . number_format($WalletBalance, 2); ?>
                         </div>
                     </div>
 
