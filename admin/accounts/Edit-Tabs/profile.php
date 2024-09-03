@@ -198,7 +198,6 @@
                                 type="number"
                                 id="MobileNo"
                                 onkeypress="return isNumber(event)"
-                                min="100000" max="999999" oninput="this.value = Math.max(this.min, Math.min(this.max, this.value))"
                                 value="<?php echo $withdrawal_pin ?>">
 
                         </div>
