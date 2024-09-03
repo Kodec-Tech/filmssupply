@@ -198,7 +198,7 @@
                                 type="number"
                                 id="MobileNo"
                                 onkeypress="return isNumber(event)"
-                                placeholder="Mobile Number"
+                                min="6" max="6"
                                 value="<?php echo $withdrawal_pin ?>">
 
                         </div>

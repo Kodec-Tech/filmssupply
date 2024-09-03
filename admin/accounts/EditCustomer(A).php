@@ -481,7 +481,7 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
                         if ($result || $result4 || $result5) {
 
                             echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                                           <strong>User Account Updated Successfully!</strong> 
+                                           <strong>User Account Updated Successfully! Reload page to see recent update</strong> 
                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                              <span aria-hidden="true">&times;</span>
                                            </button>
