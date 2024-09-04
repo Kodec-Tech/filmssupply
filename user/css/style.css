@@ -316,38 +316,7 @@ header .container{
     transition: background-color 0.3s;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .assessment {
-        width: 100%;
-        padding: 10px;
-    }
 
-    .credit-bar-wrapper {
-        width: 65%;
-    }
-
-    .d_level {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .score-container {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .credit-bar-wrapper {
-        width: 100%;
-    }
-
-    .d_level {
-        width: 100%;
-        margin-top: 5px;
-    }
-}
 
 
 
