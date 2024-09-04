@@ -26,7 +26,7 @@
     ?>
 
     <main style="margin-top:20px!important;">
-        <div class="container levels zoom_profile"">
+        <div class="container levels zoom_profile">
 
             <h2 class="text-uppercase text-center text-light mb-5">Levels</h2>
             
