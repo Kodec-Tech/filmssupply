@@ -141,7 +141,7 @@ if (isset($_POST['WDepositAc'])) {
     $AccountNo = $_POST['WDepositAc'];
     $Amount = $_POST['WMainAmount'];
 
-    if ($Amount >= 100) {
+    if ($Amount >= 1) {
 
         // mysqli_begin_transaction($conn, MYSQLI_TRANS_START_READ_ONLY);
 
@@ -186,6 +186,6 @@ if (isset($_POST['WDepositAc'])) {
             }
         }
     } else {
-        echo "Transaction Fail minimum amount required 100 USD";
+        echo "Transaction Fail minimum amount required is 1";
     }
 }
