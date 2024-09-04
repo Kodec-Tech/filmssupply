@@ -471,8 +471,8 @@
     }
 
     .d_level {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
+        font-size: 13px;
+        /* padding: 0.4rem 0.8rem; */
     }
 }
 
