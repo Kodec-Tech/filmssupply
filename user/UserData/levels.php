@@ -71,7 +71,7 @@
                 </div>
 
             <!-- all levels are here -->
-            <div class="level_table">
+            <div class="level_table zoom_dash">
                 <div class="level_card">
                     <div class="level_head">
                         <h2>NORMAL</h2>
