@@ -28,8 +28,6 @@
     <main style="margin-top:20px!important;">
         <div class="container levels">
 
-        <div class="zoom_profile">
-
             <h2 class="text-uppercase text-center text-light mb-5">Levels</h2>
             
             <div class="rank">
@@ -73,7 +71,7 @@
                 </div>
 
             <!-- all levels are here -->
-            <div class="level_table">
+            <div class="level_table zoom_profile">
                 <div class="level_card">
                     <div class="level_head">
                         <h2>NORMAL</h2>
@@ -188,7 +186,7 @@
 
             
 
-             </div>
+             
         </div>
     </main>
 
