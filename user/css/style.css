@@ -280,9 +280,9 @@ header .container{
 /* Credit Bar */
 .credit-bar {
     height: 10px;
-    background-color: #28a745;
+    background-color: #e9ecef; /* Neutral color (light grey) */
     border-radius: 25px;
-    transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 /* Score Percentage */

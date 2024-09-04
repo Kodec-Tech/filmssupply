@@ -339,7 +339,7 @@ document.addEventListener("DOMContentLoaded", function() {
     creditBar.style.width = newWidth; // Set the new width of the bar
     creditScoreText.textContent = creditScore + "%"; // Update the percentage text
 
-    // Optional: Change the color of the score text based on the score
+    // Set the color based on the score
     if (creditScore < 50) {
         creditScoreText.style.backgroundColor = "#dc3545"; // Red for low scores
         creditBar.style.backgroundColor = "#dc3545";
