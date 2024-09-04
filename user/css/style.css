@@ -247,25 +247,7 @@ header .container{
     align-items: center;
     gap: 10px;
 }
-/* .assessment div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.credit_level{
-    content: "";
-    width: 300px;
-    height: 5.5px;
-    background-color: #C70039;
-    border-radius: 100px;
-    position: relative;
-}
-.d_level{
-    background-color: #C70039;
-    padding: 0.5rem;
-    border-radius: 10px;
-    margin-left: -4px;
-} */
+
 
 
 
@@ -292,6 +274,7 @@ header .container{
     border-radius: 25px;
     overflow: hidden;
     position: relative;
+    height: 5.5px;
 }
 
 /* Credit Bar */
@@ -309,7 +292,7 @@ header .container{
     padding: 0.5rem 1rem;
     border-radius: 5px;
     font-size: 1rem;
-    min-width: 60px;
+    min-width: 50px;
     text-align: center;
     transition: background-color 0.3s;
 }
