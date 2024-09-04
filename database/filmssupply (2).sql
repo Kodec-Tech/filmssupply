@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 29, 2024 at 08:23 PM
+-- Generation Time: Sep 04, 2024 at 06:10 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.4
 
@@ -49,7 +49,7 @@ CREATE TABLE `accounts` (
 
 INSERT INTO `accounts` (`id`, `AccountNo`, `Balance`, `SavingBalance`, `SavingTarget`, `AccountType`, `State`, `username`, `ref_bonus`, `invite_code`, `referral`, `bonus`, `amount_processing`) VALUES
 (60, '1125', '0.0', '0.0', '', 'Saving', 0, 'admin', '0.0', 'YVIFK', NULL, '300', NULL),
-(61, '6792', '0.0', '0.0', '', 'Saving', 0, 'samy', '0.0', 'SAWFP', NULL, '300', NULL);
+(61, '6792', '5.18', '0.0', '', 'Saving', 0, 'samy', '0.0', 'SAWFP', NULL, '0.0', NULL);
 
 -- --------------------------------------------------------
 
@@ -127,16 +127,17 @@ CREATE TABLE `customer_detail` (
   `kyc_approval` varchar(20) NOT NULL,
   `downline` varchar(128) DEFAULT NULL,
   `withdrawal_pin` varchar(10) NOT NULL,
-  `currency` varchar(3) DEFAULT NULL
+  `currency` varchar(3) DEFAULT NULL,
+  `credit_score` varchar(100) DEFAULT '65'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `customer_detail`
 --
 
-INSERT INTO `customer_detail` (`C_No`, `Account_No`, `C_First_Name`, `C_Last_Name`, `Gender`, `C_Father_Name`, `C_Mother_Name`, `C_Birth_Date`, `C_Adhar_No`, `C_Pan_No`, `C_Mobile_No`, `C_Email`, `C_Pincode`, `C_Adhar_Doc`, `C_Pan_Doc`, `Create_Date`, `ProfileColor`, `ProfileImage`, `Bio`, `Country`, `kyc_approval`, `downline`, `withdrawal_pin`, `currency`) VALUES
-(74, '1125', 'owner', 'owner', 'Not Available', '', '', '0000-00-00', '', '', '535353645334', 'admin@gmail.com', '', '', '', '2024-08-29', '#125db4', '', '', '', '', NULL, '111111', '$'),
-(75, '6792', 'Veronica', 'Rich', 'Not Available', '', '', '0000-00-00', '', '', '264545454545', 'kaleb@mailinator.com', '', '', '', '2024-08-29', '#6de4f0', '', '', '', '', NULL, '111111', '£');
+INSERT INTO `customer_detail` (`C_No`, `Account_No`, `C_First_Name`, `C_Last_Name`, `Gender`, `C_Father_Name`, `C_Mother_Name`, `C_Birth_Date`, `C_Adhar_No`, `C_Pan_No`, `C_Mobile_No`, `C_Email`, `C_Pincode`, `C_Adhar_Doc`, `C_Pan_Doc`, `Create_Date`, `ProfileColor`, `ProfileImage`, `Bio`, `Country`, `kyc_approval`, `downline`, `withdrawal_pin`, `currency`, `credit_score`) VALUES
+(74, '1125', 'owner', 'owner', 'Not Available', '', '', '0000-00-00', '', '', '535353645334', 'admin@gmail.com', '', '', '', '2024-08-29', '#125db4', '', '', '', '', NULL, '111111', '$', NULL),
+(75, '6792', 'Veronica', 'Rich', 'Not Available', '', '', '0000-00-00', '', '', '264545454545', 'kaleb@mailinator.com', '', '', '', '2024-08-29', '#6de4f0', '', '', '', '', NULL, '111111', '£', NULL);
 
 -- --------------------------------------------------------
 
@@ -324,16 +325,6 @@ CREATE TABLE `user_task` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user_task`
---
-
-INSERT INTO `user_task` (`id`, `acctNo`, `username`, `product_id`, `product_title`, `product_img`, `product_amount`, `today_earning`, `commission_earned`, `status`, `created_date`, `level`, `reset`, `order_number`) VALUES
-(176, '1597', 'phoenix', 84, 'Marabaha Indian movie', '../movies-img/coming_soon5.png07262024133714.png', '120', '1.08', '1.08', 'completed', '2024-08-20 17:31:40', 'vip', 'false', 'ORD-8292784482'),
-(177, '1597', 'phoenix', 90, 'test2', '../movies-img/image.png08202024173819.png', '120', '1.08', '1.08', 'completed', '2024-08-20 17:31:48', 'vip', 'false', 'ORD-9673084478'),
-(178, '1597', 'phoenix', 92, 'test4', '../movies-img/back.png08202024173900.png', '410', '3.69', '3.69', 'completed', '2024-08-20 17:31:53', 'vip', 'false', 'ORD-1210054549'),
-(179, '1597', 'phoenix', 91, 'test3', '../movies-img/pic.jpg08202024173844.jpg', '140', '1.26', '1.26', 'completed', '2024-08-20 17:32:02', 'vip', 'false', 'ORD-8252078491');
-
---
 -- Indexes for dumped tables
 --
 
@@ -488,7 +479,7 @@ ALTER TABLE `transaction`
 -- AUTO_INCREMENT for table `user_task`
 --
 ALTER TABLE `user_task`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=180;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=186;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
