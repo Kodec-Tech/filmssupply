@@ -263,57 +263,57 @@ GROUP BY
                         <a href="../wallet/mwithdraw.php" class="nav-link text-left" role="button">
                             <i class="flaticon-bar-chart-1"></i><i class="fa fa-download"></i> Manage Withdrawal
                         </a>
-            </li>
+                    </li>
 
 
-            <li class="has-sub menuHover">
+                    <li class="has-sub menuHover">
 
-<a class="nav-link collapsed text-left" href="#collapseExample3" role="button" data-toggle="collapse">
-        <i class="flaticon-user"></i> <i class="fa fa-film"></i> Movies
-    </a>
+                        <a class="nav-link collapsed text-left" href="#collapseExample3" role="button" data-toggle="collapse">
+                            <i class="flaticon-user"></i> <i class="fa fa-film"></i> Movies
+                        </a>
 
 
-            <div class="collapse menu mega-dropdown" id="collapseExample3">
-        <div class="dropmenu" aria-labelledby="navbarDropdown">
-            <div class="container-fluid ">
-                <div class="row">
-                    <div class="col-lg-12 px-2">
-                        <div class="submenu-box">
-                            <ul class="list-unstyled m-0">
-                                <li><a href="../normal/movies.php">Normal </a></li>
-                                <li><a href="../vip/movies.php">VIP </a></li>
+                        <div class="collapse menu mega-dropdown" id="collapseExample3">
+                            <div class="dropmenu" aria-labelledby="navbarDropdown">
+                                <div class="container-fluid ">
+                                    <div class="row">
+                                        <div class="col-lg-12 px-2">
+                                            <div class="submenu-box">
+                                                <ul class="list-unstyled m-0">
+                                                    <li><a href="../normal/movies.php">Normal </a></li>
+                                                    <li><a href="../vip/movies.php">VIP </a></li>
 
-                                <li><a href="../vvip/movies.php">VVIP</a></li>
+                                                    <li><a href="../vvip/movies.php">VVIP</a></li>
 
-                                <li><a href="../vvvip/movies.php">VVVIP</a></li>
+                                                    <li><a href="../vvvip/movies.php">VVVIP</a></li>
 
-                                <li><a href="../gold/movies.php">Gold</a></li>
-                                <li><a href="../diamond/movies.php">Diamond </a></li>
+                                                    <li><a href="../gold/movies.php">Gold</a></li>
+                                                    <li><a href="../diamond/movies.php">Diamond </a></li>
 
-                                
-                            </ul>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</li>
+                    </li>
 
 
 
 
-            <li class="menuHover">
+                    <li class="menuHover">
                         <a href="../upgrade/user.php" class="nav-link text-left" role="button">
                             <i class="flaticon-bar-chart-1"></i><i class="fa fa-user"></i> Upgrade Users
                         </a>
-            </li>
+                    </li>
 
 
-                    
-                   
-                    
+
+
+
 
                     <li class="has-sub menuHover">
                         <a class="nav-link collapsed text-left" href="#collapseExample2" role="button" data-toggle="collapse">
@@ -352,13 +352,13 @@ GROUP BY
 
 
                     <li class="menuHover">
-                <a href="../setting.php" class="nav-link text-left" role="button">
-                    <i class="flaticon-bar-chart-1"></i><i class="bx bx-transfer ico"></i> Settings
-                </a>
-            </li>
+                        <a href="../setting.php" class="nav-link text-left" role="button">
+                            <i class="flaticon-bar-chart-1"></i><i class="bx bx-transfer ico"></i> Settings
+                        </a>
+                    </li>
 
 
-                    
+
 
                     <li class="menuHover">
                         <a class="nav-link text-left" role="button" href="../logout.php">
@@ -400,7 +400,7 @@ GROUP BY
                             <li class="nav-item">
                                 <a class="nav-link" href="#" role="button">
                                     <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $Admin ?></span>
-                                     <img id="AdminDropdown" class="img-profile rounded-circle" src="../<?php echo $AdminProfile ?? ''; ?>">
+                                    <img id="AdminDropdown" class="img-profile rounded-circle" src="../<?php echo $AdminProfile ?? ''; ?>">
                                 </a>
                             </li>
 
@@ -450,7 +450,7 @@ GROUP BY
                                                     <!-- Amount -->
                                                     <div class="input-group mb-1 mt-5">
                                                         <div class="input-group-prepend">
-                                                            <span class="input-group-text gray_bg light" id="inputGroup-sizing-default"><i class='bx bx-dollar'></i></span>
+                                                            <span class="input-group-text gray_bg light" id="inputGroup-sizing-default"><i class='bx bx-money'></i></span>
                                                         </div>
                                                         <input id="Amount" type="tel" class="form-control gray_bg light" aria-label="Default" placeholder="Enter Amount..." aria-describedby="inputGroup-sizing-default">
 
@@ -576,7 +576,7 @@ GROUP BY
 
 
 
-        <!-- Modal goes here -->
+    <!-- Modal goes here -->
     <!-- <div class="modal fade" id="purchaseCode" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
