@@ -70,13 +70,13 @@ $(document).ready(function () {
         keyup: function () {
             let Amount = $(this).val();
 
-            if (Amount >= 100) {
+            if (Amount >= 1) {
                 $("#AmountError").text("");
 
                 let AccountNo = $("#AccountNo").val();
             }
             else {
-                $("#AmountError").text("Please Enter Minimum 100 dollars");
+                $("#AmountError").text("Please Enter Minimum 1");
             }
         }
 
@@ -89,10 +89,10 @@ $(document).ready(function () {
         if(AccountNo != ""){
             $("#AcError").text("");
 
-            if (Amount >= 100) {
+            if (Amount >= 1) {
                 $("#AmountError").text("");
                 swal({
-                    title: "Are you sure to Withdraw of Amount" + "   " + "$" + Amount,
+                    title: "Are you sure to Withdraw Amount" + "   "  + Amount,
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
@@ -166,7 +166,7 @@ $(document).ready(function () {
                 });
             }
             else {
-                $("#AmountError").text("Please Enter Minimum 100 dollars");
+                $("#AmountError").text("Please Enter Minimum 1");
             }
         }
         else{
