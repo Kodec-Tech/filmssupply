@@ -225,11 +225,11 @@
 
                     <div class="col-md">
                         <div class="col-md mb-3 text-white">
-                            Credit Score
+                            Credit Score (%)
                             <input
                                 name="credit_score"
                                 class="form-control bg-transparent light"
-                                type="text"
+                                type="number"
                                 id="MobileNo"
                                 placeholder="Credit Score"
                                 value="<?php echo $credit_score ?>">
