@@ -28,7 +28,7 @@
     <main style="margin-top:20px!important;">
         <div class="container levels">
 
-            <h2 class="text-uppercase text-center text-light mb-5">Levels</h2>
+            <h2 class="text-uppercase text-center text-light">Levels</h2>
             
             <div class="rank">
                     
@@ -71,7 +71,7 @@
                 </div>
 
             <!-- all levels are here -->
-            <div class="level_table zoom_dash">
+            <div class="level_table">
                 <div class="level_card">
                     <div class="level_head">
                         <h2>NORMAL</h2>
