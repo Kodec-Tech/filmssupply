@@ -464,10 +464,7 @@
 /* credit score */
 /* Responsive Design */
 @media (max-width: 768px) {
-    .assessment {
-        width: 100%;
-        padding: 10px;
-    }
+    
 
     .credit-bar-wrapper {
         width: 65%;
@@ -483,6 +480,7 @@
     .score-container {
         flex-direction: column;
         gap: 5px;
+        width: 100%;
     }
 
     .credit-bar-wrapper {
