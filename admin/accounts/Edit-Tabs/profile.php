@@ -218,7 +218,7 @@
                                 type="text"
                                 id="MobileNo"
 
-                                value="<?php echo $WalletBalance ?>">
+                                value="<?php echo number_format($WalletBalance, 2) ?>">
 
                         </div>
                     </div>
@@ -232,7 +232,7 @@
                                 type="text"
                                 id="MobileNo"
                                 placeholder="Credit Score"
-                                value="">
+                                value="<?php echo $credit_score ?>">
 
                         </div>
                     </div>

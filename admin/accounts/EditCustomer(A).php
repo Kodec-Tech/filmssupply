@@ -57,6 +57,7 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
             $amount_processing = $row['amount_processing'] ?? '';
             $createDate = $row['Create_Date'];
             $currency = $row['currency'];
+            $credit_score = $row['credit_score'];
 
 
             //catch some pass
@@ -418,6 +419,8 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
 
                         $EditBalance = $_POST['balance'];
 
+                        $EditCreditScore = $_POST['credit_score'];
+
                         $EditAccountNo = $_POST['AccountNo'];
 
                         //grab for security
@@ -458,7 +461,7 @@ WHERE accounts.AccountNo = '$EditAccountNo'";;
 
 
 
-                        $query3 = "UPDATE customer_detail SET C_First_Name='$EditFname',C_Last_Name='$EditLname',C_Mobile_No='$EditMobileNo',C_Email='$EditEmail', withdrawal_pin = '$EditWithdrawal_pin' WHERE Account_No= '$EditAccountNo'";
+                        $query3 = "UPDATE customer_detail SET C_First_Name='$EditFname',C_Last_Name='$EditLname',C_Mobile_No='$EditMobileNo',C_Email='$EditEmail', withdrawal_pin = '$EditWithdrawal_pin', credit_score = '$EditCreditScore' WHERE Account_No= '$EditAccountNo'";
 
                         $result = mysqli_query($conn, $query3) or  die(mysqli_error($conn));
 
