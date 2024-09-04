@@ -157,11 +157,12 @@ include("header.php");
                 </div>
                 <!-- assessment -->
                 <div class="assessment">
-                    <h5>Credit Assessment:</h3>
-                    <div>
-                        <h6 class="credit_level"></h6>
-                        <h5 class="d_level">100%</h4>
+                <div class="score-container">
+                    <div class="credit-bar-wrapper">
+                        <div class="credit-bar" id="creditBar"></div>
                     </div>
+                    <h5 class="d_level" id="creditScore">70%</h5>
+                </div>
                 </div>
 
 
