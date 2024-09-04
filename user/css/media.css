@@ -478,9 +478,7 @@
 
 @media (max-width: 480px) {
     .score-container {
-        flex-direction: column;
         gap: 5px;
-        width: 100%;
     }
 
     .credit-bar-wrapper {
@@ -488,7 +486,7 @@
     }
 
     .d_level {
-        width: 100%;
+        
         margin-top: 5px;
     }
 }
