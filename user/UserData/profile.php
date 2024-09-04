@@ -1,21 +1,14 @@
 <style>
 /* General Styles */
 .assessment {
-    width: 90%;
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    width: 65%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-.assessment h5 {
-    margin: 10px 0;
-    font-size: 1.1rem;
-    color: #333;
-}
 
 /* Score Container */
 .score-container {
@@ -95,7 +88,6 @@
 
 
 <div class="assessment">
-    <h5>Credit Assessment:</h5>
     <div class="score-container">
         <div class="credit-bar-wrapper">
             <div class="credit-bar" id="creditBar"></div>
