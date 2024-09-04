@@ -274,7 +274,9 @@ header .container{
     max-width: 500px;
     margin: 20px auto;
     padding: 15px;
-  
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -316,38 +318,7 @@ header .container{
     transition: background-color 0.3s;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .assessment {
-        width: 100%;
-        padding: 10px;
-    }
 
-    .credit-bar-wrapper {
-        width: 65%;
-    }
-
-    .d_level {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .score-container {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .credit-bar-wrapper {
-        width: 100%;
-    }
-
-    .d_level {
-        width: 100%;
-        margin-top: 5px;
-    }
-}
 
 
 
