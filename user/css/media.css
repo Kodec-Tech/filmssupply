@@ -470,7 +470,7 @@
     }
 
     .credit-bar-wrapper {
-        margin-right: 5px;
+        width: 65%;
     }
 
     .d_level {
@@ -481,16 +481,16 @@
 
 @media (max-width: 480px) {
     .score-container {
-        flex-direction: row;
+        flex-direction: column;
         gap: 5px;
     }
 
     .credit-bar-wrapper {
-        margin-right: 5px;
+        width: 100%;
     }
 
     .d_level {
-        font-size: 0.8rem;
-        padding: 0.3rem 0.7rem;
+        width: 100%;
+        margin-top: 5px;
     }
 }

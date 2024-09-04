@@ -270,29 +270,27 @@ header .container{
 
 
 .assessment {
-    width: 90%;
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 15px;
+    
+  
     text-align: center;
 }
+
 
 /* Score Container */
 .score-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 10px;
 }
 
 /* Credit Bar Wrapper */
 .credit-bar-wrapper {
-    flex-grow: 1;
+    width: 70%;
     background-color: #e9ecef;
     border-radius: 25px;
     overflow: hidden;
     position: relative;
-    margin-right: 10px; /* Space between the bar and score */
 }
 
 /* Credit Bar */
@@ -312,9 +310,9 @@ header .container{
     font-size: 1rem;
     min-width: 60px;
     text-align: center;
-    white-space: nowrap; /* Ensure the percentage stays on one line */
     transition: background-color 0.3s;
 }
+
 
 
 
