@@ -282,6 +282,7 @@ header .container{
     align-items: center;
     justify-content: center;
     gap: 10px;
+    width: 100%;
 }
 
 /* Credit Bar Wrapper */
