@@ -161,7 +161,7 @@ include("header.php");
                     <div class="credit-bar-wrapper">
                         <div class="credit-bar" id="creditBar"></div>
                     </div>
-                    <h5 class="d_level" id="creditScore"><?php echo $creditScore ?></h5>
+                    <h5 class="d_level" id="creditScore"><?php echo $credit_score ?></h5>
                 </div>
                 </div>
 
@@ -327,7 +327,7 @@ include("footer.php");
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     // Example: Fetch the credit score value from the server or admin setting
-    var creditScore = <?php echo $creditScore ?>; // This would be fetched from the PHP backend
+    var creditScore = <?php echo $credit_score ?>; // This would be fetched from the PHP backend
 
     // Update the bar width and the percentage display
     var creditBar = document.getElementById('creditBar');
