@@ -5,9 +5,7 @@
     max-width: 500px;
     margin: 20px auto;
     padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
     text-align: center;
 }
 
