@@ -161,7 +161,7 @@ include("header.php");
                     <div class="credit-bar-wrapper">
                         <div class="credit-bar" id="creditBar"></div>
                     </div>
-                    <h5 class="d_level" id="creditScore">70%</h5>
+                    <h5 class="d_level" id="creditScore"><?php echo $creditScore ?></h5>
                 </div>
                 </div>
 
@@ -323,9 +323,6 @@ include("footer.php");
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-      <?php
-$creditScore = 60; // Example: Value fetched from the database or set by admin
-?>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {

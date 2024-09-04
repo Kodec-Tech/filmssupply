@@ -47,6 +47,8 @@ if (mysqli_num_rows($result) > 0) {
 
         $currency = $row['currency'] ?? '';
 
+        $credit_score = $row['credit_score'] ?? '';
+
     }
     $ProfileText = substr($Fname, 0, 1);
     $_SESSION['AccountNo'] = $AccountNo;
