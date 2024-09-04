@@ -112,7 +112,7 @@ if (isset($_POST['DepositAc'])) {
             }
         }
     } else {
-        echo "Transaction Fail minimum amount required 100 USD";
+        echo "Transaction Fail minimum amount required is 1";
     }
 }
 
