@@ -76,7 +76,7 @@ $(document).ready(function () {
                 let AccountNo = $("#AccountNo").val();
             }
             else {
-                $("#AmountError").text("Please Enter Minimum 1 USD");
+                $("#AmountError").text("Please Enter Minimum 1");
             }
         }
 
@@ -92,7 +92,7 @@ $(document).ready(function () {
             if (Amount >= 1) {
                 $("#AmountError").text("");
                 swal({
-                    title: "Are you sure to Deposit of Amount" + "   " + "$" + Amount,
+                    title: "Are you sure to Deposit of Amount" + "   "  + Amount,
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
@@ -166,7 +166,7 @@ $(document).ready(function () {
                 });
             }
             else {
-                $("#AmountError").text("Please Enter Minimum 1 USD");
+                $("#AmountError").text("Please Enter Minimum 1 ");
             }
         }
         else{

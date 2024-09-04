@@ -309,7 +309,7 @@ GROUP BY
                                                     <!-- Amount -->
                                                     <div class="input-group mb-1 mt-5">
                                                         <div class="input-group-prepend">
-                                                            <span class="input-group-text gray_bg light" id="inputGroup-sizing-default"><i class='bx bx-dollar'></i></span>
+                                                            <span class="input-group-text gray_bg light" id="inputGroup-sizing-default"><i class='bx bx-money'></i></span>
                                                         </div>
                                                         <input id="Amount" type="tel" class="form-control gray_bg light" aria-label="Default" placeholder="Enter Amount..." aria-describedby="inputGroup-sizing-default">
 
