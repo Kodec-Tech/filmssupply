@@ -269,7 +269,85 @@ header .container{
 
 
 
+.assessment {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+  
+    text-align: center;
+}
 
+
+/* Score Container */
+.score-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Credit Bar Wrapper */
+.credit-bar-wrapper {
+    width: 70%;
+    background-color: #e9ecef;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Credit Bar */
+.credit-bar {
+    height: 10px;
+    background-color: #28a745;
+    border-radius: 25px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Score Percentage */
+.d_level {
+    background-color: #28a745;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    min-width: 60px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .assessment {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .credit-bar-wrapper {
+        width: 65%;
+    }
+
+    .d_level {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .score-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .credit-bar-wrapper {
+        width: 100%;
+    }
+
+    .d_level {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
 
 
 

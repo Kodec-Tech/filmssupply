@@ -1,105 +1,329 @@
-<style>
-/* General Styles */
-.assessment {
-    width: 90%;
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 15px;
-  
-    text-align: center;
-}
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Profile settings</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+            <meta name="keywords" content="Film Supply, Cinema, Movie Rating, marketing, SEO, B2BCommerce">
+            <meta name="author" content="">
+            <meta name="theme-color" content="#C70039">
+            <meta name="description" content="Films Supply">
+    
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous"
+        />
+        <!-- Bootstrap icons -->
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+          rel="stylesheet"
+        />
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/media.css" />
+        <link rel="stylesheet" href="../css/general.css" />
+        <!-- Icon -->
+        <link rel="shortcut icon" href="../images/img/icon.png" type="image/x-icon" />
+
+        <link
+    rel="stylesheet"
+    href="../../node_modules/alerthub/dist/css/Alerthub.min.css">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"
+></script>
 
 
-/* Score Container */
-.score-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-/* Credit Bar Wrapper */
-.credit-bar-wrapper {
-    width: 70%;
-    background-color: #e9ecef;
-    border-radius: 25px;
-    overflow: hidden;
-    position: relative;
-}
-
-/* Credit Bar */
-.credit-bar {
-    height: 10px;
-    background-color: #28a745;
-    border-radius: 25px;
-    transition: width 0.5s ease-in-out;
-}
-
-/* Score Percentage */
-.d_level {
-    background-color: #28a745;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    font-size: 1rem;
-    min-width: 60px;
-    text-align: center;
-    transition: background-color 0.3s;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .assessment {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .credit-bar-wrapper {
-        width: 65%;
-    }
-
-    .d_level {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .score-container {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .credit-bar-wrapper {
-        width: 100%;
-    }
-
-    .d_level {
-        width: 100%;
-        margin-top: 5px;
-    }
-}
+</head>
 
 
-</style>
+ <body class="profile_body">
 
-
-
-
-
-<div class="assessment">
-    <div class="score-container">
-        <div class="credit-bar-wrapper">
-            <div class="credit-bar" id="creditBar"></div>
-        </div>
-        <h5 class="d_level" id="creditScore">70%</h5>
-    </div>
-</div>
-
-
-
-
+    
 <?php
+include("header.php");
+?>
+
+        <main class="zoom_profile">
+            <div class="container  text-center  text-light">
+                
+                <div class="profile">
+                    <div class="profile-content">
+                <img 
+                onclick="document.getElementById('profile').click()"
+                src="<?php echo $profile; ?>"
+                alt="user"
+                id="uploadImage"
+                accept="image/*" 
+                style="width: 56px; height: 60px; border-radius:50px; cursor:pointer"
+                class="rounded-circle">
+
+
+
+                <input
+                type="file"
+                name="profile"
+                id="profile"
+                style="display: none;"
+                onchange="updateImage(this)">
+
+                <script>
+                    function updateImage(input) {
+                    const uploadImage = document.getElementById('uploadImage');
+                    if (input.files && input.files[0]) {
+                        const reader = new FileReader();
+
+                        reader.onload = function(e) {
+                        uploadImage.src = e.target.result;
+                        };
+
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+                </script>
+
+
+                <div class="name">
+                    <p><?= $username ?></p>
+                    <img src="../images/img/check.png" alt="">
+                </div>
+                
+                <h4><span class="keywords">UID:</span> <?php
+                               $account_number = ($AccountNo);
+                               echo $account_number;
+                               
+                    ?></h4>
+                <h4><span class="keywords">Referral code:</span> <?= $invite_code ?? '' ?></h4>
+
+                <div class="rank">
+                    
+                    <?php if( $level === 'vip') {
+                    ?>
+                    <h3 style="font-size: 14px; margin-bottom: -2px">VIP</h3>
+                    <img src="../images/img/vip1.png" alt="">
+                   
+                   <?php } elseif($level === 'vvip'){
+                   ?>
+                   
+                   <h3 style="font-size: 14px; margin-bottom: -2px">VVIP</h3>
+                   <img src="../images/img/vip2.png" alt="">
+   
+                   <?php } elseif($level === 'vvvip'){
+                   ?>
+                   
+                   <h3 style="font-size: 14px; margin-bottom: -2px">VVVIP</h3>
+                   <img src="../images/img/vip3.png" alt="">
+   
+                   <?php } elseif($level === 'gold'){
+                   ?>
+                   
+                   <h3 style="font-size: 14px; margin-bottom: -2px">GOLD</h3>
+                   <img src="../images/img/vip4.png" alt="">
+
+                   <?php } elseif($level === 'diamond'){
+                   ?>
+                   
+                   <h3 style="font-size: 14px; margin-bottom: -2px">DIAMOND</h3>
+                   <img src="../images/img/vip5.png" alt="">
+
+                   <?php } elseif($level === 'normal'){
+                   ?>
+                   
+                   <h3 style="font-size: 14px; margin-bottom: -2px">Normal</h3>
+                   <img src="../images/img/vip0.png" alt="">
+                   <?php } ?>
+
+                </div>
+
+                <!-- flex this items -->
+                <div class="earn_wallet">
+                    <div class="income">
+                        <h5><?php echo $currency . ($today_earning  ?? 0); ?></h5>
+                        <h4 class="keywords">Today's Profit</h4>
+                    </div>
+                    <div class="v-line"></div>
+                    <div class="income">
+                        <h5><?php echo $currency . number_format($balance, 2); ?></h5>
+                        <h4 class="keywords">Total Amount</h4>
+                    </div>
+                </div>
+                <!-- assessment -->
+                <div class="assessment">
+                <div class="score-container">
+                    <div class="credit-bar-wrapper">
+                        <div class="credit-bar" id="creditBar"></div>
+                    </div>
+                    <h5 class="d_level" id="creditScore">70%</h5>
+                </div>
+                </div>
+
+
+            </div>
+            </div>
+                <!-- major profiles here -->
+                 <div class="major_profiles" style="margin-top: -20px!important; ">
+                    <div class="single_major_profiles">
+                        <h2>Transactions</h2>
+                        <div class="profile_option">
+                            <a href="deposit.php">
+                                <p>
+                                <img src="../images/real_icons/deposit.png" alt="" srcset="" class="option_image"> <span>Deposit</span>
+                                </p>
+                                <img src="../images/real_icons/arrow.png" alt="" srcset="" class="arrow_image">
+                            </a>
+                            <a href="withdraw.php">
+                                <p>
+                                <img src="../images/real_icons/withdraw.png" alt="" srcset="" class="option_image"> <span>Withdraw</span>
+                                </p>
+                                <img src="../images/real_icons/arrow.png" alt="" srcset="" class="arrow_image">
+                            </a>
+                            
+                            <a href="transactions.php">
+                                <p>
+                                <img src="../images/real_icons/records.png" alt="" srcset="" class="option_image">
+                                    <span>Records</span>
+                                </p>
+                                <img src="../images/real_icons/arrow.png" alt="" srcset="" class="arrow_image">
+                            </a>
+                            <a href="levels.php">
+                                <p>
+                                <img src="../images/real_icons/levels.png" alt="" srcset="" class="option_image">
+                                    <span>VIP Level</span>
+                                </p>
+                                <img src="../images/real_icons/arrow.png" alt="" srcset="" class="arrow_image">
+                            </a>
+                            <a href="filmfaqs.php">
+                                <p>
+                                <img src="../images/real_icons/faqs.png" alt="" srcset="" class="option_image">
+                                    <span>FAQs</span>
+                                </p>
+                                <img src="../images/real_icons/arrow.png" alt="" srcset="" class="arrow_image">
+                            </a>
+                            <!-- <a href="history.php">
+                                <p>
+                                    <img src="../../images/history.png" alt="" srcset="" class="option_image">
+                                    <span>Tasks History</span>
+                                </p>
+                                <img src="../images/real_icons/arrow.png" alt="" srcset="" class="arrow_image">
+                            </a>
+                            <a href="security.php">
+                                <p>
+                                    <img src="../../images/security.png" alt="" srcset="" class="option_image">
+                                    <span>Security</span>
+                                </p>
+                                <img src="../images/real_icons/arrow.png" alt="" srcset="" class="arrow_image">
+
+
+                                class="no_underline"
+                            </a> -->
+                            
+                        </div>
+                        <h2>Profile</h2>
+                        <div class="profile_option">
+                        <a href="user.php">
+                                <p>
+                                <img src="../images/real_icons/profile.png" alt="" srcset="" class="option_image">
+                                    <span>Edit Profile</span>
+                                </p>
+                                <img src="../images/real_icons/arrow.png" alt="" srcset="" class="arrow_image">
+                            </a>
+                            <a href="wallet.php">
+                                <p>
+                                <img src="../images/real_icons/update-withdraw.png" alt="" srcset="" class="option_image">
+                                    <span>Update Withdrawal Details</span>
+                                </p>
+                                <img src="../images/real_icons/arrow.png" alt="" srcset="" class="arrow_image">
+                            </a>
+                            <a href="security.php">
+                                <p>
+                                <img src="../images/real_icons/update-withdraw.png" alt="" srcset="" class="option_image">
+                                    <span>Settings</span>
+                                </p>
+                                <img src="../images/real_icons/arrow.png" alt="" srcset="" class="arrow_image">
+                            </a>
+                        </div>
+
+                        <h2>Contact Us</h2>
+                        <div class="profile_option">
+                        <a href="support.php">
+                                <p>
+                                <img src="../images/real_icons/support.png" alt="" srcset="" class="option_image">
+                                    <span>Customer Support</span>
+                                </p>
+                                <img src="../images/real_icons/arrow.png" alt="" srcset="" class="arrow_image">
+                            </a>
+                            <!-- <a href="notice.php">
+                                <p>
+                                <img src="../images/real_icons/notice.png" alt="" srcset="" class="option_image">
+                                    <span>Notifications</span>
+                                </p>
+                                <img src="../images/real_icons/arrow.png" alt="" srcset="" class="arrow_image">
+                            </a> -->
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+                    <!-- logout here -->
+                    <div class="logout_alone">
+                        <a href="../logout.php" class="">
+                            <h4>Logout</h4>
+                        </a>
+                    </div>
+                    <div class="copyright">
+                        <h3>Copyright &copy;<?php echo date('Y'); ?></h3>
+                        <h3>FilmSupply Pictures All Rights Reserved</h3>
+                    </div>
+                 </div>
+            </div>
+        </main>
+
+ 
+<script src="../../node_modules/alerthub/dist/js/alerthub.min.js"></script>
+
+<script src="../UserData/js/profile.js"></script>
+
+        
+<?php
+include("footer.php");
+?>
+
+         <!-- Bootstrap JavaScript Libraries -->
+         <script
+         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+         crossorigin="anonymous"
+     ></script>
+
+     <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+         crossorigin="anonymous"
+     ></script>
+
+     <!-- custom JavaScript -->
+      <script src="../scripts/tabs.js"></script>
+
+
+
+
+
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+      <?php
 $creditScore = 60; // Example: Value fetched from the database or set by admin
 ?>
 
@@ -133,3 +357,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </script>
 
+
+ </body>
+</html>
