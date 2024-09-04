@@ -56,7 +56,7 @@
 
 <?php
 // Assuming you have fetched the credit score from the database or set by admin
-$creditScore = 100 . '%'; // Example value from the database
+$creditScore = 100; // Example value from the database
 ?>
 
 <script>
