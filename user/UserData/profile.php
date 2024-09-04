@@ -156,6 +156,7 @@ include("header.php");
                     </div>
                 </div>
                 <!-- assessment -->
+                 <p>Credit Assessment</p>
                 <div class="assessment">
                 <div class="score-container">
                     <div class="credit-bar-wrapper">
@@ -344,11 +345,11 @@ document.addEventListener("DOMContentLoaded", function() {
         creditScoreText.style.backgroundColor = "#dc3545"; // Red for low scores
         creditBar.style.backgroundColor = "#dc3545";
     } else if (creditScore < 80) {
-        creditScoreText.style.backgroundColor = "#ffc107"; // Yellow for medium scores
-        creditBar.style.backgroundColor = "#ffc107";
+        creditScoreText.style.backgroundColor = "#dc3545"; // Yellow for medium scores
+        creditBar.style.backgroundColor = "#dc3545";
     } else {
-        creditScoreText.style.backgroundColor = "#28a745"; // Green for high scores
-        creditBar.style.backgroundColor = "#28a745";
+        creditScoreText.style.backgroundColor = "#dc3545"; // Green for high scores
+        creditBar.style.backgroundColor = "#dc3545";
     }
 });
 
