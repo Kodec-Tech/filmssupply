@@ -47,7 +47,7 @@
 
 
 <?php
-$creditScore = 85; // Example: Value fetched from the database or set by admin
+$creditScore = 100; // Example: Value fetched from the database or set by admin
 ?>
 
 <script>
