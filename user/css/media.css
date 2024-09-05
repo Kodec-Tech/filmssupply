@@ -469,15 +469,12 @@
 /* credit score */
 /* Responsive Design */
 @media (max-width: 768px) {
-    
-
     .credit-bar-wrapper {
         width: 65%;
     }
 
     .d_level {
         font-size: 13px;
-        /* padding: 0.4rem 0.8rem; */
     }
 }
 
@@ -491,7 +488,6 @@
     }
 
     .d_level {
-        
         margin-top: 5px;
     }
 }
