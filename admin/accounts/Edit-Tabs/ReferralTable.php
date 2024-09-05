@@ -35,14 +35,14 @@ background-color: transparent !important;
 
         <?php
        
-$RefSql = "SELECT * FROM accounts WHERE referral = '$username' ";
+$RefSql = "SELECT * FROM accounts WHERE username = '$username' ";
 $result = mysqli_query($conn, $RefSql) or die(mysqli_error($conn));
 $downlineCount = 1;
 
 
 if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
-        $referral = $row['username'];
+        $referral = $row['referral'];
         
         
     
