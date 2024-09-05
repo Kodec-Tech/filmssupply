@@ -281,7 +281,7 @@ header .container{
 /* Credit Bar */
 .credit-bar {
     height: 6px;
-    background-color: #28a745;
+    background-color: #dc3545;
     border-radius: 25px;
     transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
     -webkit-transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
@@ -289,7 +289,7 @@ header .container{
 
 /* Score Percentage */
 .d_level {
-    background-color: #28a745;
+    background-color: #dc3545;
     color: white;
     padding: 0.2rem 0.7rem;
     border-radius: 5px;
