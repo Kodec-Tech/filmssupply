@@ -53,7 +53,7 @@ if (mysqli_num_rows($result) > 0) {
 
                 <tr>
                     <td><?= 'Downline: ' . $downlineCount++ ?></td>
-                    <td><?= $referral ? '' : 'Admin' ?></td>
+                    <td><?= $referral ? '' : 'Joined with Admin Code' ?></td>
                    
                 </tr>
                 <!-- Add more rows as needed -->
