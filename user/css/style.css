@@ -239,23 +239,20 @@ header .container{
     height: 50px;
     background-color: #FFF;
 }
-/* .assessment{
+.assessment{
     width: 65%;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-} */
-
-
-
-
-.assessment {
-    
-  
     text-align: center;
 }
+
+
+
+
+
 
 
 /* Score Container */
