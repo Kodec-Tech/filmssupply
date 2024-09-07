@@ -72,7 +72,7 @@
         include "header.php";
         ?>
 
-    <main class="zoom_tasks">
+    <main class="">
         <div class="container tasks mt-3">
 
 
