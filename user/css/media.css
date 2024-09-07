@@ -477,8 +477,8 @@
         font-size: 13px;
     }
 
-    .assessment .title{
-        font-size: 12px;
+    .assessment p{
+        font-size: 9px!important;
     }
 }
 
@@ -495,7 +495,7 @@
         margin-top: 5px;
     }
 
-    .assessment .title{
-        font-size: 12px;
+    .assessment p{
+        font-size: 9px!important;
     }
 }
