@@ -263,7 +263,7 @@ header .container{
 
 /* Credit Bar Wrapper */
 .credit-bar-wrapper {
-    /* width: 70%; */
+    width: 70%;
     background-color: #e9ecef;
     border-radius: 25px;
     overflow: hidden;
