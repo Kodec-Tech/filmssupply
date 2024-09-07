@@ -381,7 +381,7 @@
 
 
             // Calculate how many times to repeat the array to reach 33 entries
-            $totalProducts = count($productData);
+            $totalProducts = count($product);
             $repeatedProducts = [];
 
             if ($totalProducts > 0) {
@@ -389,7 +389,7 @@
 
               // Repeat the products array to reach the desired number
               for ($i = 0; $i < $repeatCount; $i++) {
-                $repeatedProducts = array_merge($repeatedProducts, $productData);
+                $repeatedProducts = array_merge($repeatedProducts, $product);
               }
 
               // Now, we have more than 33 entries, let's slice it to exactly 33
