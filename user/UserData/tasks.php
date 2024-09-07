@@ -346,11 +346,16 @@
             <?php
             // Fetch a product with the same level as the user and that the user hasn't seen yet
 
-    $reset = 'false';
+    $reset = 'true';
     $sql = "SELECT * FROM products 
-            WHERE level = ?
-            AND product_id IN (SELECT product_id FROM user_task WHERE acctNo = ? AND reset = ?)
-            ORDER BY RAND() LIMIT ?";
+        WHERE level = ?
+        AND product_id NOT IN (
+            SELECT product_id 
+            FROM user_task 
+            WHERE reset = ?
+        )
+        ORDER BY RAND() 
+        LIMIT ?";
     
     // Prepare the statement
     $stmt = mysqli_prepare($conn, $sql);
