@@ -470,7 +470,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .credit-bar-wrapper {
-        /* width: 65%; */
+        width: 65%;
     }
 
     .d_level {
@@ -488,7 +488,7 @@
     }
 
     .credit-bar-wrapper {
-        /* width: 100%; */
+        width: 100%;
     }
 
     .d_level {
