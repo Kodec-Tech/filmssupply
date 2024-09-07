@@ -476,6 +476,10 @@
     .d_level {
         font-size: 13px;
     }
+
+    .assessment .title{
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -489,5 +493,9 @@
 
     .d_level {
         margin-top: 5px;
+    }
+
+    .assessment .title{
+        font-size: 12px;
     }
 }

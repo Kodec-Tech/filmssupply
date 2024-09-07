@@ -159,7 +159,7 @@ include("header.php");
                 <!-- assessment -->
                  
                 <div class="assessment">
-                <p>Credit Score</p>
+                <p class="title">Credit Score</p>
                 <div class="score-container">
                     <div class="credit-bar-wrapper">
                         <div class="credit-bar" id="creditBar"></div>
