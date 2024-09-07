@@ -187,7 +187,7 @@
 
       // Get the product count
       $product_count = $row_products['product_count'];
-      if ($product_count > $products_list) {
+      if ($product_count > $products_list || $product_count > 0) {
         $product_count = $products_list;
       }
 
