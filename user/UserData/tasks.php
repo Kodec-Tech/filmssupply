@@ -146,7 +146,7 @@ $row_tasks = mysqli_fetch_assoc($result_tasks);
 $task_count = $row_tasks['task_count'];
 
 
-if($level === 'normal'){
+if($level == 'normal'){
   $products_list = 33;
 }
 elseif($level == 'vip'){
@@ -166,7 +166,7 @@ elseif($level == 'diamond'){
 }
 
 // Get count of available products
-$sql_products = "SELECT COUNT(*) AS product_count FROM products WHERE level = ? LIMIT $products_list";
+$sql_products = "SELECT COUNT(*) AS product_count FROM products WHERE level = ?";
 
 // Prepare the statement
 $stmt_products = mysqli_prepare($conn, $sql_products);
@@ -185,6 +185,9 @@ $row_products = mysqli_fetch_assoc($result_products);
 
 // Get the product count
 $product_count = $row_products['product_count'];
+if($product_count > $products_list){
+  $product_count = $products_list;
+}
 
 // Construct the string
 $count_string = "$task_count/$product_count";
@@ -344,7 +347,7 @@ $reset = 'false';
 $sql = "SELECT * FROM products 
         WHERE level = ?
         AND product_id NOT IN (SELECT product_id FROM user_task WHERE acctNo = ? AND reset = ?)
-        ORDER BY RAND() LIMIT 3";
+        ORDER BY RAND() LIMIT ?";
 
 
 
@@ -352,7 +355,7 @@ $sql = "SELECT * FROM products
 
 //This display product info for user to perform order
 $stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "sss", $level, $AccountNo, $reset); 
+mysqli_stmt_bind_param($stmt, "sssi", $level, $AccountNo, $reset, $products_list); 
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 $product = mysqli_fetch_assoc($result);
