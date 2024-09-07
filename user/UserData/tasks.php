@@ -346,38 +346,19 @@
             <?php
             // Fetch a product with the same level as the user and that the user hasn't seen yet
 
+ 
+    // If no products were found, fetch all products based on level
+    $sql = "SELECT * FROM products 
+            WHERE level = ?
+            ORDER BY RAND() 
+            LIMIT ?";
+    
+    // Prepare the statement
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "si", $level, $products_list);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
 
-    // First query to fetch products excluding those with reset = true in user_task
-$sql = "SELECT * FROM products 
-WHERE level = ?
-AND product_id NOT IN (
-    SELECT product_id 
-    FROM user_task 
-    WHERE reset = 'true'
-)
-ORDER BY RAND() 
-LIMIT ?";
-
-// Prepare the statement
-$stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "si", $level, $products_list);
-mysqli_stmt_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
-
-// Check if any products were fetched
-if (mysqli_num_rows($result) == 0) {
-// If no products were found, fetch all products based on level
-$sql = "SELECT * FROM products 
-    WHERE level = ?
-    ORDER BY RAND() 
-    LIMIT ?";
-
-// Prepare the statement
-$stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "si", $level, $products_list);
-mysqli_stmt_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
-}
     
     // Fetch all products
     $products = [];
