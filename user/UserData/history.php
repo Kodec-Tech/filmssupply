@@ -58,7 +58,7 @@
 
  <?php
 $status = 'completed';
-$taskSql = "SELECT * FROM user_task WHERE acctNo = '$AccountNo' AND status='$status'";
+$taskSql = "SELECT * FROM user_task WHERE acctNo = '$AccountNo' AND status='$status' ORDER BY id DESC";
 $result = mysqli_query($conn, $taskSql) or die(mysqli_error($conn));
 
 if (mysqli_num_rows($result) > 0) {
