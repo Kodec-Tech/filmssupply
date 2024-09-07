@@ -354,7 +354,7 @@
     
     // Prepare the statement
     $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, "sssi", $level, $AccountNo, $reset, $products_list);
+    mysqli_stmt_bind_param($stmt, "si", $level, $products_list);
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
     
