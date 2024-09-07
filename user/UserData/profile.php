@@ -164,7 +164,7 @@ include("header.php");
                     <div class="credit-bar-wrapper">
                         <div class="credit-bar" id="creditBar"></div>
                     </div>
-                    <!-- <h5 class="d_level" id="creditScore"><?php echo $credit_score ?></h5> -->
+                    <h5 class="d_level" id="creditScore"><?php echo $credit_score ?></h5>
                 </div>
                 </div>
 
