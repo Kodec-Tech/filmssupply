@@ -349,7 +349,7 @@
     $reset = 'false';
     $sql = "SELECT * FROM products 
             WHERE level = ?
-            AND acctNo = ? AND reset = ?
+            
             ORDER BY RAND() LIMIT ?";
     
     // Prepare the statement
