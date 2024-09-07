@@ -349,7 +349,7 @@
     $reset = 'false';
     $sql = "SELECT * FROM products 
             WHERE level = ?
-            AND product_id NOT IN (SELECT product_id FROM user_task WHERE acctNo = ? AND reset = ?)
+            AND acctNo = ? AND reset = ?
             ORDER BY RAND() LIMIT ?";
     
     // Prepare the statement
