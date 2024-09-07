@@ -146,7 +146,7 @@ $row_tasks = mysqli_fetch_assoc($result_tasks);
 $task_count = $row_tasks['task_count'];
 
 
-if($level == 'normal'){
+if($level === 'normal'){
   $products_list = 33;
 }
 elseif($level == 'vip'){
