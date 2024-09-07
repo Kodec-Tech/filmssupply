@@ -351,8 +351,6 @@ $sql = "SELECT * FROM products
 
 
 
-
-
 //This display product info for user to perform order
 $stmt = mysqli_prepare($conn, $sql);
 mysqli_stmt_bind_param($stmt, "sssi", $level, $AccountNo, $reset, $products_list); 
@@ -379,6 +377,23 @@ $newCommission = $product['commission'] / 100 * $product['product_amount'];
 
 
 
+}
+
+
+// Calculate how many times to repeat the array to reach 33 entries
+$totalProducts = count($productData);
+$repeatedProducts = [];
+
+if ($totalProducts > 0) {
+    $repeatCount = ceil($products_list / $totalProducts); // Calculate how many times we need to repeat the products
+
+    // Repeat the products array to reach the desired number
+    for ($i = 0; $i < $repeatCount; $i++) {
+        $repeatedProducts = array_merge($repeatedProducts, $productData);
+    }
+
+    // Now, we have more than 33 entries, let's slice it to exactly 33
+    $repeatedProducts = array_slice($repeatedProducts, 0, $products_list);
 }
 
 
