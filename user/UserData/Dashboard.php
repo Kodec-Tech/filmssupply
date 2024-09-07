@@ -48,7 +48,7 @@
             <div class="container contents_body zoom_dash">
                 <!-- this is hero GIF -->
                 <!-- <img src="../images/gif/index-movie.gif" alt=""class="hero-gif"> -->
-                 <img src="../images/img/levels.jpeg" alt="" class="levels_img">
+                 <!-- <img src="../images/img/levels.jpeg" alt="" class="levels_img"> -->
 
                 <div class="movie_contents">
                     <!-- these are tabs -->

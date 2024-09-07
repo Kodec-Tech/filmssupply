@@ -145,8 +145,28 @@ $result_tasks = mysqli_stmt_get_result($stmt_tasks);
 $row_tasks = mysqli_fetch_assoc($result_tasks);
 $task_count = $row_tasks['task_count'];
 
+
+if($level == 'normal'){
+  $products_list = 33;
+}
+elseif($level == 'vip'){
+  $products_list = 35;
+}
+elseif($level == 'vvip'){
+  $products_list = 40;
+}
+elseif($level == 'vvvip'){
+  $products_list = 43;
+}
+elseif($level == 'gold'){
+  $products_list = 45;
+}
+elseif($level == 'diamond'){
+  $products_list = 50;
+}
+
 // Get count of available products
-$sql_products = "SELECT COUNT(*) AS product_count FROM products WHERE level = ?";
+$sql_products = "SELECT COUNT(*) AS product_count FROM products WHERE level = ? LIMIT $products_list";
 
 // Prepare the statement
 $stmt_products = mysqli_prepare($conn, $sql_products);
