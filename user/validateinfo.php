@@ -131,15 +131,17 @@ if (isset($_POST['submit-register'])) {
 
 
     // Check if email already exists
+    if(!empty($email)){
     $sqlEmail = "SELECT * FROM customer_detail WHERE C_Email = ?";
     $EmailStmt = mysqli_prepare($conn, $sqlEmail);
     mysqli_stmt_bind_param($EmailStmt, "s", $email);
     mysqli_stmt_execute($EmailStmt);
     $EmailResult = mysqli_stmt_get_result($EmailStmt);
 
-    if (mysqli_num_rows($EmailResult) > 0) {
+    if (mysqli_num_rows($EmailResult) > 0 ) {
         // Email already exists, handle accordingly (e.g., display an error message)
-        header('location: CreateAccount.php?signup=emailexits&firstname=' . $firstname . '&username=' . $username . '&lastname=' . $lastname);
+        header('location: CreateAccount.php?signup=emailexist&firstname=' . $firstname . '&username=' . $username . '&lastname=' . $lastname);
+    }
     }
 
 

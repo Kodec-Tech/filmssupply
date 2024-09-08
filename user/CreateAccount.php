@@ -249,9 +249,9 @@ if (isset($_SESSION['username'])) {
                      </div>';
                         
                     }
-                    elseif($validator == 'emailexits'){
+                    elseif($validator == 'emailexist'){
                         echo '<div class="alert bg-danger text-white alert-dismissible fade show role="alert"> 
-                        Enter a 6 digit withdrawal pin
+                        Email already exist
                         <button type="button" class="close text-white" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
