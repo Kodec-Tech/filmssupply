@@ -239,12 +239,12 @@ if (isset($_POST['submit-register'])) {
         //include '../mail/mail_config.php';
         $mail = $email;
         $name = $username;
-        echo "<br>";
+        // echo "<br>";
 
         // Create Otp
         $otp = rand(100000, 999999);
 
-        echo "<br>";
+        // echo "<br>";
 
 
 
