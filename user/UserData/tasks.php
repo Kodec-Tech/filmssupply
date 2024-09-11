@@ -186,11 +186,11 @@ $row_products = mysqli_fetch_assoc($result_products);
 // Get the product count
 $product_count = $row_products['product_count'];
 if($product_count > $products_list || $product_count > 0){
-  $product_count = $products_list;
+  $Newproduct_count = $products_list;
 }
 
 // Construct the string
-$count_string = "$task_count/$product_count";
+$count_string = "$task_count/$Newproduct_count";
 
 
 
