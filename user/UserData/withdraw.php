@@ -112,7 +112,7 @@
             <!-- commission tabs information -->
             <div class="tab-content active" id="tab1">
             <div class="w_head">
-                <h3 class="text-light">Available Balance</h3>
+                <h3 class="text-light">Balance:</h3>
                 <h3><?php echo $currency . number_format($balance, 1); ?></h3>
              </div>
              <!-- withdrawal form -->

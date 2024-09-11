@@ -484,13 +484,13 @@ header .container{
 }
 .w_head{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between; */
+    /* align-items: center; */
     padding-bottom: 1rem;
     margin-bottom: 1.5rem;
 }
 .w_head h3{
-    color:#DAF7A6;
+    color:#fff;
 }
 .withdraw_form .form-control option:active{
     background: none !important;
