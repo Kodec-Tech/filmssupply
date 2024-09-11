@@ -483,10 +483,10 @@ header .container{
     font-size: 16px;
 }
 .w_head{
-    display: flex;
+    /* display: flex; */
     /* justify-content: space-between; */
     /* align-items: center; */
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
     margin-bottom: 1.5rem;
 }
 .w_head h3{
