@@ -248,6 +248,7 @@ try {
                                                                 <th scope="col">Account No</th>
                                                                 <th scope="col">F Name</th>
                                                                 <th scope="col">L Name</th>
+                                                                <th scope="col">L Username</th>
                                                                 <th scope="col">Close</th>
                                                                 <!-- <th scope="col">Delete</th> -->
                                                             </tr>
@@ -256,7 +257,7 @@ try {
 
                                                             <?php
 
-                                                            $query = "SELECT * FROM customer_detail";
+$query = "SELECT * FROM customer_detail JOIN accounts ON customer_detail.Account_No = accounts.AccountNo ";
                                                             $result = mysqli_query($conn, $query) or die("query fail");
 
                                                             if (mysqli_num_rows($result) > 0) {
@@ -272,6 +273,10 @@ try {
                                                                         <td class="light"><?php echo $row['C_First_Name']; ?></td>
 
                                                                         <td class="light"><?php echo $row['C_Last_Name']; ?></td>
+
+
+
+                                                                        <td class="light"><?php echo $row['username']; ?></td>
 
 
 
