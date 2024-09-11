@@ -63,6 +63,9 @@ GROUP BY
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../css/accounts/OpenAccount.css">
 
+    <!-- css for the datatable -->
+    <link rel="stylesheet" href="//cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css">
+
     <!-- Javascrip -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -417,6 +420,15 @@ GROUP BY
             $('#purchaseCode').modal('show');
         });
     </script>
+
+    <!-- script for the datatable -->
+<script src="//cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
+
+<script>
+    new DataTable('#EditTable');
+</script>
+
+
 </body>
 
 </html>

@@ -248,7 +248,7 @@ try {
                                                                 <th scope="col">Account No</th>
                                                                 <th scope="col">F Name</th>
                                                                 <th scope="col">L Name</th>
-                                                                <th scope="col">L Username</th>
+                                                                <th scope="col">Username</th>
                                                                 <th scope="col">Close</th>
                                                                 <!-- <th scope="col">Delete</th> -->
                                                             </tr>
