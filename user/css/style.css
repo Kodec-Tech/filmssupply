@@ -487,10 +487,12 @@ header .container{
     /* justify-content: space-between; */
     /* align-items: center; */
     /* padding-bottom: 1rem; */
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: -20px;
 }
 .w_head h3{
     color:#fff;
+    font-size: 14px;
 }
 .withdraw_form .form-control option:active{
     background: none !important;
