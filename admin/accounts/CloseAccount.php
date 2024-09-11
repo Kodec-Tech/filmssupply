@@ -57,6 +57,10 @@ GROUP BY
     <!--fontawesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
+    <!-- css for the datatable -->
+    <link rel="stylesheet" href="//cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css">
+
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../css/accounts/OpenAccount.css">
 
@@ -138,34 +142,72 @@ GROUP BY
                                 </div>
 
 
-                                <?php
-                                if (isset($_POST['close_btn'])) {
-                                    $DAccountNo = $_POST['close_id'];
-                                    $Dquery = "DELETE FROM customer_detail WHERE Account_No = '$DAccountNo'";
-                                    $result = mysqli_query($conn, $Dquery) or die('Query Fail');
+<?php
+ if (isset($_POST['close_btn'])) {
+  $DAccountNo = $_POST['close_id'];
 
-                                   
+// Start a transaction
+mysqli_begin_transaction($conn);
 
-                                    
-                                    if ($result) {
-                                        echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+try {
+    $DAccountNo = mysqli_real_escape_string($conn, $DAccountNo);
+
+    // Delete from the first table
+    $Dquery1 = "DELETE FROM customer_detail WHERE Account_No = '$DAccountNo'";
+    $result1 = mysqli_query($conn, $Dquery1);
+    
+    // Delete from the second table
+    $Dquery2 = "DELETE FROM accounts WHERE AccountNo = '$DAccountNo'";
+    $result2 = mysqli_query($conn, $Dquery2);
+
+    // Delete from the third table
+    $Dquery3 = "DELETE FROM login WHERE AccountNo = '$DAccountNo'";
+    $result3 = mysqli_query($conn, $Dquery3);
+
+    // Delete from the fourth table
+    $Dquery4 = "DELETE FROM mymembership WHERE AcctNo = '$DAccountNo'";
+    $result4 = mysqli_query($conn, $Dquery4);
+
+    // Check if all queries were successful
+    if ($result1 && $result2 && $result3 && $result4) {
+        // Commit the transaction
+        mysqli_commit($conn);
+        
+        echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                         <strong>Your Account Deleted Successfully!</strong>.
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                         </div>';
-                                    } else {
-                                        echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                                <strong>Your Account not Deleted!</strong>.
+
+
+
+    } else {
+        // Rollback the transaction if any query failed
+        mysqli_rollback($conn);
+        
+        echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                <strong>Account Could not be Deleted due to some issues</strong>.
                                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                                 </div>';
-                                    }
-                                }
+    }
+
+} catch (Exception $e) {
+    // Rollback the transaction in case of an exception
+    mysqli_rollback($conn);
+    die('Error: ' . $e->getMessage());
+}
+
+
+
+
+         
+        }
 
                                
-                                ?>
+ ?>
 
 
 
@@ -206,6 +248,7 @@ GROUP BY
                                                                 <th scope="col">Account No</th>
                                                                 <th scope="col">F Name</th>
                                                                 <th scope="col">L Name</th>
+                                                                <th scope="col">L Username</th>
                                                                 <th scope="col">Close</th>
                                                                 <!-- <th scope="col">Delete</th> -->
                                                             </tr>
@@ -230,6 +273,12 @@ GROUP BY
                                                                         <td class="light"><?php echo $row['C_First_Name']; ?></td>
 
                                                                         <td class="light"><?php echo $row['C_Last_Name']; ?></td>
+
+
+
+                                                                        <td class="light"><?php echo $row['username']; ?></td>
+
+
 
                                                                         <td class="light">
                                                                             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
@@ -424,6 +473,14 @@ GROUP BY
             $('#purchaseCode').modal('show');
         });
     </script>
+
+
+<!-- script for the datatable -->
+<script src="//cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
+
+<script>
+    new DataTable('#EditTable');
+</script>
 
 
 
