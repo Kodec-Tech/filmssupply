@@ -32,7 +32,7 @@
     <body class="dashboard_body">
 
     <?php
-    include"header.php";
+    include "header.php";
     ?>
 
         <main style="margin-top:30px!important">
