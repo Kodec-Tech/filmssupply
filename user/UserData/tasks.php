@@ -233,7 +233,7 @@ if(mysqli_num_rows($mergeresult) > 0){
 }}
 
 
-if(!empty($product_count)  && $task_count != $product_count && $balance >=0 ){
+if(!empty($product_count)  && $task_count != $Newproduct_count && $balance >=0 ){
   if($task_count != ($mergeProductData['grand_order'] ?? '')){
 
 ?>
@@ -259,7 +259,7 @@ if(empty($product_count) ){
 }
 
 //if task is all performed
-if($task_count > 0 && $task_count === $product_count ){
+if($task_count > 0 && $task_count === $Newproduct_count){
   //Update the Trial Bonus and set it to Zero
 $NewBonus = "0.0";
 $sql_bonus = "UPDATE accounts SET bonus = ? WHERE AccountNo = ?";
@@ -347,13 +347,13 @@ $reset = 'false';
 $sql = "SELECT * FROM products 
         WHERE level = ?
         AND product_id NOT IN (SELECT product_id FROM user_task WHERE acctNo = ? AND reset = ?)
-        ORDER BY RAND() LIMIT 3";
+        ORDER BY RAND() LIMIT ?";
 
 
 
 //This display product info for user to perform order
 $stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "sss", $level, $AccountNo, $reset); 
+mysqli_stmt_bind_param($stmt, "sssi", $level, $AccountNo, $reset, $products_list); 
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 $product = mysqli_fetch_assoc($result);
