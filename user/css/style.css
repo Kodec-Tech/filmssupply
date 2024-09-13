@@ -614,7 +614,7 @@ header .container{
 
 /*USER LEVEL*/
 .levels{
-    background: url('../images/img/bg.png') no-repeat top;
+    background: url('../images/img/bg.png?v=1') no-repeat top;
     background-size: auto;
     padding: 2rem;
 }
@@ -660,7 +660,7 @@ header .container{
 
 /*User Profile*/
 .userprofile{
-    background: url('../images/img/bg.png') no-repeat center;
+    background: url('../images/img/bg.png?v=1') no-repeat center;
     background-size: cover;
     padding: 2rem;
 }
