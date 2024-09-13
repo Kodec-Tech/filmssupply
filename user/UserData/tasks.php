@@ -153,7 +153,7 @@ elseif($level == 'vip'){
   $products_list = 35;
 }
 elseif($level == 'vvip'){
-  $products_list = 1;
+  $products_list = 1; 
 }
 elseif($level == 'vvvip'){
   $products_list = 43;
