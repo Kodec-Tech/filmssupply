@@ -342,9 +342,7 @@ if($balance < 0 ){
 <!-- Lets fetch all necessary informations for us to utilize in the modal -->
 <?php
 // Fetch a product with the same level as the user and that the user hasn't seen yet
-if($product_count != $Newproduct_count){
-
-}else{
+if($product_count === $Newproduct_count){
 $reset = 'false';
 $sql = "SELECT * FROM products 
         WHERE level = ?
