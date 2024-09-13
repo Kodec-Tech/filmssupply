@@ -184,7 +184,7 @@ $result_products = mysqli_stmt_get_result($stmt_products);
 $row_products = mysqli_fetch_assoc($result_products);
 
 // Get the product count
-echo $product_count = $row_products['product_count'];
+$product_count = $row_products['product_count'];
 if($product_count > $products_list || $product_count > 0){
   $Newproduct_count = $products_list;
 }
@@ -342,7 +342,9 @@ if($balance < 0 ){
 <!-- Lets fetch all necessary informations for us to utilize in the modal -->
 <?php
 // Fetch a product with the same level as the user and that the user hasn't seen yet
+if($product_count != $Newproduct_count){
 
+}else{
 $reset = 'false';
 $sql = "SELECT * FROM products 
         WHERE level = ?
@@ -377,6 +379,7 @@ $newCommission = $product['commission'] / 100 * $product['product_amount'];
 
 
 
+}
 }
 
 
