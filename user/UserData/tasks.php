@@ -244,9 +244,20 @@ if(!empty($product_count)  && $task_count != $Newproduct_count && $balance >=0 &
 
 
 <?php
-}else {
-  echo '<p>Tasks not upto the required level</p>';
 }}
+
+if($product_count != $Newproduct_count){
+  ?>
+  
+  
+  
+  <button type="button" class="btn btn-primary tab active" data-bs-toggle="modal" data-bs-target="#NoTaskToPerform">
+    Not upto
+  </button>
+
+<?php
+}
+
 if(empty($product_count) ){
 ?>
 
