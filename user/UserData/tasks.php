@@ -259,7 +259,7 @@ if(empty($product_count) ){
 }
 
 //if task is all performed
-if($task_count > 0 && $task_count === $product_count ){
+if($task_count > 0 && $task_count === $Newproduct_count){
   //Update the Trial Bonus and set it to Zero
 $NewBonus = "0.0";
 $sql_bonus = "UPDATE accounts SET bonus = ? WHERE AccountNo = ?";
