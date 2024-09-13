@@ -251,8 +251,8 @@ if($product_count != $Newproduct_count){
   
   
   
-  <button type="button" class="btn btn-primary tab active" data-bs-toggle="modal" data-bs-target="#NoTaskToPerform">
-    Not upto
+  <button type="button" class="btn btn-primary tab active" data-bs-toggle="modal" data-bs-target="#Notupto">
+    Rate
   </button>
 
 <?php
