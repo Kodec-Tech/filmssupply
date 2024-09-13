@@ -184,7 +184,7 @@ $result_products = mysqli_stmt_get_result($stmt_products);
 $row_products = mysqli_fetch_assoc($result_products);
 
 // Get the product count
-$product_count = $row_products['product_count'];
+echo $product_count = $row_products['product_count'];
 if($product_count > $products_list || $product_count > 0){
   $Newproduct_count = $products_list;
 }
