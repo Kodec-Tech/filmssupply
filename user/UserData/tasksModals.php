@@ -74,7 +74,51 @@ if(!empty($productData)){
   </div>
 </div>
                        <!-- start modal ends -->
+<?php } else{ ?>
+
+
+  <!-- Modal for No Tasks to Perform Regarding your Level-->
+<div class="modal fade" id="Notupto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">FilmSuppy</h5>
+        <button type="button" class="btn close_task" data-bs-dismiss="modal"><h1 class="rounded-circle">X</h1></button>
+      </div>
+      <!-- modal body starts here -->
+      <div class="modal-body">
+        <!-- flex-column this man -->
+        <div class="history_card perform_task">
+          <div class="history_card2">
+              
+              <div class="hcard_texts">
+                                    
+                  <p class="text-center text-light">This membership level requires <?php echo $Newproduct_count ?> movies to rate, kindly contact support to update more movies.</p>
+              </div>
+              <!-- grid this boy -->
+    
+          </div>
+        
+      </div>
+      </div>
+     
+      <div class="modal-footer">
+        <button type="submit" class="btn text-light text-center Perform_tasks_btn" data-bs-dismiss="modal">Confirm</button>
+      </div>
+   
+    </div>
+  </div>
+</div>
+                       <!-- start modal ends -->
+
 <?php } ?>
+
+
+
+
+
+
+
 
 
 
@@ -128,39 +172,7 @@ if(!empty($productData)){
 
 
 
-<!-- Modal for No Tasks to Perform Regarding your Level-->
-<div class="modal fade" id="Notupto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">FilmSuppy</h5>
-        <button type="button" class="btn close_task" data-bs-dismiss="modal"><h1 class="rounded-circle">X</h1></button>
-      </div>
-      <!-- modal body starts here -->
-      <div class="modal-body">
-        <!-- flex-column this man -->
-        <div class="history_card perform_task">
-          <div class="history_card2">
-              
-              <div class="hcard_texts">
-                                    
-                  <p class="text-center text-light">This membership level requires <?php echo $Newproduct_count ?> movies to rate, kindly contact support for more movies.</p>
-              </div>
-              <!-- grid this boy -->
-    
-          </div>
-        
-      </div>
-      </div>
-     
-      <div class="modal-footer">
-        <button type="submit" class="btn text-light text-center Perform_tasks_btn" data-bs-dismiss="modal">Confirm</button>
-      </div>
-   
-    </div>
-  </div>
-</div>
-                       <!-- start modal ends -->
+
 
 
 
