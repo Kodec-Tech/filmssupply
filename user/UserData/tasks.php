@@ -353,7 +353,7 @@ $sql = "SELECT * FROM products
 
 //This display product info for user to perform order
 $stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "sssi", $level, $AccountNo, $reset, $Newproduct_count); 
+mysqli_stmt_bind_param($stmt, "sssi", $level, $AccountNo, $reset, $product_count); 
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 $product = mysqli_fetch_assoc($result);
