@@ -347,13 +347,13 @@ $reset = 'false';
 $sql = "SELECT * FROM products 
         WHERE level = ?
         AND product_id NOT IN (SELECT product_id FROM user_task WHERE acctNo = ? AND reset = ?)
-        ORDER BY RAND() LIMIT ?";
+        ORDER BY RAND() LIMIT 3";
 
 
 
 //This display product info for user to perform order
 $stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "sssi", $level, $AccountNo, $reset, $products_list); 
+mysqli_stmt_bind_param($stmt, "sss", $level, $AccountNo, $reset); 
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 $product = mysqli_fetch_assoc($result);
