@@ -233,7 +233,7 @@ if(mysqli_num_rows($mergeresult) > 0){
 }}
 
 
-if(!empty($product_count)  && $task_count != $Newproduct_count && $balance >=0 ){
+if(!empty($product_count)  && $task_count != $Newproduct_count && $balance >=0 && $product_count == $Newproduct_count){
   if($task_count != ($mergeProductData['grand_order'] ?? '')){
 
 ?>
@@ -244,6 +244,8 @@ if(!empty($product_count)  && $task_count != $Newproduct_count && $balance >=0 )
 
 
 <?php
+}else {
+  echo '<p>Tasks not upto the required level</p>';
 }}
 if(empty($product_count) ){
 ?>
