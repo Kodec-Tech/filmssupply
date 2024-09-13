@@ -44,14 +44,14 @@
 
 
 </head>
+<?php
+include("header.php");
+?>
 
 
  <body class="profile_body">
 
     
-<?php
-include("header.php");
-?>
 
         <main class="zoom_profile">
             <div class="container  text-center  text-light">
