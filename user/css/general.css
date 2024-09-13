@@ -79,7 +79,7 @@ button{
 
 
 .dashboard_body{
-    background-image: url('../../user/images/img/bgprofile.png');
+    background-image: url('../../user/images/img/bgprofile.png?v=1');
     background-repeat: no-repeat;
     /* background-size: 100% 100%; */
     background-size: 60% auto;
@@ -88,7 +88,7 @@ button{
     height: 100%;
 }
 .tasks_body{
-    background-image: url('../../user/images/img/bgprofile.png');
+    background-image: url('../../user/images/img/bgprofile.png?v=1');
     background-repeat: no-repeat;
     /* background-size: 100% 100%; */
     background-size: 60% auto;
@@ -97,7 +97,7 @@ button{
     height: 100%;
 }
 .profile_body{
-    background-image: url('../../user/images/img/bgprofile.png');
+    background-image: url('../../user/images/img/bgprofile.png?v=1');
     background-repeat: no-repeat;
     /* background-size: 100% 100%; */
     background-size: 60% auto;
