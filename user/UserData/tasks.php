@@ -246,18 +246,6 @@ if(!empty($product_count)  && $task_count != $Newproduct_count && $balance >=0 )
 <?php
 }}
 
-if($product_count != $Newproduct_count){
-  ?>
-  
-  
-  
-  <button type="button" class="btn btn-primary tab active" data-bs-toggle="modal" data-bs-target="#Notupto">
-    Rate
-  </button>
-
-<?php
-}
-
 if(empty($product_count) ){
 ?>
 

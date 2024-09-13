@@ -1,3 +1,6 @@
+<?php
+if(!empty($productData)){
+?>
 <!-- Modal for Movies/Products-->
 <div class="modal fade zoom_modal" id="TaskMovies" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -71,6 +74,7 @@
   </div>
 </div>
                        <!-- start modal ends -->
+<?php } ?>
 
 
 
